@@ -3,6 +3,7 @@ import { login, signup } from '../actions/session_actions';
 import SessionForm from './SessionForm';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { withRouter } from 'react-router-dom'
 
 export const msp = ({ session, errors, entities: { users } }) => {
   return {
@@ -10,6 +11,7 @@ export const msp = ({ session, errors, entities: { users } }) => {
     currentUser: users[session.currentUserId],
     formType: 'LOG IN',
     navLink: <Link to='/signup'>Sign Up</Link>,
+    status_text: 'Don’t have an account?'
     // loggedIn: Boolean(session.currentUserId)
   };
 };
@@ -20,4 +22,4 @@ export const mdp = (dispatch) => {
   };
 };
 
-export default connect(msp, mdp)(SessionForm);
+export default withRouter(connect(msp, mdp)(SessionForm));
