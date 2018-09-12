@@ -1,3 +1,111 @@
 .homepage {
-  
+  background: url("https://cdngeneral.rentcafe.com/dmslivecafe/3/162865/_PRP0840.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&quality=85&scale=both&");
+  background-size: cover;
+  height: 650px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+
+  animation-fill-mode: forwards;
+
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 15px;
+}
+
+.top-left-navBar{
+  width: 100%;
+  position: relative;
+  display: flex;
+ }
+
+.nav-sign-up {
+  text-decoration: none;
+  float: right;
+  padding: 15px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #00000000 transparent;
+  color: white;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-host {
+  text-decoration: none;
+  float: right;
+  padding: 15px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #00000000 transparent;
+  color: white;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-help {
+  text-decoration: none;
+  float: right;
+  padding: 15px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #00000000 transparent;
+  color: white;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-earn-credit {
+  text-decoration: none;
+  float: right;
+  padding: 15px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #00000000 transparent;
+  color: white;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-log-in {
+  text-decoration: none;
+  float: right;
+  padding: 15px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid #00000000 transparent;
+  color: white;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
 }

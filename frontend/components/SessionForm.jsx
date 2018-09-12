@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 class SessionForm extends React.Component {
   constructor(props){
     super(props);
@@ -17,7 +18,6 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
-
   }
 
   renderErrors(){
@@ -41,31 +41,34 @@ class SessionForm extends React.Component {
       return (
       <div>
         <label>Email Address</label>
-        <input type='text' value={this.state.email} onChange={this.update('email')}></input>
+        <input type='text' placeholder='fill in your email address' value={this.state.email} onChange={this.update('email')}></input>
       </div>
       );
     }
     if (!this.props.currentUser) {
       return (
-      <div className='login-form'>
-        <h4 >{this.props.formType} or {this.props.navLink}</h4>
+      <div className='signup-form-container'>
+        <div className='signup-form'>
+        <h4 >{this.props.status_text} {this.props.navLink}</h4>
         <form onSubmit={this.handleSubmit}>
         <label>Username</label>
-        <input type='text' value={this.state.username} onChange={this.update('username')}></input>
+        <input type='text' placeholder='fill in your username' value={this.state.username} onChange={this.update('username')}></input>
         {this.props.formType === 'SIGN UP' ? email() : null }
-
         <label>Password</label>
-        <input type='text' value={this.state.password} onChange={this.update('password')}></input>
+        <input type='text' placeholder='fill in your password' value={this.state.password} onChange={this.update('password')}></input>
         <button>{this.props.formType}</button>
+        <Link to="/">Exit</Link>
       </form>
+      </div>
     </div>
-      );
-    } else{
+  );
+} else{
   return(
     <div></div>
-      )
-    }
-  }
+  )
+}
+}
+
 }
 
 export default withRouter(SessionForm);

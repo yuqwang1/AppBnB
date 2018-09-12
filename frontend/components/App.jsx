@@ -12,12 +12,14 @@ import SignupFormContainer from './SignupFormContainer';
 
 const App = () => (
   <div>
-    <header>
-    <h1>App BnB</h1>
-    <GreetingContainer />
-    </header>
-    <Route path="/login" component={LoginFormContainer} />
-    <Route path="/signup" component={SignupFormContainer} />
+    <div className='homepage'>
+      <header>
+      <h1 className='top-left-navBar'>Logo</h1>
+      <GreetingContainer />
+      </header>
+    </div>
+    <AuthRoute path="/login" component={LoginFormContainer} />
+    <AuthRoute path="/signup" component={SignupFormContainer} />
   </div>
 );
 

@@ -1,7 +1,7 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.login-form {
+.signup-form-container {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -11,4 +11,13 @@
   overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.72);
+}
+
+.signup-form {
+  border-radius: 6px;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
 }
