@@ -7,10 +7,12 @@ class SessionForm extends React.Component {
     this.state = {
       username: "",
       password: "",
-      email: ""
+      email: "",
+      error: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.props.clearErrors();
   }
 
 
@@ -21,10 +23,11 @@ class SessionForm extends React.Component {
   }
 
   renderErrors(){
+    // debugger
     return(
       <ul>
-        {this.props.errors.map((error) => {
-          return {error};
+        {this.props.errors.map((error,idx) => {
+          return <li key={idx}>{error}</li>;
         })}
       </ul>
     );
@@ -42,7 +45,7 @@ class SessionForm extends React.Component {
       <div>
         <label>Email Address</label>
         <input type='text' placeholder='fill in your email address' value={this.state.email} onChange={this.update('email')}></input>
-        <i class="far fa-envelope"></i>
+        <i className="far fa-envelope"></i>
       </div>
       );
     }
@@ -50,12 +53,12 @@ class SessionForm extends React.Component {
       return (
       <div className='signup-form-container'>
         <div className='signup-form'>
-
+          {this.renderErrors()}
           <form onSubmit={this.handleSubmit}>
             <div>
               <label>Username</label>
               <input type='text' placeholder='fill in your username' value={this.state.username} onChange={this.update('username')}></input>
-              <i class="far fa-user"></i>
+              <i className="far fa-user"></i>
             </div>
 
             {this.props.formType === 'SIGN UP' ? email() : null }
@@ -63,7 +66,7 @@ class SessionForm extends React.Component {
             <div>
               <label>Password</label>
               <input type='text' placeholder='fill in your password' value={this.state.password} onChange={this.update('password')}></input>
-              <i class="fas fa-unlock"></i>
+              <i className="fas fa-unlock"></i>
             </div>
             <button>{this.props.formType}</button>
             <Link to="/">Exit</Link>
