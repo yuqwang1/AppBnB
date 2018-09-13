@@ -13,9 +13,12 @@ import SignupFormContainer from './SignupFormContainer';
 const App = () => (
   <div>
     <div className='homepage'>
-      <header>
-      <h1 className='top-left-navBar'>Logo</h1>
-      <GreetingContainer />
+      <header className='navBar'>
+        <h1 className='top-left-navBar'>
+        <img className='logo' src='/Users/zhaoxinrui/Desktop/logo.png'>
+        </img>
+        </h1>
+        <GreetingContainer />
       </header>
     </div>
     <AuthRoute path="/login" component={LoginFormContainer} />

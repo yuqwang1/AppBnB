@@ -42,6 +42,7 @@ class SessionForm extends React.Component {
       <div>
         <label>Email Address</label>
         <input type='text' placeholder='fill in your email address' value={this.state.email} onChange={this.update('email')}></input>
+        <i class="far fa-envelope"></i>
       </div>
       );
     }
@@ -49,16 +50,25 @@ class SessionForm extends React.Component {
       return (
       <div className='signup-form-container'>
         <div className='signup-form'>
-        <h4 >{this.props.status_text} {this.props.navLink}</h4>
-        <form onSubmit={this.handleSubmit}>
-        <label>Username</label>
-        <input type='text' placeholder='fill in your username' value={this.state.username} onChange={this.update('username')}></input>
-        {this.props.formType === 'SIGN UP' ? email() : null }
-        <label>Password</label>
-        <input type='text' placeholder='fill in your password' value={this.state.password} onChange={this.update('password')}></input>
-        <button>{this.props.formType}</button>
-        <Link to="/">Exit</Link>
-      </form>
+
+          <form onSubmit={this.handleSubmit}>
+            <div>
+              <label>Username</label>
+              <input type='text' placeholder='fill in your username' value={this.state.username} onChange={this.update('username')}></input>
+              <i class="far fa-user"></i>
+            </div>
+
+            {this.props.formType === 'SIGN UP' ? email() : null }
+
+            <div>
+              <label>Password</label>
+              <input type='text' placeholder='fill in your password' value={this.state.password} onChange={this.update('password')}></input>
+              <i class="fas fa-unlock"></i>
+            </div>
+            <button>{this.props.formType}</button>
+            <Link to="/">Exit</Link>
+            <h4 >{this.props.status_text} {this.props.navLink}</h4>
+          </form>
       </div>
     </div>
   );
