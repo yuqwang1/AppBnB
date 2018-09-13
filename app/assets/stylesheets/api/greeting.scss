@@ -6,7 +6,6 @@
   background-attachment: fixed;
 
   animation-fill-mode: forwards;
-
 }
 
 .navBar {
@@ -26,9 +25,11 @@
   }
 
 .logo {
-  max-width: 60px;
-  max-height: 60px;
-  margin: auto;
+  max-width: 40px;
+  max-height: 40px;
+  position: relative;
+  left: 30px;
+  top: -20px;
 }
 
  .top-right-navBar{

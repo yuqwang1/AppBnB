@@ -15,7 +15,7 @@ const App = () => (
     <div className='homepage'>
       <header className='navBar'>
         <h1 className='top-left-navBar'>
-        <img className='logo' src='/Users/zhaoxinrui/Desktop/logo.png'>
+        <img className='logo' src={window.logo}>
         </img>
         </h1>
         <GreetingContainer />
