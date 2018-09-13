@@ -14,21 +14,23 @@ class Greeting extends React.Component {
   render(){
     if (this.props.currentUser) {
       return (
-        <div className='right-login-nav-bar'>
-          <h1>Welcome {this.props.currentUser.username}</h1>
+        <div className='.top-right-navBar'>
+
           <Link to='/' className='nav-host-loggedin'>Become a host</Link>
           <br></br>
-          <Link to='/' className='nav-earn-credit-loggedin'>Earn credit</Link>
+          <Link to='/' className='nav-messages-loggedin'>Messages</Link>
+          <br></br>
+          <Link to='/' className='nav-earn-credit-loggedin'>Credit</Link>
           <br></br>
           <Link to='/' className='nav-help-loggedin'>Help</Link>
           <br></br>
-          <button className='logout' onClick={this.actionLogout.bind(this)}>log out </button>
+          <Link to='/' className='logout' onClick={this.actionLogout.bind(this)}>Log out </Link>
       </div>
       );
     } else {
       return(
-        <div className='navBar'>
-          <div className='top-left-navBar'>
+        <div >
+          <div className='top-right-navBar'>
             <Link to='/' className='nav-host'>Become a host</Link>
             <br></br>
             <Link to='/' className='nav-earn-credit'>Earn credit</Link>
