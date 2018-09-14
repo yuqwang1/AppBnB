@@ -8,7 +8,7 @@ class Greeting extends React.Component {
   }
 
   actionLogout(){
-    this.props.logout().then(this.props.history.push('/'))
+    this.props.logout()
   }
 
   render(){
@@ -24,9 +24,9 @@ class Greeting extends React.Component {
           <br></br>
           <Link to='/' className='nav-help-loggedin'>Help</Link>
           <br></br>
-          <Link to='/' className='logout' onClick={this.actionLogout.bind(this)}>Log out </Link>
+          <div className='logout' onClick={this.props.logout}>Log out </div>
         </div>
-      </div>  
+      </div>
     );
   } else {
     return(
@@ -38,9 +38,9 @@ class Greeting extends React.Component {
           <br></br>
           <Link to='/' className='nav-help'>Help</Link>
           <br></br>
-          <Link to='/signup' className='nav-sign-up'>Sign Up</Link>
+          <div className='nav-sign-up' onClick={() => this.props.openModal('signup')}>Sign up</div>
           <br></br>
-          <Link to='/login' className='nav-log-in'>Log In</Link>
+          <div className='nav-log-in' onClick={() => this.props.openModal('login')}>Log in</div>
           <br></br>
         </div>
       </div>
@@ -48,5 +48,6 @@ class Greeting extends React.Component {
   }
 }
 }
+
 
 export default Greeting;

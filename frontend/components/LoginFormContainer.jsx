@@ -4,12 +4,14 @@ import SessionForm from './SessionForm';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { withRouter } from 'react-router-dom'
+import { openModal, closeModal } from '../actions/modal_actions'
 
 export const msp = ({ session, errors, entities: { users } }) => {
+  // debugger
   return {
     errors: errors.session,
     currentUser: users[session.currentUserId],
-    formType: 'LOG IN',
+    formType: 'Log in',
     navLink: <Link to='/signup'>Sign Up</Link>,
     status_text: 'Don’t have an account?'
     // loggedIn: Boolean(session.currentUserId)
@@ -19,7 +21,13 @@ export const msp = ({ session, errors, entities: { users } }) => {
 export const mdp = (dispatch) => {
   return {
     processForm: (user) => dispatch(login(user)),
-    clearErrors: () => dispatch(clearErrors())
+    otherForm: (
+      <button className='otherForm-button' onClick={() => dispatch(openModal('signup'))}>
+        Signup
+      </button>
+    ),
+    closeModal: () => dispatch(closeModal()),
+    clearErrors: () => dispatch(clearErrors()),
   };
 };
 

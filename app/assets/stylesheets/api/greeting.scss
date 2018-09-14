@@ -1,11 +1,7 @@
-.homepage {
+body {
   background: url("https://cdngeneral.rentcafe.com/dmslivecafe/3/162865/_PRP0840.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&quality=85&scale=both&");
   background-size: cover;
   height: 650px;
-  background-repeat: repeat;
-  background-attachment: fixed;
-
-  animation-fill-mode: forwards;
 }
 
 .navBar {
@@ -21,6 +17,7 @@
 .top-left-navBar{
   width: 60%;
   position: relative;
+  top: -10px;
   display: flex;
   }
 
@@ -35,6 +32,8 @@
  .top-right-navBar{
    width: 100%;
    position: relative;
+   left: 50px;
+   top: -10px;
    display: flex;
  }
 

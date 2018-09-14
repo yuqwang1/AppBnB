@@ -33,13 +33,13 @@ export const clearErrors = () => {
 
 // THUNK ACTION CREATORS
 export const login = (user) => {
-  debugger
+  // debugger
   return (dispatch) => {
     return SessionApiUtil.login(user).then( user => {
-      debugger
+      // debugger
       return dispatch(receiveCurrentUser(user));
     }, errors => {
-      debugger
+      // debugger
       return dispatch(receiveErrors(errors.responseJSON));
     });
   };
@@ -56,6 +56,7 @@ export const signup = (user) => {
 };
 
 export const logout = () => {
+  // debugger
   return dispatch => {
     return SessionApiUtil.logout().then( () => {
       return dispatch(logoutCurrentUser());

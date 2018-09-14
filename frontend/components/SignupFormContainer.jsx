@@ -4,11 +4,13 @@ import SessionForm from './SessionForm';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom'
+import { openModal, closeModal } from '../actions/modal_actions'
 
 export const msp = ({ session, errors, entities: { users } }) => {
+  // debugger
   return {
     errors: errors.session,
-    formType: 'SIGN UP',
+    formType: 'Sign up',
     currentUser: users[session.currentUserId],
     navLink: <Link to='/login'>Log In</Link>,
     status_text: 'Already have an App-bnb account?'
@@ -16,9 +18,16 @@ export const msp = ({ session, errors, entities: { users } }) => {
 };
 
 export const mdp = (dispatch) => {
+  // debugger
   return {
     processForm: (user) => dispatch(signup(user)),
-      clearErrors: () => dispatch(clearErrors())
+    otherForm: (
+      <button className='otherForm-button' onClick={() => dispatch(openModal('login'))}>
+        Login
+      </button>
+    ),
+    closeModal: () => dispatch(closeModal()),
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 
