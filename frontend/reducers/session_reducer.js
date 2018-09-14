@@ -5,8 +5,9 @@ let default_state = {
   currentUserId: null,
 };
 
-export const sessionReducer = (state = default_state, action) => {
+export const sessionReducer = (state = {currentUserId: null}, action) => {
   Object.freeze(state);
+    // debugger
     switch(action.type) {
       case RECEIVE_CURRENT_USER:
         return {
