@@ -16,15 +16,15 @@ class Greeting extends React.Component {
       return (
       <div>
         <div className='top-right-navBar'>
-          <Link to='/' className='nav-host-loggedin'>Become a host</Link>
+          <Link to='/' className='nav-bar-loggedin'>Become a host</Link>
           <br></br>
-          <Link to='/' className='nav-messages-loggedin'>Messages</Link>
+          <Link to='/' className='nav-bar-loggedin'>Messages</Link>
           <br></br>
-          <Link to='/' className='nav-earn-credit-loggedin'>Credit</Link>
+          <Link to='/' className='nav-bar-loggedin'>Credit</Link>
           <br></br>
-          <Link to='/' className='nav-help-loggedin'>Help</Link>
+          <Link to='/' className='nav-bar-loggedin'>Help</Link>
           <br></br>
-          <div className='logout' onClick={this.props.logout}>Log out </div>
+          <div className='nav-bar-loggedin' onClick={this.props.logout}>Log out </div>
         </div>
       </div>
     );
@@ -32,15 +32,15 @@ class Greeting extends React.Component {
     return(
       <div>
         <div className='top-right-navBar'>
-          <Link to='/' className='nav-host'>Become a host</Link>
+          <Link to='/' className='nav-sign-up'>Become a host</Link>
           <br></br>
-          <Link to='/' className='nav-earn-credit'>Earn credit</Link>
+          <Link to='/' className='nav-sign-up'>Earn credit</Link>
           <br></br>
-          <Link to='/' className='nav-help'>Help</Link>
+          <Link to='/' className='nav-sign-up'>Help</Link>
           <br></br>
           <div className='nav-sign-up' onClick={() => this.props.openModal('signup')}>Sign up</div>
           <br></br>
-          <div className='nav-log-in' onClick={() => this.props.openModal('login')}>Log in</div>
+          <div className='nav-sign-up' onClick={() => this.props.openModal('login')}>Log in</div>
           <br></br>
         </div>
       </div>

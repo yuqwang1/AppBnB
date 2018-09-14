@@ -1,5 +1,5 @@
 
-.nav-host-loggedin {
+.nav-bar-loggedin {
   text-decoration: none;
   float: right;
   padding: 15px;
@@ -16,70 +16,6 @@
   font-weight: 500;
 }
 
-.nav-help-loggedin {
-  text-decoration: none;
-  float: right;
-  padding: 15px;
-  font-family: sans-serif;
-  margin: 0 auto;
-  cursor: pointer;
-  position: relative;
-  text-align: center;
-  border-radius: 4px;
-  border: 2px solid #00000000 transparent;
-  color: white;
-  line-height: 1;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.nav-messages-loggedin{
-  text-decoration: none;
-  float: right;
-  padding: 15px;
-  font-family: sans-serif;
-  margin: 0 auto;
-  cursor: pointer;
-  position: relative;
-  text-align: center;
-  border-radius: 4px;
-  border: 2px solid #00000000 transparent;
-  color: white;
-  line-height: 1;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.nav-earn-credit-loggedin {
-  text-decoration: none;
-  float: right;
-  padding: 15px;
-  font-family: sans-serif;
-  margin: 0 auto;
-  cursor: pointer;
-  position: relative;
-  text-align: center;
-  border-radius: 4px;
-  border: 2px solid #00000000 transparent;
-  color: white;
-  line-height: 1;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.logout {
-  text-decoration: none;
-  float: right;
-  padding: 15px;
-  font-family: sans-serif;
-  margin: 0 auto;
-  cursor: pointer;
-  position: relative;
-  text-align: center;
-  border-radius: 4px;
-  border: 2px solid #00000000 transparent;
-  color: white;
-  line-height: 1;
-  font-size: 14px;
-  font-weight: 500;
-}
+// .nav-bar-loggedin:hover {
+//   text-decoration: underline;
+// }
