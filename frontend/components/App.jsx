@@ -1,5 +1,6 @@
 import React from 'react';
 import GreetingContainer from './GreetingContainer';
+import SpotSearchContainer from './SpotSearchContainer';
 import { Provider } from 'react-redux';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 import { Route,
@@ -22,6 +23,7 @@ const App = () => (
         </h1>
         <GreetingContainer />
       </header>
+      <Route exact path="/" component={ SpotSearchContainer } />
     </div>
   </div>
 );
