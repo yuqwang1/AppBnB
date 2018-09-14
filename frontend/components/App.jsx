@@ -9,10 +9,12 @@ import { Route,
   HashRouter } from 'react-router-dom';
 import LoginFormContainer from './LoginFormContainer';
 import SignupFormContainer from './SignupFormContainer';
+import Modal from './modal/modal';
 
 const App = () => (
   <div>
-    <div className='homepage'>
+    <Modal />
+    <div>
       <header className='navBar'>
         <h1 className='top-left-navBar'>
         <img className='logo' src={window.logo}>
@@ -21,8 +23,6 @@ const App = () => (
         <GreetingContainer />
       </header>
     </div>
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    <AuthRoute path="/signup" component={SignupFormContainer} />
   </div>
 );
 
