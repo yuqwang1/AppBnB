@@ -26,10 +26,10 @@
   position: relative;
   top: -10px;
   font-family: 'Roboto', sans-serif;
-  padding: 8px 18px 0;
+  padding: 12px 18px 0;
   left: -50px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .close-x {
@@ -42,7 +42,9 @@
   font-size: 40px;
   text-align: center;
   border: none;
+  cursor: pointer;
 }
+
 
 .signup-area {
   position: relative;
@@ -67,6 +69,7 @@
   font-weight: bold;
   padding: 7px 9px;
   font-family: 'Source Sans Pro', sans-serif;
+  cursor: pointer;
 }
 
 
@@ -76,7 +79,7 @@
   font-size: 16px;
   line-height: 22px;
   letter-spacing: normal;
-  color: rgb(72, 72, 72)
+  color: rgb(72, 72, 72);
 }
 
 .otherForm-button {
@@ -86,6 +89,7 @@
   font-size: 16px;
   line-height: 22px;
   font-family: 'Source Sans Pro', sans-serif;
+  cursor: pointer;
 }
 
 ul {
