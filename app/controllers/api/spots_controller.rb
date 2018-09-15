@@ -13,7 +13,7 @@ class Api::SpotsController < ApplicationController
   def update
     @spot = current_user.spots.find(param[:id])
     if @spot.update(spot_param)
-      render: show
+      render :show
     else
       render json: @spot.error.full_messages, status: 422
     end
