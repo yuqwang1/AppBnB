@@ -1,7 +1,7 @@
 import React from 'react'
 
 class SpotMap extends React.Component {
-  render(){
+  render () {
     return (
       <div className='map' ref='map'>
         SpotMap
@@ -10,5 +10,4 @@ class SpotMap extends React.Component {
   }
 }
 
-
-export default SpotMap;
+export default SpotMap

@@ -1,6 +1,7 @@
 import * as SpotsApiUtil from '../util/spot_api_util'
 
 export const RECEIVE_SPOTS = 'RECEIVE_SPOTS'
+export const RECEIVE_SPOT = 'RECEIVE_SPOT'
 
 export const receiveSpots = (spots) => {
   return {
@@ -9,10 +10,25 @@ export const receiveSpots = (spots) => {
   }
 }
 
-export const fetchSpots = () => {
+export const receiveSpot = (spot) => {
+  return {
+    type: 'RECEIVE_SPOT',
+    spot
+  }
+}
+
+export const fetchSpots = (filters) => {
   return dispatch => {
-    return SpotsApiUtil.fetchSpots().then(spots => {
-      return dispatch({ type: RECEIVE_SPOTS, spots })
+    return SpotsApiUtil.fetchSpots(filters).then(spots => {
+      return dispatch(receiveSpots(spots))
+    })
+  }
+}
+
+export const fetchSpot = (id) => {
+  return dispatch => {
+    return SpotsApiUtil.fetchSpot(id).then(spot => {
+      return dispatch(receiveSpot(spot))
     })
   }
 }
