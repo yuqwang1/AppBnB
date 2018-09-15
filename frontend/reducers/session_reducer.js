@@ -1,21 +1,20 @@
-import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions'
 
+let DefaultState = {
+  currentUserId: null
+}
 
-let default_state = {
-  currentUserId: null,
-};
-
-export const sessionReducer = (state = {currentUserId: null}, action) => {
-  Object.freeze(state);
-    // debugger
-    switch(action.type) {
-      case RECEIVE_CURRENT_USER:
-        return {
-          currentUserId: action.currentUser.id
-        };
-      case LOGOUT_CURRENT_USER:
-        return default_state;
-      default:
-        return state;
-    }
-  };
+export const sessionReducer = (state = { currentUserId: null }, action) => {
+  Object.freeze(state)
+  // debugger
+  switch (action.type) {
+    case RECEIVE_CURRENT_USER:
+      return {
+        currentUserId: action.currentUser.id
+      }
+    case LOGOUT_CURRENT_USER:
+      return DefaultState
+    default:
+      return state
+  }
+}

@@ -1,11 +1,11 @@
-import { RECEIVE_SPOTS } from '../actions/spot_actions';
+import { RECEIVE_SPOTS } from '../actions/spot_actions'
 
 export const spotsReducer = (state = {}, action) => {
-  Object.freeze(state);
+  Object.freeze(state)
   switch (action.type) {
     case RECEIVE_SPOTS:
-      return action.spots;
+      return action.spots
     default:
-      return state;
-    }
+      return state
+  }
 }

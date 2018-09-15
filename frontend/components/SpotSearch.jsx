@@ -1,15 +1,14 @@
-import SpotMap from './SpotMap';
-import SpotIndex from './SpotIndex';
-import React from 'react';
+import SpotMap from './SpotMap'
+import SpotIndex from './SpotIndex'
+import React from 'react'
 
 class SpotSearch extends React.Component {
-  render(){
+  render () {
     return (
       <div>
         <div>
           <SpotMap/>
         </div>
-
         <div>
           <SpotIndex/>
         </div>
@@ -19,4 +18,4 @@ class SpotSearch extends React.Component {
   }
 }
 
-export default SpotSearch;
+export default SpotSearch
