@@ -1,9 +1,8 @@
-import { connect } from 'react-redux';
-import { signup, clearErrors } from '../actions/session_actions';
-import SessionForm from './SessionForm';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { signup, clearErrors } from '../actions/session_actions'
+import SessionForm from './SessionForm'
+import React from 'react'
+import { Link, withRouter } from 'react-router-dom'
 import { openModal, closeModal } from '../actions/modal_actions'
 
 export const msp = ({ session, errors, entities: { users } }) => {
@@ -14,8 +13,8 @@ export const msp = ({ session, errors, entities: { users } }) => {
     currentUser: users[session.currentUserId],
     navLink: <Link to='/login'>Log In</Link>,
     status_text: 'Already have an App-bnb account?'
-  };
-};
+  }
+}
 
 export const mdp = (dispatch) => {
   // debugger
@@ -28,7 +27,7 @@ export const mdp = (dispatch) => {
     ),
     closeModal: () => dispatch(closeModal()),
     clearErrors: () => dispatch(clearErrors())
-  };
-};
+  }
+}
 
-export default withRouter(connect(msp, mdp)(SessionForm));
+export default withRouter(connect(msp, mdp)(SessionForm))

@@ -1,12 +1,12 @@
-import React from 'react';
-import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { withRouter } from 'react-router'
+// import { Link } from 'react-router-dom'
 class SpotIndex extends React.Component {
-  componentDidMount(){
+  componentDidMount () {
     // this.props.fetchSpots();
   }
 
-  render(){
+  render () {
     return (
       <div>
         <ul>
@@ -16,4 +16,4 @@ class SpotIndex extends React.Component {
   }
 }
 
-export default withRouter(SpotIndex);
+export default withRouter(SpotIndex)

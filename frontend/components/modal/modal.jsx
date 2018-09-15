@@ -1,23 +1,23 @@
-import React from 'react';
-import { closeModal } from '../../actions/modal_actions';
-import { connect } from 'react-redux';
-import LoginFormContainer from '../LoginFormContainer';
-import SignupFormContainer from '../SignupFormContainer';
+import React from 'react'
+import { closeModal } from '../../actions/modal_actions'
+import { connect } from 'react-redux'
+import LoginFormContainer from '../LoginFormContainer'
+import SignupFormContainer from '../SignupFormContainer'
 
-function Modal({modal, closeModal}) {
+function Modal ({ modal, closeModal }) {
   if (!modal) {
-    return null;
+    return null
   }
-  let component;
+  let component
   switch (modal) {
     case 'login':
-      component = <LoginFormContainer />;
-      break;
+      component = <LoginFormContainer />
+      break
     case 'signup':
-      component = <SignupFormContainer />;
-      break;
+      component = <SignupFormContainer />
+      break
     default:
-      return null;
+      return null
   }
   return (
     <div className="modal-background" onClick={closeModal}>
@@ -25,19 +25,19 @@ function Modal({modal, closeModal}) {
         { component }
       </div>
     </div>
-  );
+  )
 }
 
 const mapStateToProps = state => {
   return {
     modal: state.ui.modal
-  };
-};
+  }
+}
 
 const mapDispatchToProps = dispatch => {
   return {
     closeModal: () => dispatch(closeModal())
-  };
-};
+  }
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+export default connect(mapStateToProps, mapDispatchToProps)(Modal)
