@@ -17,7 +17,7 @@ class Spot < ApplicationRecord
 
 
 
-  def self.in_bound
+  def self.in_bound(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
       .where("lat > ?", bounds[:southWest][:lat])
       .where("lng < ?", bounds[:northEast][:lng])
