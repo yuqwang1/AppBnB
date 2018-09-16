@@ -1,6 +1,7 @@
-import SpotMap from './SpotMap'
-import SpotIndex from './SpotIndex'
-import React from 'react'
+import SpotMap from './SpotMap';
+import SpotIndex from './SpotIndex';
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 const SpotSearch = ({ spots, updateFilter }) => {
   return (
