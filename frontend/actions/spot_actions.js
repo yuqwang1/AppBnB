@@ -27,7 +27,15 @@ export const fetchSpots = (filters) => {
 
 export const fetchSpot = (id) => {
   return dispatch => {
-    return SpotsApiUtil.fetchSpot(id).then(spot => {
+    return SpotsApiUtil.fetchSpot(id).then(payload => {
+      return dispatch(receiveSpot(payload))
+    })
+  }
+}
+
+export const createSpot = (spot) => {
+  return dispatch => {
+    return SpotsApiUtil.createSpot(spot).then(spot => {
       return dispatch(receiveSpot(spot))
     })
   }

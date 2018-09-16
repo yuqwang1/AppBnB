@@ -1,19 +1,20 @@
-import { connect } from 'react-redux'
-import SpotSearch from './SpotSearch'
-// import React from 'react'
+import { connect } from 'react-redux';
+import SpotSearch from './SpotSearch';
+import React from 'react'
 // import { Link,withRouter } from 'react-router-dom'
-import { fetchSpots } from '../actions/spot_actions'
+import { fetchSpots } from '../actions/spot_actions';
+import { updateFilter } from '../actions/filter_actions';
 
 export const msp = (state) => {
   return {
     spots: Object.values(state.entities.spots)
-  }
+  };
 }
 
 export const mdp = (dispatch) => {
   return {
-    fetchSpots: () => dispatch(fetchSpots())
-  }
+    updateFilter: (filter, value) => dispatch(updateFilter(filter,value))
+  };
 }
 
 export default connect(msp, mdp)(SpotSearch)

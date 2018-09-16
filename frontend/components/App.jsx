@@ -17,9 +17,9 @@ const App = () => (
     <Modal />
     <div>
       <header className='navBar'>
-        <h1 className='top-left-navBar'>
+        <a href='/' className='top-left-navBar'>
           <img className='logo' src={window.logo}></img>
-        </h1>
+        </a>
         <GreetingContainer />
       </header>
       <Route exact path="/" component={ SpotSearchContainer } />
