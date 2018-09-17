@@ -11,7 +11,6 @@ export const msp = ({ session, errors, entities: { users } }) => {
     errors: errors.session,
     formType: 'Sign up',
     currentUser: users[session.currentUserId],
-    navLink: <Link to='/login'>Log In</Link>,
     status_text: 'Already have an App-bnb account?'
   }
 }

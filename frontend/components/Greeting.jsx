@@ -1,14 +1,12 @@
 import React from 'react'
+import SearchBarContainer from './searchBar/SearchBarContainer'
 // import { Link } from 'react-router-dom'
 
 class Greeting extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
-
   actionLogout () {
     this.props.logout()
   }
+
 
   render () {
     if (this.props.currentUser) {
@@ -25,6 +23,7 @@ class Greeting extends React.Component {
             <br></br>
             <button className='nav-bar-loggedin' onClick={this.props.logout}>Log out </button>
           </div>
+          <SearchBarContainer/>
         </div>
       )
     } else {
@@ -42,6 +41,7 @@ class Greeting extends React.Component {
             <button className='nav-sign-up' onClick={() => this.props.openModal('login')}>Log in</button>
             <br></br>
           </div>
+          <SearchBarContainer/>
         </div>
       )
     }

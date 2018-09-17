@@ -1,7 +1,13 @@
 import merge from 'lodash/merge'
 import { UPDATE_FILTER } from '../actions/filter_actions'
 
-const filterReducer = (state = {}, action) => {
+const defaultFilters = Object.freeze({
+  bounds: {},
+  minGuest: 1,
+  maxGuest: 16
+});
+
+const filterReducer = (state = defaultFilters, action) => {
   Object.freeze(state)
   switch (action.type) {
     case UPDATE_FILTER:

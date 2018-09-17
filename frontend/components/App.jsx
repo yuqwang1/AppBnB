@@ -15,14 +15,16 @@ import Modal from './modal/modal'
 const App = () => (
   <div>
     <Modal />
-    <div>
+    <div className='homepage'>
       <header className='navBar'>
-        <a href='/' className='top-left-navBar'>
-          <img className='logo' src={window.logo}></img>
-        </a>
-        <GreetingContainer />
+        <div className='top-left-navBar'>
+          <a herf='/'>
+            <img className='logo' src={window.logo}/>
+          </a>
+        </div>
       </header>
-      <Route exact path="/" component={ SpotSearchContainer } />
+      <Route exact path='/' component={ GreetingContainer } />
+      <Route exact path='/spots' component={ SpotSearchContainer } />
     </div>
   </div>
 )

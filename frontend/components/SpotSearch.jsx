@@ -1,11 +1,11 @@
 import SpotMap from './SpotMap';
 import SpotIndex from './SpotIndex';
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+// import FilterForm from './filter_form';
 
 const SpotSearch = ({ spots, updateFilter }) => {
   return (
-    <div>
+    <div className='map-page'>
       <div>
         <SpotIndex spots={spots}/>
       </div>
@@ -13,6 +13,7 @@ const SpotSearch = ({ spots, updateFilter }) => {
       <div>
         <SpotMap spots={spots} updateFilter={updateFilter}/>
       </div>
+
     </div>
   )
 }

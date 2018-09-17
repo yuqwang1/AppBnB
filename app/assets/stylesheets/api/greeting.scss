@@ -1,10 +1,16 @@
 body {
+  margin: 0px;
+}
+
+.homepage {
   background: url("https://cdngeneral.rentcafe.com/dmslivecafe/3/162865/_PRP0840.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&quality=85&scale=both&");
   background-size: cover;
   height: 650px;
+  height: 100vh;
 }
 
 .navBar {
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -31,10 +37,10 @@ body {
 }
 
  .top-right-navBar{
-   width: 100%;
+   width: 40%;
    position: relative;
-   left: 50px;
-   top: -10px;
+   left: 750px;
+   top: -70px;
    display: flex;
  }
 
