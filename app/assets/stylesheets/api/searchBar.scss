@@ -2,21 +2,27 @@
   font-weight: 600;
   font-size: 1.75em;
   text-shadow: 1px 1px 40px rgba(22,23,31,0.4);
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  margin: auto;
+  position: relative;
+  left: 200px;
 }
 
 .search-form {
   display: flex;
-  width: 820px;
-  outline: none;
-  height: 70px;
-  border: none;
-  margin-top: 20px;
-  font-size: 1.2em;
-  border-radius: 4px;
-  box-shadow: 1px 1px 40px rgba(22,23,31,0.4);
-  padding: 12px;
-  padding-left: 55px;
-  color: #484848;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 65%;
+    max-width: 500px;
+    margin-top: 20px;
+    border-radius: 5px;
+    s: 5px;
+    background-color: white;
+    position: relative;
+    left: 200px;
+
 }
 
 .search-form input {
@@ -60,23 +66,32 @@
   display: block;
   width: 600px;
   position: relative;
-    top: 295px;
+  top: 325px;
+  left: 100px;
 }
 
 #explore {
-  font-weight: 500;
-  font-size: 28px;
+  position: relative;
+  left: 39px;
+  top: 8px;
+  font-weight: 800;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #484848;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   width: 100%;
   letter-spacing: 0.03em;
 }
 
 .manhattan {
   display: flex;
+  width: 80%;
+  color: #484848;
 }
 
 .TriBeCa {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
   width: 240px;
   height: 80px;
   position: relative;
@@ -88,6 +103,8 @@
 }
 
 .TriBeCa p {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
   margin-left: 10px;
   letter-spacing: 0.03em;
 }
@@ -121,6 +138,9 @@
 }
 
 .MagicManhattan {
+  margin-left: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
   width: 240px;
   height: 80px;
   position: relative;
@@ -132,6 +152,8 @@
 }
 
 .MagicManhattan p {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
   margin-left: 10px;
   letter-spacing: 0.03em;
 }
@@ -165,6 +187,9 @@
 }
 
 .ManhattanLux {
+  margin-left: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
   width: 240px;
   height: 80px;
   position: relative;
@@ -176,6 +201,8 @@
 }
 
 .ManhattanLux p {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
   margin-left: 10px;
   letter-spacing: 0.03em;
 }
@@ -187,7 +214,7 @@
 }
 
 .ManhattanLux:after {
-  content: 'Loft.Like.Love.Lots.Look';
+  content: 'Loft Like Love Lots Look';
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
@@ -208,51 +235,10 @@
   opacity: 2;
 }
 
-.MagicManhattan {
-  width: 240px;
-  height: 80px;
-  position: relative;
-  display: flex;
-  border: 1px solid rgb(240, 238, 238);
-  border-radius: 3px;
-  align-items: center;
-  box-shadow: 0 1px 1px #D3D3D3;
-}
-
-.MagicManhattan p {
-  margin-left: 10px;
-  letter-spacing: 0.03em;
-}
-
-.MagicManhattan img {
-  width: 45%;
-  height: 100%;
-  border-radius: 2px;
-}
-
-.MagicManhattan:after {
-  content: 'Magic Manhattan';
-  color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 101%; height: 101%;
-  top:0; left:0;
-  background:rgba(0,0,0,0.7);
-  opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  letter-spacing: 0.05em;
-}
-
-.MagicManhattan:hover:after {
-  opacity: 2;
-}
-
 .explore-all {
+  margin-left: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
   width: 240px;
   height: 80px;
   position: relative;
@@ -264,6 +250,8 @@
 }
 
 .explore-all p {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
   margin-left: 10px;
   letter-spacing: 0.03em;
 }

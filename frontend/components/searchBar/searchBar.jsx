@@ -47,7 +47,7 @@ class SearchBar extends React.Component {
           <input
             className="search-form-input"
             type="text"
-            placeholder="Discover adventure..."
+            placeholder="Anywhere Manhattan"
             value={this.state.search}
             onChange={this.updateForm('search')}
           />
@@ -74,7 +74,7 @@ class SearchBar extends React.Component {
             <Link to="/spots/?search=LoftLikeLove">
               <li className="ManhattanLux ">
                 <img src="https://a0.muscache.com/im/pictures/12426057/2292b61c_original.jpg?aki_policy=xx_large" />
-                <p>Loft.Like.Love.Lots.Look</p>
+                <p>Loft Like Love Lots Look</p>
               </li>
             </Link>
 

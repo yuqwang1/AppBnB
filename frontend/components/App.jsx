@@ -24,8 +24,8 @@ const App = () => (
         </div>
       </header>
       <Route exact path='/' component={ GreetingContainer } />
-      <Route exact path='/spots' component={ SpotSearchContainer } />
     </div>
+    <Route exact path='/spots' component={ SpotSearchContainer } />
   </div>
 )
 
