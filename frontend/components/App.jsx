@@ -15,17 +15,8 @@ import Modal from './modal/modal'
 const App = () => (
   <div>
     <Modal />
-    <div className='homepage'>
-      <header className='navBar'>
-        <div className='top-left-navBar'>
-          <a herf='/'>
-            <img className='logo' src={window.logo}/>
-          </a>
-        </div>
-      </header>
-      <Route exact path='/' component={ GreetingContainer } />
-    </div>
-    <Route exact path='/spots' component={ SpotSearchContainer } />
+    <Route path='/' component={ GreetingContainer } />
+    <Route path='/spots' component={ SpotSearchContainer } />
   </div>
 )
 

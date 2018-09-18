@@ -5,15 +5,13 @@ import React from 'react';
 
 const SpotSearch = ({ spots, updateFilter }) => {
   return (
-    <div className='map-page'>
-      <div>
+    <div>
+      <div className='spot-img-list'>
         <SpotIndex spots={spots}/>
       </div>
-
-      <div>
+      <div className='map-page'>
         <SpotMap spots={spots} updateFilter={updateFilter}/>
       </div>
-
     </div>
   )
 }

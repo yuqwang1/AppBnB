@@ -15,6 +15,12 @@
  */
 
 .map {
-  height: 500px;
-  width: 500px;
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 80px;
+  margin: 24px;
+  width: 34%;
+  min-width: 360px;
+  height: 84%;
 }

@@ -4,14 +4,32 @@
   background-color: transparent;
   border: none;
   float: right;
-  padding: 15px;
   font-family: sans-serif;
-  margin: 0 auto;
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative;
+  left: 780px;
+  text-align: center;
+  border-radius: 0px;
+  color: white;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.nav-bar-loggedin-black {
+  height: 60px;
+  width: 80px;
+  background-color: transparent;
+  border: none;
+  float: right;
+  font-family: sans-serif;
   cursor: pointer;
   position: relative;
   text-align: center;
   border-radius: 0px;
-  color: white;
+  color: black;
   line-height: 1;
   font-size: 14px;
   font-weight: 500;

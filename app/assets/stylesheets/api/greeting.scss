@@ -10,22 +10,20 @@ body {
 }
 
 .navBar {
+  // overflow: hidden;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  position: relative;
+  position: fixed;
+  top: 0px;
   width: 100%;
   padding-top: 19px;
   padding-bottom: 15px;
+  z-index: 500;
+  // height: 120px;
 }
 
-.top-left-navBar{
-  width: 60%;
-  position: relative;
-  top: -10px;
-  display: flex;
-  }
 
 .logo {
   max-width: 40px;
@@ -36,15 +34,14 @@ body {
   cursor: pointer;
 }
 
- .top-right-navBar{
-   width: 40%;
-   position: relative;
-   left: 750px;
-   top: -70px;
-   display: flex;
- }
+.session-form {
+  display: flex;
+  width: 200px;
+  // margin-left: 10px;
+}
 
 .nav-sign-up {
+  color: black;
   height: 60px;
   background-color: transparent;
   border: none;
@@ -56,7 +53,6 @@ body {
   position: relative;
   text-align: center;
   border-radius: 0px;
-  color: white;
   line-height: 1;
   font-size: 14px;
   font-weight: 500;

@@ -4,6 +4,7 @@ export const RECEIVE_SPOTS = 'RECEIVE_SPOTS'
 export const RECEIVE_SPOT = 'RECEIVE_SPOT'
 
 export const receiveSpots = (spots) => {
+  // debugger
   return {
     type: 'RECEIVE_SPOTS',
     spots
@@ -17,9 +18,12 @@ export const receiveSpot = (spot) => {
   }
 }
 
-export const fetchSpots = (filters) => {
+export const fetchSpots = (data) => {
+  // debugger
   return dispatch => {
-    return SpotsApiUtil.fetchSpots(filters).then(spots => {
+    // debugger
+    return SpotsApiUtil.fetchSpots(data).then(spots => {
+      // debugger
       return dispatch(receiveSpots(spots))
     })
   }

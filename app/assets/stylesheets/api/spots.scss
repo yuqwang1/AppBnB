@@ -1,3 +1,32 @@
 // Place all the styles related to the api/spots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.spot-img {
+  zoom: 15%;
+}
+
+.spot-img-list {
+  // margin-top: 30px;
+  // display: block;
+  // position: relative;
+  width: 66%;
+  margin-top: 200px;
+  // padding-right: 24px;
+  // top: 150px;
+  // left: 0;
+  // right: auto;
+  // box-sizing: border-box;
+  // overflow-y:scroll;
+  // overflow-y:auto;
+}
+
+.map-page {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 80px;
+  margin: 24px;
+  width: 34%;
+  min-width: 360px;
+  height: 84%;
+}

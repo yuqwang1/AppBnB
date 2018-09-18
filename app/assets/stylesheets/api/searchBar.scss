@@ -6,23 +6,29 @@
   color: white;
   margin: auto;
   position: relative;
-  left: 200px;
+  left: -150px;
+  max-width: 500px;
+}
+
+.searchBar {
+  position: relative;
+  top: -10px;
+  width: 65%;
+  left: -175px
 }
 
 .search-form {
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    width: 65%;
-    max-width: 500px;
-    margin-top: 20px;
-    border-radius: 5px;
-    s: 5px;
-    background-color: white;
-    position: relative;
-    left: 200px;
-
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 500px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: white;
+  height: 20px;
+  position: relative;
+  left: 240px;
 }
 
 .search-form input {
@@ -66,7 +72,7 @@
   display: block;
   width: 600px;
   position: relative;
-  top: 325px;
+  top: 400px;
   left: 100px;
 }
 
@@ -104,6 +110,8 @@
 }
 
 .TriBeCa p {
+  font-weight: 1000;
+  color: black;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   margin-left: 10px;
@@ -153,6 +161,8 @@
 }
 
 .MagicManhattan p {
+  font-weight: 1000;
+  color: black;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   margin-left: 10px;
@@ -202,6 +212,8 @@
 }
 
 .ManhattanLux p {
+  font-weight: 1000;
+  color: black;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   margin-left: 10px;
@@ -251,6 +263,8 @@
 }
 
 .explore-all p {
+  font-weight: 1000;
+  color: black;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   margin-left: 10px;
@@ -264,7 +278,7 @@
 }
 
 .explore-all:after {
-  content: 'Loft.Like.Love.Lots.Look';
+  content: 'Explore All';
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;

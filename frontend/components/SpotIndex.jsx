@@ -1,19 +1,41 @@
 import React from 'react'
-import { withRouter } from 'react-router'
-// import { Link } from 'react-router-dom'
+import SpotIndexItem from './SpotIndexItem'
+import { withRouter } from 'react-router-dom'
 class SpotIndex extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {};
+  }
   componentDidMount () {
-    // this.props.fetchSpots();
+
   }
 
-  render () {
+  emptyPage () {
     return (
       <div>
-        <ul>
-        </ul>
+        <h1>No Matched Result, Please Try Again</h1>
       </div>
     )
   }
+
+  render () {
+    if (this.props.spots.length === 0) {
+      return (
+        this.emptyPage.bind(this)()
+      )
+    } else {
+      return (
+        <div >
+          <h1>Explore Airbnb</h1>
+          <div >
+            {this.props.spots.map(spot =>
+              <SpotIndexItem spot={spot} key={spot.id} />
+            )}
+          </div>
+        </div>
+      )
+    }
+  }
 }
 
-export default withRouter(SpotIndex)
+export default withRouter(SpotIndex);

@@ -20,11 +20,13 @@ class Api::SpotsController < ApplicationController
   end
 
   def index
-    if bounds
-      @spots = Spot.in_bounds(bounds)
-    else
-      @spots = Spot.all
-    end
+    if params[:title]
+    query_string = "%#{params[:title]}%"
+    final_query_string = query_string.downcase
+    @spots = Spot.where('LOWER(title) LIKE ? OR LOWER(details) LIKE ?', final_query_string, final_query_string)
+      else
+    @spots = Spot.all
+  end
   end
 
   private
