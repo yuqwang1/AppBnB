@@ -6,10 +6,10 @@ class Spot < ApplicationRecord
     primary_key: :id,
     foreign_key: :host_id
 
-  # has_many :bookings,
-  #   class_name: 'Booking',
-  #   primary_key: :id,
-  #   foreign_key: :spot_id
+  has_many :bookings,
+    class_name: 'Booking',
+    primary_key: :id,
+    foreign_key: :spot_id
   #
   # has_many :reviews,
   #   through: :bookings,

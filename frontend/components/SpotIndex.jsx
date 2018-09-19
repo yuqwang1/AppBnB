@@ -12,7 +12,7 @@ class SpotIndex extends React.Component {
 
   emptyPage () {
     return (
-      <div>
+      <div className='spot-error'>
         <h1>No Matched Result, Please Try Again</h1>
       </div>
     )
@@ -28,11 +28,10 @@ class SpotIndex extends React.Component {
         <div>
           <h1 className='spot-list-title'>Explore Airbnb</h1>
           <div className='spot-img-list'>
-            <div className='img-box'>
-              {this.props.spots.map(spot =>
-                <SpotIndexItem spot={spot} key={spot.id} />
-              )}
-            </div>
+            {this.props.spots.map(spot =>
+              <SpotIndexItem spot={spot} key={spot.id} />
+            )}
+
           </div>
         </div>
       )

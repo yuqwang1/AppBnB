@@ -2,9 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .spot-img {
-  zoom: 22%;
+  zoom: 25%;
 }
 
+.spot-error {
+  position: relative;
+  top: 200px;
+  left: 50px;
+}
 .spot-list-title {
   position: relative;
   top: 150px;
@@ -15,17 +20,16 @@
 
 .spot-img-list {
   // margin-top: 30px;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   // position: relative;
   width: 66%;
   margin-top: 200px;
-  // padding-right: 24px;
-  // top: 150px;
-  // left: 0;
-  // right: auto;
-  // box-sizing: border-box;
-  // overflow-y:scroll;
-  // overflow-y:auto;
+  position: relative;
+  left: 20px;
+  top: -25px;
+
 }
 
 .map {
@@ -43,10 +47,9 @@
   float: left;
     box-sizing: border-box;
     color: #484848;
-    max-width: 33%;
-    padding: 8px;
-    padding-left: 0;
-    min-width: 280px;
+    // max-width: 33%;
+    padding: 12px;
+    padding-top: 0px;
     display: block;
     vertical-align: top;
   // width: 100%;
@@ -57,6 +60,47 @@
 }
 
 .spot-title {
-  max-width: 200px;
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  font-family: 'Roboto', sans-serif;
+  color: #484848;
+  font-weight: 800;
+
+  max-width: 300px;
+}
+
+.spot-guest{
+  margin: 0px ;
+  word-wrap: break-word ;
+  font-size: 14px ;
+  line-height: 18px ;
+  letter-spacing: normal ;
+  font-family: 'Roboto', sans-serif;
+  color: #484848 ;
+  font-weight: normal ;
+  display: inline ;
   text-align: center;
+  text-decoration: none
+}
+
+.spot-cost {
+  margin: 0px ;
+  word-wrap: break-word ;
+  font-size: 14px ;
+  line-height: 18px ;
+  letter-spacing: normal ;
+  font-family: 'Roboto', sans-serif;
+  color: #484848 ;
+  font-weight: normal ;
+  display: inline ;
+  text-align: center;
+  text-decoration: none
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
 }
