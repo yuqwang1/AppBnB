@@ -27,15 +27,7 @@ class Api::BookingsController < ApplicationController
   def update
   end
 
-  def valid_booking?(check_in, check_out)
-    if check_in > check_out
-      return ['Check in date are greater than check out date, please try again']
-    elsif check_in == check_out
-      return ['Check in and check out can not be the same date']
-    else
-      return true
-    end
-  end
+  
 
   private
   def booking_parmas
