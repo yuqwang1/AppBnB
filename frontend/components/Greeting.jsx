@@ -15,6 +15,7 @@ class Greeting extends React.Component {
       } else {
         return (
           <button className='nav-bar-loggedin-black' onClick={this.props.logout}>Log out </button>
+
         )
       }
     } else {
@@ -41,7 +42,7 @@ class Greeting extends React.Component {
     const loggedin = this.props.currentUser;
     return (
       <div className='homepage'>
-        <header className='navBar'>
+        <header className='navBar-homepage'>
           <a href='/'>
             <img className='logo' src={window.logo}/>
           </a>
@@ -53,7 +54,10 @@ class Greeting extends React.Component {
           <button className='nav-bar-loggedin'>Help</button>
           { this.sessionButton.bind(this)() }
         </header>
-        <SearchBarContainer/>
+        <div className='title'>Book unique homes and experiences</div>
+        <div className='searchBar-homepage'>
+          <SearchBarContainer/>
+        </div>
 
         <div className="explore-section">
           <p id="explore">Explore AppBnb</p>
@@ -94,24 +98,22 @@ class Greeting extends React.Component {
   viewPage () {
     const loggedin = this.props.currentUser;
     return (
-      <div>
-        <header className='navBar'>
-          <a href='/'>
-            <img className='logo' src={window.logo}/>
-          </a>
-          <div className= 'searchBar'>
-            <SearchBarContainer/>
-          </div>
+      <header className='navBar'>
+        <a href='/'>
+          <img className='logo' src={window.logo}/>
+        </a>
+        <div className= 'searchBar'>
+          <SearchBarContainer/>
+        </div>
 
-          <button className='nav-sign-up'>Become a host</button>
-          {
-            loggedin ? <button className='nav-sign-up'>Messages</button> : null
-          }
-          <button className='nav-sign-up'>Credit</button>
-          <button className='nav-sign-up'>Help</button>
-          { this.sessionButton.bind(this)() }
-        </header>
-      </div>
+        <button className='nav-sign-up'>Become a host</button>
+        {
+          loggedin ? <button className='nav-sign-up'>Messages</button> : null
+        }
+        <button className='nav-sign-up'>Credit</button>
+        <button className='nav-sign-up'>Help</button>
+        { this.sessionButton.bind(this)() }
+      </header>
     )
   }
 

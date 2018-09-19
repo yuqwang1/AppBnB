@@ -46,7 +46,6 @@ class SearchBar extends React.Component {
   render () {
     return (
       <div>
-        { this.props.location.pathname === '/' ? <div className='title'>Book unique homes and experiences</div> : null}
         <form className="search-form" onSubmit={this.handleSubmit}>
           <img className='search-icon' src="https://d30y9cdsu7xlg0.cloudfront.net/png/15028-200.png" />
           <input

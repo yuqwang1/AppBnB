@@ -6,10 +6,8 @@ import React from 'react';
 const SpotSearch = ({ spots, updateFilter }) => {
   return (
     <div>
-      <div className='spot-img-list'>
-        <SpotIndex spots={spots}/>
-      </div>
-      <div className='map-page'>
+      <SpotIndex spots={spots}/>
+      <div className='map'>
         <SpotMap spots={spots} updateFilter={updateFilter}/>
       </div>
     </div>

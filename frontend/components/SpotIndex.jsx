@@ -25,12 +25,14 @@ class SpotIndex extends React.Component {
       )
     } else {
       return (
-        <div >
-          <h1>Explore Airbnb</h1>
-          <div >
-            {this.props.spots.map(spot =>
-              <SpotIndexItem spot={spot} key={spot.id} />
-            )}
+        <div>
+          <h1 className='spot-list-title'>Explore Airbnb</h1>
+          <div className='spot-img-list'>
+            <div className='img-box'>
+              {this.props.spots.map(spot =>
+                <SpotIndexItem spot={spot} key={spot.id} />
+              )}
+            </div>
           </div>
         </div>
       )
