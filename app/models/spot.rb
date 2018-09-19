@@ -10,17 +10,24 @@ class Spot < ApplicationRecord
     class_name: 'Booking',
     primary_key: :id,
     foreign_key: :spot_id
-  #
-  # has_many :reviews,
-  #   through: :bookings,
-  #   source: :review
 
+  has_many :reviews,
+    class_name: 'Review',
+    primary_key: :id,
+    foreign_key: :spot_id
 
+  has_many :reviewers,
+    through: :reviews,
+    source: :author
 
-  def self.in_bound(bounds)
-    self.where("lat < ?", bounds[:northEast][:lat])
-      .where("lat > ?", bounds[:southWest][:lat])
-      .where("lng < ?", bounds[:northEast][:lng])
-      .where("lng > ?", bounds[:southWest][:lng])
-  end
+  has_many :bookers,
+    through: :bookings,
+    source: :user
+
+  # def self.in_bound(bounds)
+  #   self.where("lat < ?", bounds[:northEast][:lat])
+  #     .where("lat > ?", bounds[:southWest][:lat])
+  #     .where("lng < ?", bounds[:northEast][:lng])
+  #     .where("lng > ?", bounds[:southWest][:lng])
+  # end
 end
