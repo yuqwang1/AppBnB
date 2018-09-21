@@ -1,5 +1,5 @@
 class Api::BookingsController < ApplicationController
-  before_action :require_login
+  before_action :require_login, only: [:create]
 
   def create
     @booking = Booking.new(booking_params)
