@@ -1,13 +1,15 @@
 import React from 'react'
 import SpotIndexItem from './SpotIndexItem'
 import { withRouter } from 'react-router-dom'
+import { fetchSpots } from '../actions/spot_actions';
+import { connect } from 'react-redux';
 class SpotIndex extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
   }
   componentDidMount () {
-
+    this.props.fetchSpots()
   }
 
   emptyPage () {
@@ -38,5 +40,10 @@ class SpotIndex extends React.Component {
     }
   }
 }
+const mdp = (dispatch) => {
+  return {
+    fetchSpots: () => dispatch(fetchSpots())
+  }
+}
 
-export default withRouter(SpotIndex);
+export default withRouter(connect(null, mdp)(SpotIndex))

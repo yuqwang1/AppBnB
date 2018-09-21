@@ -7,18 +7,19 @@ class BookingForm extends React.Component {
     super(props);
     this.state = this.props.booking;
     this.handleSubmit = this.handleSubmit.bind(this);
-
+    this.props.clearBookingErrors();
+    this.props.clearBooking();
   }
 
 componentWillUnmount () {
-  this.props.clearBookingErrors();
+  this.props.clearBooking();
+
 }
 
 
 renderErrors () {
   // debugger
-
-    return (
+  return (
       <ul >
         {this.props.errors.map((error, idx) => {
           return <li className='booking-error' key={idx}>{error}</li>
@@ -40,11 +41,9 @@ renderErrors () {
       .then(() => {
         this.setState({ check_in: '', check_out: '', guests: 1 })
         this.props.clearBookingErrors();
+
       });
 }
-
-
-
 
 
   render () {

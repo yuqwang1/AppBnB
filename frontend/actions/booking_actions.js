@@ -32,6 +32,10 @@ export const clearBookingErrors = () => {
   }
 }
 
+export const clearBooking = () => dispatch => {
+  return dispatch(receiveBookings({}));
+};
+
 
 export const fetchBookings = () => {
   return dispatch => {

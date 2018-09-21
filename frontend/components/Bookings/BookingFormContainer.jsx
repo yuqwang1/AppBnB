@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import BookingForm from './BookingForm';
-import { createBooking, clearBookingErrors } from '../../actions/booking_actions';
+import { createBooking, clearBookingErrors, clearBooking } from '../../actions/booking_actions';
 import { fetchSpot } from '../../actions/spot_actions'
 
 const msp = (state, ownProps) => {
@@ -16,7 +16,8 @@ const msp = (state, ownProps) => {
 const mdp = dispatch => ({
   createBooking: booking => dispatch(createBooking(booking)),
   clearBookingErrors: () => dispatch(clearBookingErrors()),
-  fetchSpot: (id) => dispatch(fetchSpot(id))
+  fetchSpot: (id) => dispatch(fetchSpot(id)),
+  clearBooking: () => dispatch(clearBooking())
 });
 
 export default withRouter(connect(msp, mdp)(BookingForm));
