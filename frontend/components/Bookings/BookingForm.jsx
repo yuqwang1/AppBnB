@@ -7,13 +7,12 @@ class BookingForm extends React.Component {
     super(props);
     this.state = this.props.booking;
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.props.clearBookingErrors();
+    // this.props.clearBookingErrors();
     this.props.clearBooking();
   }
 
 componentWillUnmount () {
   this.props.clearBooking();
-
 }
 
 

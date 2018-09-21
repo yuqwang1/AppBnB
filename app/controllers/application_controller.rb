@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    redirect_to new_session_url unless logged_in?
+    render json: ['You are not logged in '], status: 401 unless logged_in?
   end
 
   def logged_in?
