@@ -5,6 +5,9 @@
 #
 User.destroy_all
 Spot.destroy_all
+Review.destroy_all
+Booking.destroy_all
+
 u0 = User.create!(
   username: "guest",
   email: "user@user.io",
@@ -72,7 +75,7 @@ u10 = User.create!(
 )
 
 
-l0 = Spot.create!(
+s0 = Spot.create!(
   host_id: u0.id,
   title: "Private Bedroom Manhattan ",
   details: "The layout of the apartment gives you added privacy. Nice cozy brownstone building with walk up. Alot of steps & just steps outside:
@@ -87,7 +90,7 @@ Starbucks, Large 24 hour Supermarket, Duane Reade, 24 hr Dunkin Donuts, Several 
   bath: 1
 )
 
-l1 = Spot.create!(
+s1 = Spot.create!(
   host_id: u1.id,
   title: "TriBeCa 2500 Sq Ft w/ Priv Elevator",
   details: "2500 square feet TriBeCa loft with 13-feet exposed beam ceilings, hardwood floors and over-sized windows. Three bedrooms, two bathrooms, large kitchen, washer/dryer, art, and modern furnishings. We own our building, live on the premises, and are available for assistance at all times. We are in compliance with all local and state rent laws.",
@@ -101,7 +104,7 @@ l1 = Spot.create!(
   bath: 2
 )
 
-l2 = Spot.create!(
+s2 = Spot.create!(
   host_id: u1.id,
   title: "Saloon room with dock access",
   details: "Come for the accessibility via coal barge. Stay for the dramatic family reunions.",
@@ -115,7 +118,7 @@ l2 = Spot.create!(
   bath: 1
 )
 
-l3 = Spot.create!(
+s3 = Spot.create!(
   host_id: u2.id,
   title: "Cozy 15 mins Manhattan& 10 Mins LGA",
   details: "My place is located in Queens, NYC close to LaGuardia Airport, Midtown Manhattan, 15 to 20 mins Subway ride you can be at all major tourist location also we are close to U.S. Open tennis in Flushing, Electric Zoo, Citi Field Mets Stadium to name a few. I'm located in the heart of all the Boro's which is called Jackson Heights - Queens.This room is suitable for one person traveling light.GREAT for students & tourists. Receiving 5 STAR reviews since the beginning! We are super clean and friendly!",
@@ -129,7 +132,7 @@ l3 = Spot.create!(
   bath: 1
 )
 
-l4 = Spot.create!(
+s4 = Spot.create!(
   host_id: u2.id,
   title: "Manhattan brownstone with renovation potential",
   details: "You specialize in something until one day you find it is specializing in you. Enquire about our furniture sale!",
@@ -143,7 +146,7 @@ l4 = Spot.create!(
   bath: 1
 )
 
-l5 = Spot.create!(
+s5 = Spot.create!(
   host_id: u3.id,
   title: "Magic Manhattan with Rooftop",
   details: "Stay in your very own, cool downtown apartment with designer furniture and rooftop with downtown skyline views. Access to amazing rooftop garden.",
@@ -157,7 +160,7 @@ l5 = Spot.create!(
   bath: 1
 )
 
-l6 = Spot.create!(
+s6 = Spot.create!(
   host_id: u4.id,
   title: "Manhattan Lux Loft.Like.Love.Lots.Look !",
   details: "Convenient hotel room for women with wealthy parents.
@@ -172,7 +175,7 @@ l6 = Spot.create!(
   bath: 2
 )
 
-l7 = Spot.create!(
+s7 = Spot.create!(
   host_id: u5.id,
   title: "AMAZINGLY LOCATED ONE BEDROOM, NEAR CENTRAL PARK",
   details: "THE APARTMENT IS LOCATED IN THE HEART OF MANHATTAN, A COUPLE OF BLOCKS AWAY FROM CENTRAL PARK, WALKING DISTANCE TO BROADWAY SHOWS, TIMES SQUARE, HUNDREDS OF RESTAURANTS, BARS AND THE SUBWAY AND JUST 15 MINUTES WALKING TO TIMES SQUARE.",
@@ -186,7 +189,7 @@ l7 = Spot.create!(
   bath: 1
 )
 
-l8 = Spot.create!(
+s8 = Spot.create!(
   host_id: u6.id,
   title: "A room with a view",
   details: "Spacious accommodation in Florentine pensione with a beautiful view of the River Arno. No transfers.",
@@ -200,7 +203,7 @@ l8 = Spot.create!(
   bath: 1
 )
 
-l9 = Spot.create!(
+s9 = Spot.create!(
   host_id: u7.id,
   title: "Soho 2 Bedroom Private Terrace",
   details: "THIS IS THE MANHATTAN YOU NEVER KNEW EXISTED
@@ -220,7 +223,7 @@ Soho is the most chic neighborhood in Manhattan and possibly the world. The arch
   bath: 2
 )
 
-l10 = Spot.create!(
+s10 = Spot.create!(
   host_id: u8.id,
   title: "Times Square Luxury Place",
   details: "Beautifuly designed apartment in Times Square, perfect for two guest to enjoy New York to the fullest. Clean, bright and comfortable space with it's own bathroom. Close to every cool area to see when visiting the city.",
@@ -234,7 +237,7 @@ l10 = Spot.create!(
   bath: 1
 )
 
-l11 = Spot.create!(
+s11 = Spot.create!(
   host_id: u9.id,
   title: "Beautiful affordable 4 Bedrooms in Manhattan",
   details: "Affordable stay in the big apple! This large loft style 4BR apartment is situated in the north after Upper East Side area of Manhattan, a short walk to some of New York’s finest shopping districts and site seeing",
@@ -248,7 +251,7 @@ l11 = Spot.create!(
   bath: 1
 )
 
-l12 = Spot.create!(
+s12 = Spot.create!(
   host_id: u10.id,
   title: "Luxury Chelsea Loft 4Bedrooms/2Bath Sleep 10",
   details: "Absolutely stunning full floor loft with tremendous skylights!! Enjoy NYC from this immaculately kept, 2000 sq ft full floor 4 bed, 2 bath residence located in Chelsea. Step off the private keyed elevator into your newly renovated home with 11 foot ceilings- 7 foot windows, central air conditioning and hardwood floors throughout.",
@@ -262,7 +265,7 @@ l12 = Spot.create!(
   bath: 2
 )
 
-l13 = Spot.create!(
+s13 = Spot.create!(
   host_id: u8.id,
   title: "Luxury midtown mini mansion! Sleeps 16!",
   details: "Come stay in this beautiful 4-story, single-family townhouse in prime Manhattan minutes away from Central Park, Broadway Theaters, 5-star and Michelin rated restaurants and the best shopping Manhattan has to offer! This expansive house has 7 bedrooms, most with their own bathrooms. Cook and entertain like a local in the updated kitchen, or barbecue outside in the manicured garden. Sip a cocktail with your group on the roof deck and enjoy the views and sunsets.",
@@ -276,7 +279,7 @@ l13 = Spot.create!(
   bath: 5
 )
 
-l14 = Spot.create!(
+s14 = Spot.create!(
   host_id: u6.id,
   title: "Manhattan's Best Deal!",
   details: "Welcome to Harlem! Everything is close by! 2 mins to the express Metro/Subway that will have you in Times Square in 20 minutes! There's a grocery story across the street. Excellent restaurants and entertainment are in walking distance!",
@@ -290,7 +293,7 @@ l14 = Spot.create!(
   bath: 1
 )
 
-l15 = Spot.create!(
+s15 = Spot.create!(
   host_id: u4.id,
   title: "Affordable, Private, Simple & Clean NYC Flat!",
   details: "My very clean and private, small studio flat sleeps up to 5. Nearby trains get you to Times Square in 15 minutes! The apt has a peaceful feel, the standard full bed has an amazing memory foam mattress and there are two sofa beds / futons, in addition to a full air mattress. Markets and restaurants are nearby. Get $77 in savings codes for awesome food delivery & taxi apps when you book with me!",
@@ -302,4 +305,92 @@ l15 = Spot.create!(
   bedrooms: 4,
   beds: 4,
   bath: 1
+)
+
+r1 = Review.create!(
+  rating: 5,
+  user_id: u2.id,
+  spot_id: s0.id,
+  review: 'Great place to stay for a trip to NYC. Spotless room. Awesome location. Great communication!'
+)
+r2 = Review.create!(
+  rating: 4,
+  user_id: u1.id,
+  spot_id: s0.id,
+  review: 'Clean, spacious and convenient. Perfect location! Kam made us feel very comfortable. He was warm, welcoming and very helpful! Would definitely stay here again.'
+)
+r3 = Review.create!(
+  rating: 5,
+  user_id: u2.id,
+  spot_id: s0.id,
+  review: 'The hospitality was fantastic. It is obvious that Jake will go out of his way to get whatever you need. There is a fish smell out in the hallway, but once you are in your apartment, it’s a great home away from home.'
+)
+r4 = Review.create!(
+  rating: 4,
+  user_id: u3.id,
+  spot_id: s10.id,
+  review: 'Very clean and spacious. Transportation information on how to get to NYC was given and easily followed. The neighborhood is quiet and we had no qualms about walking from the bus stop late at night. We really enjoyed our stay here.'
+)
+r5 = Review.create!(
+  rating: 5,
+  user_id: u4.id,
+  spot_id: s1.id,
+  review: 'This really is a GREAT apartment in the lower east side. MANY small issues prevent me from giving this place 5 stars. I have messaged Jake privately about these issues and I trust he is an honest guy who will work to correct these issues....just as he DID purchase a wonderfully comfortable bed and linens after a different  suggested so. I paid my maximum, per night allowance....but was not happy with the value due to cleanliness issues. Subway is JUST around the corner, making navigating the city EASY.'
+)
+r6 = Review.create!(
+  rating: 5,
+  user_id: u5.id,
+  spot_id: s2.id,
+  review: 'Carol and Marc’s apartment was perfect for our needs. The location was great and the price was right. It saved us from spending hundreds more on getting 2 NYC hotel rooms. We enjoyed getting to meet the very friendly hosts and I’m a big fan of the modern style and furnishings in their apartment. Thanks again.'
+)
+r7 = Review.create!(
+  rating: 5,
+  user_id: u2.id,
+  spot_id: s3.id,
+  review: 'The location is great. The host is great. The apartment has potential but the pictures do make it look nicer and bigger than it is. Trash in the stairway does smell in the apartment, windows don’t hold much noise and let through heat/cold, bathroom and kitchen are pretty basic with minimal amenities and bed has a noticeable slope in it'
+)
+r8 = Review.create!(
+  rating: 5,
+  user_id: u10.id,
+  spot_id: s4.id,
+  review: 'I am a fairly frequent AirBnB traveler. Michelle’s home was top notch and all communication with her was 100%. My wife and I felt like locals in this space. It was about a 10 minute walk to the train that took us into Manhattan. Take the express and it’s pretty fast. The neighborhood is totally residential. Easy parking on street. Another reviewer mentioned some noise from neighbors. We did not have any issues at all. I would definitely stay again.
+'
+)
+r9 = Review.create!(
+  rating: 5,
+  user_id: u8.id,
+  spot_id: s7.id,
+  review: 'Absolutely loved it'
+)
+r10 = Review.create!(
+  rating: 4,
+  user_id: u5.id,
+  spot_id: s8.id,
+  review: 'Fantastic, clean, comfortable spot in Brooklyn. Only a short stroll from the subway, and close to several good options for food, drinks, and groceries. The neighborhood is gorgeous and worthy of many long walks.
+'
+)
+r11 = Review.create!(
+  rating: 4,
+  user_id: u8.id,
+  spot_id: s3.id,
+  review: 'This is a great place. Perfect sized room for a getaway. It was nice that there was a small kitchen for our use as well.'
+)
+r12 = Review.create!(
+  rating: 5,
+  user_id: u7.id,
+  spot_id: s3.id,
+  review: 'The home was clean, warm, and quiet. Everything we needed. Recommend.
+'
+)
+r13 = Review.create!(
+  rating: 5,
+  user_id: u5.id,
+  spot_id: s5.id,
+  review: 'I’ve stayed here before and would do so again, great location and hosts are one of the best I’ve see;'
+)
+r14 = Review.create!(
+  rating: 5,
+  user_id: u2.id,
+  spot_id: s5.id,
+  review: 'Our girls trip of 15 enjoyed the stay at Ruth place. Ruth was helpful and made everything so easy for us.'
 )

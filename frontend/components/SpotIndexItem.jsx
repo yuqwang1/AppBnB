@@ -2,10 +2,10 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 const SpotIndexItem = props => {
-  const guests = props.spot.guest
+  // const guests = props.spot.guest
   return (
     <div className='img-box'>
-      <Link to={`spots/${props.spot.id}`}>
+      <Link to={`/spots/${props.spot.id}`}>
         <img className='spot-img' src={props.spot.img_url}></img>
         <div className='spot-title'>{props.spot.title}</div>
         <div className='spot-guest'>{props.spot.guest} guests · </div>

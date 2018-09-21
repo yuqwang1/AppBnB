@@ -5,18 +5,24 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     if @booking.save
-      render :index
+      @bookings = Booking.where(user_id: current_user.id)
+      render :show
     else
-      render json: @Booking.errors.full_messages, status: 422
+      render json: @booking.errors.full_messages, status: 422
     end
   end
 
-  def show
+  def update
     @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      render :show
+    else
+      render json: @booking.errors.full_messages, status: 422
+    end
   end
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   def destroy
@@ -24,13 +30,11 @@ class Api::BookingsController < ApplicationController
     @booking.destroy
   end
 
-  def update
-  end
 
-  
+
 
   private
-  def booking_parmas
+  def booking_params
     params.require(:booking).permit(:user_id, :spot_id, :check_in, :check_out, :guest)
   end
 

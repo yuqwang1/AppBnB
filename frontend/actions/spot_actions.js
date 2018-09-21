@@ -12,6 +12,7 @@ export const receiveSpots = (spots) => {
 }
 
 export const receiveSpot = (spot) => {
+  // debugger
   return {
     type: 'RECEIVE_SPOT',
     spot
@@ -30,8 +31,10 @@ export const fetchSpots = (data) => {
 }
 
 export const fetchSpot = (id) => {
+  // debugger
   return dispatch => {
     return SpotsApiUtil.fetchSpot(id).then(payload => {
+      // debugger
       return dispatch(receiveSpot(payload))
     })
   }
@@ -40,6 +43,7 @@ export const fetchSpot = (id) => {
 export const createSpot = (spot) => {
   return dispatch => {
     return SpotsApiUtil.createSpot(spot).then(spot => {
+      // debugger
       return dispatch(receiveSpot(spot))
     })
   }

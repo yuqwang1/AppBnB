@@ -8,15 +8,15 @@ import { Route,
   Switch,
   Link,
   HashRouter } from 'react-router-dom'
-import LoginFormContainer from './LoginFormContainer'
-import SignupFormContainer from './SignupFormContainer'
 import Modal from './modal/modal'
+import SpotShowContainer from './SpotShowContainer'
 
 const App = () => (
   <div>
     <Modal />
     <Route path='/' component={ GreetingContainer } />
-    <Route path='/spots' component={ SpotSearchContainer } />
+    <Route exact path='/spots' component={ SpotSearchContainer } />
+    <Route path='/spots/:spotId' component={ SpotShowContainer } />
   </div>
 )
 

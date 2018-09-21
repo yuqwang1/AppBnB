@@ -8,7 +8,8 @@ export const spotsReducer = (state = {}, action) => {
     // debugger
       return action.spots || {}
     case RECEIVE_SPOT:
-      merge({}, state, { [action.spot.id]: action.spot })
+    // debugger
+      return merge({}, state, { [action.spot.id]: action.spot })
     default:
       return state
   }

@@ -1,3 +1,91 @@
 // Place all the styles related to the api/bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.spot-show-body {
+
+}
+
+.booking-form-container {
+ display: block;
+ position: relative;
+ width: 40%;
+ margin-top: 100px;
+ left: 800px;
+ top: -250px;
+ height: 400px;
+ box-sizing: border-box;
+ background-color: #fefefe;
+ padding: 32px;
+ border: 1px solid rgb(240, 238, 238);
+ width: 400px;
+
+ // font-family: 'Roboto', sans-serif;
+ // font-weight: 400;
+ // font-size: 15px;
+}
+
+.booking-button-box {
+  margin: 9px auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  background-color: #fc5b62;
+  border-color: #fc5b62;
+  color: white;
+  font-weight: bold;
+  padding: 7px 9px;
+  font-family: 'Source Sans Pro', sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+
+}
+
+.booking-text {
+  text-align: center;
+  padding: 10px;
+}
+
+.booking-price {
+  padding: 20px;
+  padding-left: 0px;
+  font-size: 26px;
+}
+
+.booking-date-calendar {
+  margin: 9px auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+}
+
+.booking-date {
+  border: 1px solid #EBEBEB;
+  padding: 7px 10px;
+}
+
+.booking-guests-selector {
+  background: #ffffff;
+  text-align: left;
+  border-radius: 2px;
+  padding: 8px;
+  line-height: normal;
+  display: block;
+  width: 100%;
+  border-radius: none;
+  border: 1px solid #EBEBEB;
+  height: 30px;
+}
+
+.booking-errors {
+  height: 20px;
+  position: relative;
+  top: -35px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  padding-bottom: 0px;
+  left: -50px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fc5b62;
+}

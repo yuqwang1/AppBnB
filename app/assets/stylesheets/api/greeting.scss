@@ -20,7 +20,7 @@ body {
   width: 100%;
   padding-top: 19px;
   padding-bottom: 15px;
-  z-index: 500;
+  z-index: 2;
   background-color: white;
   // height: 120px;
 }
@@ -47,6 +47,7 @@ body {
   left: 30px;
   top: 10px;
   cursor: pointer;
+  z-index: 10;
 }
 
 .session-form {
