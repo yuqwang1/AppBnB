@@ -63,21 +63,21 @@ class Greeting extends React.Component {
         <div className="explore-section">
           <p id="explore">Explore AppBnb</p>
           <ul className="manhattan">
-            <Link to="/spots/120">
+            <Link to="/spots">
               <li className="TriBeCa ">
                 <img src="https://a0.muscache.com/im/pictures/15619021/d6cf8207_original.jpg?aki_policy=xx_large" />
                 <p>TriBeCa</p>
               </li>
             </Link>
 
-            <Link to="/spots/124">
+            <Link to="/spots">
               <li className="MagicManhattan">
                 <img src="https://a0.muscache.com/im/pictures/27720090/20bd06e4_original.jpg?aki_policy=xx_large" />
                 <p>Magic Manhattan with Rooftop</p>
               </li>
             </Link>
 
-            <Link to="/spots/125">
+            <Link to="/spots">
               <li className="ManhattanLux ">
                 <img src="https://a0.muscache.com/im/pictures/12426057/2292b61c_original.jpg?aki_policy=xx_large" />
                 <p>Loft Like Love Lots Look</p>
