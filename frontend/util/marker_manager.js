@@ -1,3 +1,4 @@
+
 class MarkerManager {
   constructor(map, handleClick) {
     this.map = map;
@@ -21,7 +22,7 @@ class MarkerManager {
   }
 
   createMarkerFromspot(spot) {
-    const position = new google.maps.LatLng(spot.lat, spot.long);
+    const position = new google.maps.LatLng(spot.lat, spot.lng);
     const marker = new google.maps.Marker({
       position,
       map: this.map,

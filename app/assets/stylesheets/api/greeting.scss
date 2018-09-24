@@ -2,6 +2,10 @@ body {
   margin: 0px;
 }
 
+#spot-map-sticky {
+  position: sticky;
+  top: 80px;
+}
 .homepage {
   background: url("https://cdngeneral.rentcafe.com/dmslivecafe/3/162865/_PRP0840.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&quality=85&scale=both&");
   background-size: cover;

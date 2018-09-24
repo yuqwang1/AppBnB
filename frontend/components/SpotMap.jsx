@@ -5,10 +5,10 @@ import MarkerManager from '../util/marker_manager';
 
 const mapOptions = {
   center: {
-    lat: 40.815744,
-    lng: -73.948284
+    lat: 40.715494,
+    lng: -74.002209
   },
-  zoom: 12
+  zoom: 11
 };
 
 const getCoordsObj = latLng => ({
@@ -39,13 +39,10 @@ class SpotMap extends React.Component {
     this.props.history.push(`/spots/${spot.id}`);
   }
 
-  componentDidUpdate () {
-    this.MarkerManager.updateMarkers(this.props.spots);
-}
 
   render () {
     return (
-      <div className='map' ref='map'>
+      <div id='spot-map-sticky' className='spot-map' ref='map'>
       </div>
     )
   }
