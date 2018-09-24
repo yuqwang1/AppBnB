@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationRecord
-  before_action :require_login, only: [:create]
+  # before_action :require_login, only: [:create]
   def create
     @review = current_user.reviews.new(review_params)
     if review.save
