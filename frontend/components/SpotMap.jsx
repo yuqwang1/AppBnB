@@ -29,6 +29,9 @@ class SpotMap extends React.Component {
     this.MarkerManager.updateMarkers(this.props.spots);
   }
 
+  componentDidUpdate () {
+    this.MarkerManager.updateMarkers(this.props.spots);
+  }
   registerListeners () {
     google.maps.event.addListener(this.map, 'click', event => {
       const coords = getCoordsObj(event.latLng);

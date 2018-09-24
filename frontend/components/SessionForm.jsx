@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
     const email = () => {
       return (
         <div className='signup-area'>
-          <input className='signup-input' type='text' placeholder='Email Address' value={this.state.email} onChange={this.update('email')}></input>
+          <input className='signup-input' type='email' placeholder='Email Address' value={this.state.email} onChange={this.update('email')}></input>
           <i className="far fa-envelope"></i>
         </div>
       )

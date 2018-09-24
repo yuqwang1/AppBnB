@@ -27,7 +27,7 @@ class Api::SpotsController < ApplicationController
   def index
     if params[:title]
     query_string = "%#{params[:title]}%".downcase
-    @spots = Spot.where("LOWER(title) LIKE ? OR LOWER(details) LIKE ?" , query_string, query_string)
+    @spots = Spot.where("LOWER(title) LIKE ?" , query_string)
       else
     @spots = Spot.all
   end
