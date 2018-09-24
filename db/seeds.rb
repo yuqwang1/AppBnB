@@ -191,10 +191,10 @@ s7 = Spot.create!(
 
 s8 = Spot.create!(
   host_id: u6.id,
-  title: "A room with a view",
+  title: "LUXURY HUGE 2BR DUPLEX NEAR TRAIN w PATIO OASIS",
   details: "Spacious accommodation in Florentine pensione with a beautiful view of the River Arno. No transfers.",
   img_url: 'https://a0.muscache.com/im/pictures/110982486/a7a96b3a_original.jpg?aki_policy=xx_large',
-  lat: 43.770060,
+  lat: 40.770060,
   lng: -73.970750,
   cost: 180,
   guest: 2,
