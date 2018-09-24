@@ -12,7 +12,8 @@ class SpotShow extends React.Component {
   componentDidMount () {
     // debugger
     this.props.fetchSpot(this.props.match.params.spotId)
-  }
+    window.scrollTo(0, 0);
+}
 
   componentWillReceiveProps(nextProps) {
     if (!this.props.spot || this.props.spot.id !== parseInt(nextProps.match.params.spotId)) {
