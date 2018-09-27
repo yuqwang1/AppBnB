@@ -1,6 +1,7 @@
 .review-form {
 display: block;
 position: relative;
+min-width: 631px;
 width: 50%;
 margin-top: 50px;
 left: 100px;
@@ -14,9 +15,9 @@ border: 1px solid #f0eeee;
 }
 
 .review-submit {
-  margin: 9px auto;
   box-sizing: border-box;
-  width: 100%;
+  min-width: 561px;
+  width: 80%;
   height: 50px;
   font-size: 20px;
   background-color: #fc5b62;

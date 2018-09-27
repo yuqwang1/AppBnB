@@ -31,17 +31,6 @@ class SearchBar extends React.Component {
     };
   }
 
-  filterBar () {
-    return (
-      <div className='filterBar'>
-        <button className='filterButton'>Dates</button>
-        <button className='filterButton'>Guests</button>
-        <button className='filterButton'>Home Types</button>
-        <button className='filterButton'>Price</button>
-        <button className='filterButton'>More filters</button>
-      </div>
-    )
-  }
 
   render () {
     return (
@@ -57,7 +46,6 @@ class SearchBar extends React.Component {
           />
           <input className="search-button" type='submit' value='Search'/>
         </form>
-        { this.props.location.pathname === '/spots/' || this.props.location.pathname === '/spots' ? this.filterBar.bind(this)() : null }
       </div>
     );
   }

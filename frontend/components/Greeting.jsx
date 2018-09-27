@@ -41,25 +41,27 @@ class Greeting extends React.Component {
 
     const loggedin = this.props.currentUser;
     return (
-      <div className='homepage'>
-        <header className='navBar-homepage'>
-          <a href='/'>
-            <img className='logo' src={window.logo}/>
-          </a>
-
-          <button className='nav-bar-loggedin'>Become a host</button>
-          {
-            loggedin ? <button className='nav-bar-loggedin'>Messages</button> : null
-          }
-          <button className='nav-bar-loggedin'>Credit</button>
-          <button className='nav-bar-loggedin'>Help</button>
-          { this.sessionButton.bind(this)() }
-        </header>
-        <div className='title'>Book unique homes and experiences</div>
-        <div className='searchBar-homepage'>
-          <SearchBarContainer/>
+      <div className='homepage-container'>
+        <div className='homepage'>
+          <header className='navBar-homepage'>
+            <a href='/'>
+              <img className='logo' src={window.logo}/>
+            </a>
+            <div className='right-navBar-homepage'>
+              <button className='nav-bar-loggedin'>Become a host</button>
+              {
+                loggedin ? <button className='nav-bar-loggedin'>Messages</button> : null
+              }
+              <button className='nav-bar-loggedin'>Credit</button>
+              <button className='nav-bar-loggedin'>Help</button>
+              { this.sessionButton.bind(this)() }
+            </div>
+          </header>
+          <div className='title'>Book unique homes and experiences</div>
+          <div className='searchBar-homepage'>
+            <SearchBarContainer/>
+          </div>
         </div>
-
         <div className="explore-section">
           <p id="explore">Explore AppBnb</p>
           <ul className="manhattan">
@@ -96,25 +98,44 @@ class Greeting extends React.Component {
     )
   }
 
+  filterBar () {
+    return (
+      <div className='filterBar'>
+        <button className='filterButton'>Dates</button>
+        <button className='filterButton'>Guests</button>
+        <button className='filterButton'>Home Types</button>
+        <button className='filterButton'>Price</button>
+        <button className='filterButton'>More filters</button>
+      </div>
+    )
+  }
+
   viewPage () {
     const loggedin = this.props.currentUser;
     return (
-      <header className='navBar'>
-        <a href='/'>
-          <img className='logo' src={window.logo}/>
-        </a>
-        <div className= 'searchBar'>
-          <SearchBarContainer/>
-        </div>
+      <div>
+        <header className='navBar'>
+          <div className='left-navBar-otherView'>
+            <a href='/'>
+              <img className='logo' src={window.logo}/>
+            </a>
+            <div className= 'searchBar'>
+              <SearchBarContainer/>
 
-        <button className='nav-sign-up'>Become a host</button>
-        {
-          loggedin ? <button className='nav-sign-up'>Messages</button> : null
-        }
-        <button className='nav-sign-up'>Credit</button>
-        <button className='nav-sign-up'>Help</button>
-        { this.sessionButton.bind(this)() }
-      </header>
+            </div>
+          </div>
+          <div className='right-navBar-otherView'>
+            <button className='nav-sign-up'>Become a host</button>
+            {
+              loggedin ? <button className='nav-sign-up'>Messages</button> : null
+            }
+            <button className='nav-sign-up'>Credit</button>
+            <button className='nav-sign-up'>Help</button>
+            { this.sessionButton.bind(this)() }
+          </div>
+        </header>
+        { this.props.location.pathname === '/spots/' || this.props.location.pathname === '/spots' ? this.filterBar.bind(this)() : null }
+      </div>
     )
   }
 

@@ -6,15 +6,27 @@ body {
   position: sticky;
   top: 80px;
 }
+
+.right-navBar-otherView {
+  display: flex;
+}
+
+.left-navBar-otherView {
+  display: flex;
+}
+
 .homepage {
   background: url("https://cdngeneral.rentcafe.com/dmslivecafe/3/162865/_PRP0840.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&quality=85&scale=both&");
-  background-size: cover;
-  height: 650px;
-  height: 100vh;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  height: 900px;
 }
 
 .navBar {
-  // overflow: hidden;
+  overflow: hidden;
+  justify-content: space-between;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
@@ -30,17 +42,28 @@ body {
 }
 
 .navBar-homepage {
+  overflow: hidden;
+  justify-content: space-between;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  position: relative;
+  // flex-direction: row;
+  // flex-wrap: nowrap;
+  // position: relative;
   top: 0px;
   width: 100%;
   padding-top: 19px;
   padding-bottom: 15px;
-  z-index: 500;
+  z-index: 2;
   // background-color: white;
+}
+
+.homepage-container{
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.right-navBar-homepage {
+  display: flex;
 }
 
 
@@ -68,7 +91,7 @@ body {
   float: right;
   padding: 15px;
   font-family: sans-serif;
-  margin: 0 auto;
+
   cursor: pointer;
   position: relative;
   text-align: center;
