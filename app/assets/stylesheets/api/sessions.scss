@@ -14,7 +14,7 @@
 }
 
 .signup-input {
-
+  margin-bottom: 15px;
   box-sizing: border-box;
   letter-spacing: normal;
   width: 100%;
@@ -31,7 +31,7 @@
 }
 
 .signup-errror {
-  height: 40px;
+  height: 60px;
   position: relative;
   top: -20px;
   font-family: 'Roboto', sans-serif;
@@ -78,6 +78,7 @@
   padding: 7px 9px;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
+
 }
 
 .signup-button:hover {
@@ -92,6 +93,7 @@
   line-height: 22px;
   letter-spacing: normal;
   color: rgb(72, 72, 72);
+  margin-top: 15px;
 }
 
 .otherForm-button {
