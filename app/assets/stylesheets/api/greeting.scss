@@ -7,12 +7,11 @@ body {
   top: 80px;
 }
 
-.right-navBar-otherView {
-  display: flex;
-}
 
-.left-navBar-otherView {
-  display: flex;
+.homepage-container{
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .homepage {
@@ -57,15 +56,17 @@ body {
   // background-color: white;
 }
 
-.homepage-container{
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 .right-navBar-homepage {
   display: flex;
 }
 
+.right-navBar-otherView {
+  display: flex;
+}
+
+.left-navBar-otherView {
+  display: flex;
+}
 
 .logo {
   max-width: 40px;
