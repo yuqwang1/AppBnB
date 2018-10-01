@@ -74,16 +74,22 @@
 .explore-section {
   font-family: 'Source Sans Pro', sans-serif;
   // display: block;
+  // padding-left: 100px;
   display: flex;
   flex-direction: column;
-  width: 80%;
-  position: relative;
-  left: 100px;
-}
+  width: 85%;
+  margin: auto;
+  // padding-inline-start: 40px;
 
+  // position: relative;
+  padding-left: 39px;
+
+}
+ul {
+  padding-left: 0;
+}
 #explore {
   position: relative;
-  left: 39px;
   top: 8px;
   font-weight: 800;
   font-size: 24px;
@@ -96,8 +102,11 @@
 
 .manhattan {
   display: flex;
-  justify-content: space-between;
-  min-width: 600px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  // justify-content: space-between;
+  width: 100%;
+  // margin: auto;
   color: #484848;
   margin-bottom: 50px;
 }
@@ -113,6 +122,8 @@
   border-radius: 3px;
   align-items: center;
   box-shadow: 0 1px 1px #D3D3D3;
+  margin-right: 20px;
+  margin-bottom: 15px;
 }
 
 .TriBeCa p {
@@ -153,7 +164,7 @@
 }
 
 .MagicManhattan {
-  margin-left: 20px;
+  // margin-left: 20px;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   width: 240px;
@@ -164,6 +175,8 @@
   border-radius: 3px;
   align-items: center;
   box-shadow: 0 1px 1px #D3D3D3;
+  margin-right: 20px;
+  margin-bottom: 15px;
 }
 
 .MagicManhattan p {
@@ -204,7 +217,7 @@
 }
 
 .ManhattanLux {
-  margin-left: 20px;
+  // margin-left: 20px;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   width: 240px;
@@ -215,6 +228,8 @@
   border-radius: 3px;
   align-items: center;
   box-shadow: 0 1px 1px #D3D3D3;
+  margin-right: 20px;
+  margin-bottom: 15px;
 }
 
 .ManhattanLux p {
@@ -255,7 +270,7 @@
 }
 
 .explore-all {
-  margin-left: 20px;
+  // margin-left: 20px;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   width: 240px;
@@ -266,6 +281,8 @@
   border-radius: 3px;
   align-items: center;
   box-shadow: 0 1px 1px #D3D3D3;
+  // margin-right: 20px;
+  margin-bottom: 15px;
 }
 
 .explore-all p {
