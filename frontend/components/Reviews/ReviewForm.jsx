@@ -22,35 +22,41 @@ class ReviewForm extends React.Component {
     }
   }
 
-  render () {
+  createReview () {
     return (
-      
-      <div className='review-form'>
-        <h1>Reviews</h1>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <Rating onChange={rating => this.state.rating}
-              emptySymbol="far fa-star"
-              fullSymbol="fas fa-star"
-            />
-          </div>
+     <div className='review-form'>
+      <h1>Reviews</h1>
+      <form onSubmit={this.handleSubmit}>
+        <div>
+          <Rating onChange={rating => this.state.rating}
+            emptySymbol="far fa-star"
+            fullSymbol="fas fa-star"
+          />
+        </div>
 
-          <label>
-            <br></br>
-            <textarea
-              className='revew-content'
-              value={this.state.review}
-              onChange={this.update('review')}
-              placeholder='leave your review here'
-            />
-          </label>
-          <button className='review-submit'>
-            Create Review
-          </button>
-        </form>
-      </div>
+        <label>
+          <br></br>
+          <textarea
+            className='revew-content'
+            value={this.state.review}
+            onChange={this.update('review')}
+            placeholder='leave your review here'
+          />
+        </label>
+        <button className='review-submit'>
+          Create Review
+        </button>
+      </form>
+    </div>
+  )
+}
+  render () {
+    const loggedin = this.props.currentUser;
+    return (
+       loggedin ? this.createReview.bind(this)() : null
     )
   }
 }
+
 
 export default withRouter(ReviewForm);
