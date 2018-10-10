@@ -1,10 +1,21 @@
+.show-content {
+  // margin-top: 25px;
+  // margin-bottom: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .spot-show-image {
   max-height: 400px;
   width: 100%;
 }
 
 .spot-detail-show-page {
-  max-width: 60%;
+  width: 58.333333333333336%;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
 }
 

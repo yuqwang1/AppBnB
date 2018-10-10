@@ -60,7 +60,10 @@ renderErrors () {
     return (
       <div className='booking-form-container'>
         <div className='booking-errors'>{this.renderErrors()}</div>
-        <div className='booking-price'> $ {this.props.spot.cost} per night</div>
+        <div className='price-tag'>
+          <strong className='booking-price'> $ {this.props.spot.cost}</strong>
+          per night
+        </div>
         <div className='booking-date-calendar'>
           <label>Dates</label>
           <br></br>

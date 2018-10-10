@@ -27,18 +27,20 @@ class SpotShow extends React.Component {
     return (
       <div className='spot-show-body'>
         <img className='spot-show-image' src={spot.img_url} />
-        <div className='spot-detail-show-page'>
-          <h2 className='spot-show-header'>ENTIRE APARTMENT</h2>
-          <div className='spot-show-title'>{spot.title}</div>
-          <div className='icon-list-show-page'>
-            <div className='icon-show-page'> <i className="fas fa-user-friends" /> {spot.guest} guest </div>
-            <div className='icon-show-page'> <i className="fas fa-warehouse" />{spot.bedrooms} bedroom </div>
-            <div className='icon-show-page'> <i className="fas fa-bed" />{spot.beds} bed </div>
-            <div className='icon-show-page'> <i className="fas fa-bath" />{spot.bath} bath </div>
+        <div className='show-content'>
+          <div className='spot-detail-show-page'>
+            <h2 className='spot-show-header'>ENTIRE APARTMENT</h2>
+            <div className='spot-show-title'>{spot.title}</div>
+            <div className='icon-list-show-page'>
+              <div className='icon-show-page'> <i className="fas fa-user-friends" /> {spot.guest} guest </div>
+              <div className='icon-show-page'> <i className="fas fa-warehouse" />{spot.bedrooms} bedroom </div>
+              <div className='icon-show-page'> <i className="fas fa-bed" />{spot.beds} bed </div>
+              <div className='icon-show-page'> <i className="fas fa-bath" />{spot.bath} bath </div>
+            </div>
+            <div className='details-show-page'>{spot.details}</div>
           </div>
-          <div className='details-show-page'>{spot.details}</div>
+          <BookingFormContainer/>
         </div>
-        <BookingFormContainer/>
         <ReviewFormContainer/>
       </div>
     )
