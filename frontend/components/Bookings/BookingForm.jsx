@@ -43,7 +43,7 @@ renderErrors () {
 }
 
 renderBooking () {
-  debugger
+  // debugger
     if (!this.props.booking.length ) {
       return;
     } else if(this.props.booking.length !== 0) {
