@@ -11,11 +11,13 @@ export const receiveSpots = (spots) => {
   }
 }
 
-export const receiveSpot = (spot) => {
+export const receiveSpot = ({ spot, users, reviews }) => {
   // debugger
   return {
     type: 'RECEIVE_SPOT',
-    spot
+    spot,
+    users,
+    reviews
   }
 }
 

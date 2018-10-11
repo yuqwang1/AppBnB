@@ -4,12 +4,14 @@
 .spot-show-body {
 
 }
-
+.booking-form {
+  position: sticky;
+  top: 100px;
+}
 .booking-form-container {
   border: 1.4px solid #dbdbdb;
   border-radius: 1px;
-  display: flex;
-  position: sticky;
+  display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -77,7 +79,7 @@
   text-align: left;
   line-height: normal;
   display: block;
-  width: 100%;
+  width: 98%;
 
   border-radius: none;
   border: 1px solid #EBEBEB;

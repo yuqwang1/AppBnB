@@ -7,13 +7,37 @@ class ReviewForm extends React.Component {
     this.state = this.props.review;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+
+  }
+
+  componentWillReceiveProps (prop) {
+    if (prop.currentUser === null) {
+      this.setState({
+        review: '',
+        rating: '',
+        spot_id: this.props.match.params.spotId
+      })
+    }
   }
 
   handleSubmit (e) {
     e.preventDefault()
-    const spotId = parseInt(this.props.match.params.spotId)
+    const spotId = this.props.match.params.spotId
     const review = Object.assign({}, this.state);
-    this.props.createReview(review);
+    this.props.createReview(review).then(() => {
+      this.props.fetchSpot(spotId);
+    });
+    this.setState(
+      {
+        review: '',
+        rating: 3,
+        spot_id: spotId
+      }
+    )
+  }
+
+  updateErrors(e) {
+    this.props.clearErrors();
   }
 
   update (field) {
@@ -22,33 +46,45 @@ class ReviewForm extends React.Component {
     }
   }
 
+  renderErrors () {
+    // debugger
+    return (
+      <ul >
+        {this.props.errors.map((error, idx) => {
+          return <li className='review-error' key={idx}>{error}</li>
+        })}
+      </ul>
+    )
+  }
+
   createReview () {
     return (
-     <div className='review-form'>
-      <h1>Reviews</h1>
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          <Rating onChange={rating => this.state.rating}
-            emptySymbol="far fa-star"
-            fullSymbol="fas fa-star"
-          />
-        </div>
+      <div className='review-form'>
+        <h1 className='review-title'>Reviews</h1>
+        <form onSubmit={this.handleSubmit}>
+          <div className='review-error'>
+            { this.renderErrors() }
+          </div>
+          <div>
+            <Rating onChange={rating => this.state.rating}
+              emptySymbol="far fa-star"
+              fullSymbol="fas fa-star"
+            />
+          </div>
 
-        <label>
-          <br></br>
           <textarea
-            className='revew-content'
+            className='review-content'
             value={this.state.review}
             onChange={this.update('review')}
             placeholder='leave your review here'
           />
-        </label>
-        <button className='review-submit'>
-          Create Review
-        </button>
-      </form>
-    </div>
-  )
+
+          <button className='review-submit'>
+            Create Review
+          </button>
+        </form>
+      </div>
+    )
 }
   render () {
     const loggedin = this.props.currentUser;

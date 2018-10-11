@@ -58,27 +58,29 @@ renderErrors () {
     todayDate = todayDate.toJSON().split('T')[0];
 
     return (
-      <div className='booking-form-container'>
-        <div className='booking-errors'>{this.renderErrors()}</div>
-        <div className='price-tag'>
-          <strong className='booking-price'> $ {this.props.spot.cost}</strong>
-          per night
+      <div className='booking-form'>
+        <div className='booking-form-container'>
+          <div className='booking-errors'>{this.renderErrors()}</div>
+          <div className='price-tag'>
+            <strong className='booking-price'> $ {this.props.spot.cost}</strong>
+            per night
+          </div>
+          <div className='booking-date-calendar'>
+            <label>Dates</label>
+            <br></br>
+            <input className='booking-date' type='date' value={this.state.check_in}
+              min={todayDate} onChange={this.update('check_in')} />
+            <input className='booking-date' type='date' value={this.state.check_out}
+              min={todayDate} onChange={this.update('check_out')} />
+          </div>
+          <div className='booking-guests'>
+            <label>Guests</label>
+            <br></br>
+            <select className='booking-guests-selector' onChange={this.update('guests')}>{ dropdown }</select>
+          </div>
+          <button className='booking-button-box' onClick={this.handleSubmit} type='submit'>Book</button>
+          <div className='booking-text'>You won’t be charged yet</div>
         </div>
-        <div className='booking-date-calendar'>
-          <label>Dates</label>
-          <br></br>
-          <input className='booking-date' type='date' value={this.state.check_in}
-            min={todayDate} onChange={this.update('check_in')} />
-          <input className='booking-date' type='date' value={this.state.check_out}
-            min={todayDate} onChange={this.update('check_out')} />
-        </div>
-        <div className='booking-guests'>
-          <label>Guests</label>
-          <br></br>
-          <select className='booking-guests-selector' onChange={this.update('guests')}>{ dropdown }</select>
-        </div>
-        <button className='booking-button-box' onClick={this.handleSubmit} type='submit'>Book</button>
-        <div className='booking-text'>You won’t be charged yet</div>
       </div>
     );
   }

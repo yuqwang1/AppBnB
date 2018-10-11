@@ -1,15 +1,19 @@
-class Api::ReviewsController < ApplicationRecord
+class Api::ReviewsController < ApplicationController
   # before_action :require_login, only: [:create]
   def create
     @review = current_user.reviews.new(review_params)
-    if review.save
+    if !(current_user.spots.find_by(id: params[:review][:spot_id]) == nil)
+      render json: ['Cannot review own location'], status: 422
+    elsif @review.save
       render :show
     else
       render json: @review.errors.full_messages, status: 422
     end
   end
 
-
+  def index
+      @reviews = Review.where(spot_id: params[:spot_id])
+    end
 
 
   private

@@ -19,6 +19,9 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+li {
+  list-style-type: none;
+}
 .spot-show-header {
   color: #572533;
   font-size: 12px;
@@ -49,7 +52,7 @@
 
 .details-show-page {
   margin-left: 100px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 22px;
   letter-spacing: normal;
 
