@@ -1,7 +1,8 @@
 export const createReview = (review) => {
+  // debugger
   return $.ajax({
     method: 'POST',
-    url: `/api/spots/${review.spotId}/reviews`,
+    url: `/api/spots/${review.spot_id}/reviews`,
     data: { review }
   })
 }

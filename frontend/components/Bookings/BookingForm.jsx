@@ -8,12 +8,11 @@ class BookingForm extends React.Component {
     this.state = this.props.booking;
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.props.clearBookingErrors();
-    this.props.clearBooking();
   }
 
-componentWillUnmount () {
-  this.props.clearBooking();
-}
+  componentWillUnmount() {
+      this.props.clearBooking();
+    }
 
 
 renderErrors () {
@@ -40,10 +39,21 @@ renderErrors () {
       .then(() => {
         this.setState({ check_in: '', check_out: '', guests: 1 })
         this.props.clearBookingErrors();
-
       });
 }
 
+renderBooking () {
+  debugger
+    if (!this.props.booking.length ) {
+      return;
+    } else if(this.props.booking.length !== 0) {
+      return (
+        <ul>
+          <li>Congratulations, You successfullly booked </li>
+        </ul>
+      )
+    }
+}
 
   render () {
     let dropdown = [];
@@ -52,7 +62,6 @@ renderErrors () {
         <option key={i} value={i + 1}> {i + 1} guests</option>
       )
     }
-
     let today = new Date();
     let todayDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000);
     todayDate = todayDate.toJSON().split('T')[0];
@@ -61,7 +70,8 @@ renderErrors () {
       <div className='booking-form'>
         <div className='booking-form-container'>
           <div className='booking-errors'>{this.renderErrors()}</div>
-          <div className='price-tag'>
+          <div className='booking-errors'>{this.renderBooking()}</div>
+        <div className='price-tag'>
             <strong className='booking-price'> $ {this.props.spot.cost}</strong>
             per night
           </div>

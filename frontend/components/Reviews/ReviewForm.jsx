@@ -60,12 +60,12 @@ class ReviewForm extends React.Component {
   createReview () {
     return (
       <div className='review-form'>
-        <h1 className='review-title'>Reviews</h1>
-        <form onSubmit={this.handleSubmit}>
+        <h1 className='review-title'>Review</h1>
+        <form className='review-container' onSubmit={this.handleSubmit}>
           <div className='review-error'>
             { this.renderErrors() }
           </div>
-          <div>
+          <div className='review-rating'>
             <Rating onChange={rating => this.state.rating}
               emptySymbol="far fa-star"
               fullSymbol="fas fa-star"
