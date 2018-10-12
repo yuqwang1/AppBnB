@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchBarContainer from './searchBar/SearchBarContainer';
 import { Link, withRouter } from 'react-router-dom';
-// import { Link } from 'react-router-dom'
+
 
 class Greeting extends React.Component {
   actionLogout () {
