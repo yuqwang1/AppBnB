@@ -9,7 +9,8 @@ const msp = (state, ownProps) => {
   return ({
     errors: state.errors.bookings,
     booking: { check_in: '', check_out: '', guest: 1 },
-    spot: state.entities.spots[ownProps.match.params.spotId] || {}
+    spot: state.entities.spots[ownProps.match.params.spotId] || {},
+    reviews: Object.values(state.entities.reviews)
   }
 )};
 

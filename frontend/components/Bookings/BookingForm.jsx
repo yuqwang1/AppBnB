@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 // import Errors from '../shared/errors';
+import Star from '../star';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -55,7 +56,12 @@ renderBooking () {
     }
 }
 
-  render () {
+render () {
+
+    let score = 0;
+    this.props.reviews.forEach(review => score += review.rating);
+    score = score / this.props.reviews.length || 0;
+
     let dropdown = [];
     for (let i = 0; i < 16; i++) {
       dropdown.push(
@@ -67,14 +73,16 @@ renderBooking () {
     todayDate = todayDate.toJSON().split('T')[0];
 
     return (
+      // debugger
       <div className='booking-form'>
         <div className='booking-form-container'>
           <div className='booking-errors'>{this.renderErrors()}</div>
           <div className='booking-errors'>{this.renderBooking()}</div>
-        <div className='price-tag'>
+          <div className='price-tag'>
             <strong className='booking-price'> ${this.props.spot.cost}</strong>
             per night
           </div>
+          <Star rating = {score} />
           <div className='booking-date-calendar'>
             <label className='label-date'>Dates</label>
             <br></br>

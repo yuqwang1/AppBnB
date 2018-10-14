@@ -10,15 +10,7 @@ class ReviewForm extends React.Component {
 
   }
 
-  componentWillReceiveProps (prop) {
-    if (prop.currentUser === null) {
-      this.setState({
-        review: '',
-        rating: '',
-        spot_id: this.props.match.params.spotId
-      })
-    }
-  }
+
 
   handleSubmit (e) {
     e.preventDefault()
@@ -26,11 +18,11 @@ class ReviewForm extends React.Component {
     const review = Object.assign({}, this.state);
     this.props.createReview(review).then(() => {
       this.props.fetchSpot(spotId);
-    });
+    }).then(() => { window.scrollBy(0, 10000) });
     this.setState(
       {
         review: '',
-        rating: 3,
+        rating: '',
         spot_id: spotId
       }
     )
@@ -61,14 +53,15 @@ class ReviewForm extends React.Component {
       <div className='review-form'>
         <h1 className='review-title'>Review</h1>
         <form className='review-container' onSubmit={this.handleSubmit}>
-          <div className='review-error'>
+          <div className='review-errors'>
             { this.renderErrors() }
           </div>
           <div className='review-rating'>
-            <Rating onChange={rating => this.state.rating}
+            <Rating
+              onChange={rating => this.state.rating = rating }
               emptySymbol="far fa-star"
               fullSymbol="fas fa-star"
-            />
+              />
           </div>
 
           <textarea

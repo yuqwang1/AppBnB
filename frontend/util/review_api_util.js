@@ -15,7 +15,7 @@ export const fetchReviews = (spotId) => {
 }
 
 export const deleteReview = (reviewId) => {
-  debugger
+  // debugger
   return $.ajax({
     method: 'DELETE',
     url: `/api/reviews/${reviewId}`

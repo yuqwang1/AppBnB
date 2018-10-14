@@ -15,16 +15,28 @@
 }
 
 .review-title {
-  color: black;
+  box-sizing: border-box;
   font-size: 28px;
   font-weight: bold;
-  margin: 10px auto;
-  padding: 7px 9px;
+  margin-bottom: 15px;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.43;
+  color: #484848;
 
 }
 
 .review-container {
   width: 90%;
+}
+
+.review-errors {
+  box-sizing: border-box;
+  width: 97%;
+  padding: 7px 3px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fc5b62;
 }
 
 .review-submit {
@@ -55,6 +67,7 @@
 
 .review-rating {
   margin-bottom: 10px;
+  color: #008489;
 }
 
 .single-review {

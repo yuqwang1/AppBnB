@@ -8,7 +8,7 @@ const msp = (state, ownProps) => {
   // debugger
   return ({
     errors: state.errors.reviews,
-    review: { review: '', rating: 3, spotId: ownProps.match.params.spotId },
+    review: { review: '', rating: '', spotId: ownProps.match.params.spotId },
     spot: state.entities.spots[ownProps.match.params.spotId],
     currentUser: state.entities.users[state.session.currentUserId]
   }
