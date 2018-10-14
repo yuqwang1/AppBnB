@@ -24,6 +24,10 @@ class SpotShow extends React.Component {
   }
 
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.deleteReview(this.props.reviews[(this.props.reviews.length - 1)].id);
+  }
 
   render () {
     if(!this.props.spot || !this.props.reviews) {
@@ -31,17 +35,18 @@ class SpotShow extends React.Component {
     }
     // debugger
     const spot = this.props.spot || { img_url: '', title: '', guest: 0, bedrooms: 0, beds: 0, bath: 0, details: '' }
-
     const reviews = this.props.reviews.map((review) => {
       if (!review) return null;
       return (
         <li className='single-review' key={review.id}>
           <div className='single-review-user'>User {review.user_id}</div>
           <div className='single-review-content'>{review.review}</div>
+          { this.props.currentUserId === review.user_id ? <input className='single-review-deletion' onClick={ (e) => this.handleSubmit(e) } type='submit' value='Delete' /> : null}
         </li>
       )
     }
 )
+
 
     return (
       <div className='spot-show-body'>
@@ -51,10 +56,10 @@ class SpotShow extends React.Component {
             <h2 className='spot-show-header'>ENTIRE APARTMENT</h2>
             <div className='spot-show-title'>{spot.title}</div>
             <div className='icon-list-show-page'>
-              <div className='icon-show-page'> <i className="fas fa-user-friends" /> {spot.guest} guest </div>
-              <div className='icon-show-page'> <i className="fas fa-warehouse" />{spot.bedrooms} bedroom </div>
-              <div className='icon-show-page'> <i className="fas fa-bed" />{spot.beds} bed </div>
-              <div className='icon-show-page'> <i className="fas fa-bath" />{spot.bath} bath </div>
+              <div className='icon-show-page'> <i className="fas fa-user-friends" />  {spot.guest} guest </div>
+              <div className='icon-show-page'> <i className="fas fa-warehouse" />  {spot.bedrooms} bedroom </div>
+              <div className='icon-show-page'> <i className="fas fa-bed" />  {spot.beds} bed </div>
+              <div className='icon-show-page'> <i className="fas fa-bath" />  {spot.bath} bath </div>
             </div>
             <div className='details-show-page'>{spot.details}</div>
             <ReviewFormContainer/>

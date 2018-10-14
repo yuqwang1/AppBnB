@@ -72,11 +72,11 @@ renderBooking () {
           <div className='booking-errors'>{this.renderErrors()}</div>
           <div className='booking-errors'>{this.renderBooking()}</div>
         <div className='price-tag'>
-            <strong className='booking-price'> $ {this.props.spot.cost}</strong>
+            <strong className='booking-price'> ${this.props.spot.cost}</strong>
             per night
           </div>
           <div className='booking-date-calendar'>
-            <label>Dates</label>
+            <label className='label-date'>Dates</label>
             <br></br>
             <input className='booking-date' type='date' value={this.state.check_in}
               min={todayDate} onChange={this.update('check_in')} />
@@ -84,7 +84,7 @@ renderBooking () {
               min={todayDate} onChange={this.update('check_out')} />
           </div>
           <div className='booking-guests'>
-            <label>Guests</label>
+            <label className='label-date'>Guests</label>
             <br></br>
             <select className='booking-guests-selector' onChange={this.update('guests')}>{ dropdown }</select>
           </div>

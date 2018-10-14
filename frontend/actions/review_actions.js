@@ -21,17 +21,18 @@ export const receiveReviews = (reviews) => {
   }
 }
 
-export const removeReview = (id) => {
+export const removeReview = (reviewId) => {
   return {
     type: REMOVE_REVIEW,
-    id
+    reviewId
   }
 }
 
 export const createReview = (review) => {
   return dispatch => {
     return ReviewApiUtil.createReview(review).then(review => {
-      return dispatch(receiveReview(review))},
+      return dispatch(receiveReview(review))
+},
     errors => {
       return dispatch(receiveReviewErrors(errors.responseJSON))
     })
@@ -46,13 +47,18 @@ export const fetchReviews = (spotId) => {
   }
 }
 
-export const deleteReview = (id) => {
+export const deleteReview = (reviewId) => {
+
   return dispatch => {
-    return ReviewApiUtil.deleteReview(id).then(review => {
-      return dispatch(removeReview(id))
+    return ReviewApiUtil.deleteReview(reviewId).then(review => {
+      return dispatch(removeReview(reviewId))
+    },
+    errors => {
+      return dispatch(receiveReviewErrors(errors.responseJSON))
     })
   }
 }
+
 
 export const receiveReviewErrors = errors => {
   return {

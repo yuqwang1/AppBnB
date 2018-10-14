@@ -3,7 +3,6 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = current_user.reviews.new(review_params)
     @review.spot_id = params[:review][:spotId]
-    # debugger
     if !(current_user.spots.find_by(id: params[:review][:spotId]) == nil)
       render json: ['Cannot review own location'], status: 422
     elsif @review.save
@@ -15,7 +14,16 @@ class Api::ReviewsController < ApplicationController
 
   def index
       @reviews = Review.where(spot_id: params[:spot_id])
-    end
+  end
+
+  def destroy
+      @review = Review.find(params[:id])
+      if @review
+        @review.destroy!
+      else
+        render json: ['That review does not exist'], status: 422
+      end
+  end
 
 
   private

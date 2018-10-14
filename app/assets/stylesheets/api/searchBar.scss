@@ -23,30 +23,42 @@
 
 .search-form {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px;
   width: 600px;
   margin-top: 20px;
-  border-radius: 5px;
   background-color: white;
-  height: 40px;
   position: relative;
   left: 210px;
+  background-color: #ffffff !important;
+  -webkit-transition: box-shadow 200ms ease-in !important;
+  -moz-transition: box-shadow 200ms ease-in !important;
+  transition: box-shadow 200ms ease-in !important;
+  border: 1px solid #EBEBEB !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  height: 48px !important;
 }
 
 .search-form input {
   float: left;
+  border-style: none;
+}
+
+.search-icon-container {
+  padding-top: 35px;
+  padding-left: 20px;
+  padding-right: 10px;
+  width: 30px;
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
 }
 
 .search-icon {
-  width: 45px;
-  height: 45px;
-  opacity: 0.3;
-  top: 40px;
-  color: #767676;
-  font-size: 33px;
-  left: 15px;
+  height: 18px;
+  width: 18px;
+  display: block;
+  fill: currentColor;
 }
 
 .search-form-input {

@@ -37,6 +37,7 @@ body {
   padding-bottom: 15px;
   z-index: 2;
   background-color: white;
+  height: 50px;
 }
 
 .navBar-homepage {
@@ -64,11 +65,15 @@ body {
   display: flex;
 }
 
+input:focus {
+    outline:none;
+}
+
 .logo {
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 32px;
+  max-height: 32px;
   position: relative;
-  left: 30px;
+  left: 22px;
   top: 10px;
   cursor: pointer;
   z-index: 10;

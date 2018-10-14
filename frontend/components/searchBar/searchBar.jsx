@@ -36,7 +36,9 @@ class SearchBar extends React.Component {
     return (
       <div>
         <form className="search-form" onSubmit={this.handleSubmit}>
-          <img className='search-icon' src="https://d30y9cdsu7xlg0.cloudfront.net/png/15028-200.png" />
+          <div className='search-icon-container'>
+            <div className='search-icon'><i className="fas fa-search fa-lg"></i></div>
+          </div>
           <input
             className="search-form-input"
             type="text"

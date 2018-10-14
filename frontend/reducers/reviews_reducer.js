@@ -10,8 +10,9 @@ export const reviewsReducer = (state = {}, action) => {
     case RECEIVE_REVIEWS:
       return action.reviews;
     case REMOVE_REVIEW:
+    // debugger
       const remove = merge({}, state)
-      delete remove[action.id]
+      delete remove[action.reviewId]
       return remove
     default:
       return state

@@ -16,7 +16,6 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => ({
   createReview: review => dispatch(createReview(review)),
-  deleteReview: () => dispatch(deleteReview()),
   fetchSpot: (id) => dispatch(fetchSpot(id)),
   clearErrors: () => dispatch(clearErrors())
 });
