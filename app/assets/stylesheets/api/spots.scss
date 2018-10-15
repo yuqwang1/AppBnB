@@ -19,11 +19,9 @@
 }
 
 .spot-img-list {
-  // margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  // position: relative;
   width: 66%;
   margin-top: 200px;
   position: relative;
@@ -34,24 +32,23 @@
 
 .spot-map {
   display: block;
-    position: fixed;
-    right: 0;
-    top: 70px;
-    margin: 24px;
-    width: 34%;
-    min-width: 400px;
-    height: 80%;
+  position: fixed;
+  right: 0;
+  top: 70px;
+  margin: 24px;
+  width: 34%;
+  min-width: 400px;
+  height: 80%;
 }
 
 .img-box {
   float: left;
-    box-sizing: border-box;
-    color: #484848;
-    // max-width: 33%;
-    padding: 12px;
-    padding-top: 0px;
-    display: block;
-    vertical-align: top;
+  box-sizing: border-box;
+  color: #484848;
+  padding: 12px;
+  padding-top: 0px;
+  display: block;
+  vertical-align: top;
 }
 
 .spot-title {

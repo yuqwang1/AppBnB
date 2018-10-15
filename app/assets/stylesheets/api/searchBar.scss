@@ -115,8 +115,8 @@ ul {
 .manhattan {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  // justify-content: space-between;
+  // justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
   // margin: auto;
   color: #484848;
@@ -126,8 +126,8 @@ ul {
 .TriBeCa {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
-  width: 240px;
-  height: 80px;
+  width: 250px;
+  height: 100px;
   position: relative;
   display: flex;
   border: 1px solid rgb(240, 238, 238);
@@ -180,7 +180,7 @@ ul {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   width: 240px;
-  height: 80px;
+  height: 100px;
   position: relative;
   display: flex;
   border: 1px solid rgb(240, 238, 238);
@@ -233,7 +233,7 @@ ul {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   width: 240px;
-  height: 80px;
+  height: 100px;
   position: relative;
   display: flex;
   border: 1px solid rgb(240, 238, 238);
@@ -286,7 +286,7 @@ ul {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   width: 240px;
-  height: 80px;
+  height: 100px;
   position: relative;
   display: flex;
   border: 1px solid rgb(240, 238, 238);

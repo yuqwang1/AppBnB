@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>AppBnb</title>
+    <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type => 'image/x-icon' %>
+
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

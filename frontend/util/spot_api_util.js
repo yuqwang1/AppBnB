@@ -8,7 +8,7 @@ export const fetchSpots = (data) => {
 }
 
 export const fetchSpot = (id) => {
-  // debugger
+
   return $.ajax({
     method: 'GET',
     url: `api/spots/${id}`

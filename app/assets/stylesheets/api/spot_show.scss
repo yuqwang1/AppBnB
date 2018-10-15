@@ -10,6 +10,41 @@
   justify-content: center;
 }
 
+.Amenities {
+  display: flex;
+  justify-content: space-between;
+}
+.Amenities-left {
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 1px;
+  position: relative;
+  width: 50%;
+  float: left;
+}
+.icon-Amenities-page {
+  letter-spacing: normal;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.43;
+  color: #484848;
+  display: table;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.spot-show-map {
+  display: block;
+  width: 80%;
+  height: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.spot-detail-container {
+  width: 80%
+}
+
 .spot-show-image {
   max-height: 400px;
   width: 100%;
@@ -21,7 +56,6 @@
   padding-left: 8px;
   padding-right: 8px;
   box-sizing: border-box;
-  // font-family: 'Source Sans Pro', sans-serif;
 }
 
 li {
@@ -32,14 +66,12 @@ li {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: normal;
-  // margin-left: 100px;
 }
 
 .spot-show-title {
   color: black;
   font-size: 28px;
   font-weight: bold;
-  // margin-left: 100px;
   margin-bottom: 15px;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 1.43;
@@ -49,27 +81,24 @@ li {
 .icon-list-show-page {
   display: flex;
   flex-wrap: wrap;
-  // margin-left: 100px;
   font-size: 18px;
   margin-bottom: 15px;
 }
 
 .icon-show-page {
   margin-right: 10px;
-    word-wrap: break-word;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: normal;
-    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-    color: #484848;
-    font-weight: normal;
-    display: inline;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  color: #484848;
+  font-weight: normal;
+  display: inline;
 }
 
 .details-show-page {
-  // margin-left: 100px;
   letter-spacing: normal;
-  width: 90%;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
   line-height: 1.43;

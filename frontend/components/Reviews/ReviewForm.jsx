@@ -18,7 +18,7 @@ class ReviewForm extends React.Component {
     const review = Object.assign({}, this.state);
     this.props.createReview(review).then(() => {
       this.props.fetchSpot(spotId);
-    }).then(() => { window.scrollBy(0, 10000) });
+    }).then(() => { window.scrollBy(0, 400) });
     this.setState(
       {
         review: '',
