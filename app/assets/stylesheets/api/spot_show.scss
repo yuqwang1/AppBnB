@@ -14,6 +14,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .Amenities-left {
   padding-left: 8px;
   padding-right: 8px;
@@ -22,6 +23,7 @@
   width: 50%;
   float: left;
 }
+
 .icon-Amenities-page {
   letter-spacing: normal;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -40,6 +42,7 @@
   height: 50%;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-top: 1px solid #696969;
 }
 
 .spot-detail-container {
@@ -109,7 +112,7 @@ li {
   letter-spacing: normal;
   font-family: 'Roboto', sans-serif;
   color: #484848;
-  font-weight:lighter;
+  font-weight:100;
   display: inline;
   text-align: center;
   text-decoration: none;
