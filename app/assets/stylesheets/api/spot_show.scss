@@ -31,6 +31,7 @@
   display: table;
   box-sizing: border-box;
   margin-top: 5px;
+
 }
 
 .spot-show-map {
@@ -90,20 +91,28 @@ li {
   margin-right: 10px;
   word-wrap: break-word;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 18px;
   letter-spacing: normal;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #484848;
   font-weight: normal;
   display: inline;
+  text-align: center;
+  text-decoration: none;
 }
 
 .details-show-page {
-  letter-spacing: normal;
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 18px;
   line-height: 1.43;
+  letter-spacing: normal;
+  font-family: 'Roboto', sans-serif;
   color: #484848;
+  font-weight:lighter;
+  display: inline;
+  text-align: center;
+  text-decoration: none;
   padding-right: 2px;
 }
 

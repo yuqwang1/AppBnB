@@ -56,7 +56,7 @@ class ReviewForm extends React.Component {
         <div className='review-errors'>
           { this.renderErrors() }
         </div>
-        <div className='review-title'>Review</div>
+        <div className='review-title'>Tell us about your trip</div>
         <div className='review-rating'>
           <ReactStars
             color2='#008489'
