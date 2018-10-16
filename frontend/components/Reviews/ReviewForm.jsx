@@ -1,14 +1,16 @@
 import React from 'react';
-import { withRouter } from 'react-router'
-import Rating from 'react-rating';
+import { withRouter } from 'react-router';
+import ReactStars from 'react-stars';
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.review;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
-
+    this.handleRating = this.handleRating.bind(this);
   }
+
+
 
   handleSubmit (e) {
     e.preventDefault()
@@ -17,14 +19,14 @@ class ReviewForm extends React.Component {
     this.props.createReview(review)
       .then(() => { this.props.fetchSpot(spotId) })
       .then(() => { this.props.closeModal() })
-      .then(() => { window.scrollBy(0, 400) });
-    this.setState(
-      {
-        review: '',
-        rating: '',
-        spot_id: spotId
-      }
-    )
+      .then(() => { window.scrollBy(0, 400) })
+      .then(() => { this.props.clearErrors() })
+  }
+
+  handleRating (e) {
+    this.setState({
+      rating: e
+    })
   }
 
   updateErrors(e) {
@@ -50,18 +52,21 @@ class ReviewForm extends React.Component {
   createReview () {
     return (
       <div className='review-form'>
+        <button type='button' className="close-x" onClick={ this.props.closeModal }>&times;</button>
         <div className='review-errors'>
           { this.renderErrors() }
         </div>
         <div className='review-title'>Review</div>
+        <div className='review-rating'>
+          <ReactStars
+            color2='#008489'
+            value={ this.state.rating }
+            onChange={ this.handleRating }
+            half = { false }
+            size={ 24 }
+          />
+        </div>
         <form className='review-container' onSubmit={this.handleSubmit}>
-          <div className='review-rating'>
-            <Rating
-              onChange={rating => this.state.rating = rating }
-              emptySymbol="far fa-star"
-              fullSymbol="fas fa-star"
-            />
-          </div>
 
           <textarea
             className='review-content'

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 // import SearchBar from './searchBar/SearchBarContainer';
 import BookingFormContainer from './Bookings/BookingFormContainer';
 import ReviewFormContainer from './Reviews/ReviewFormContainer';
-import SpotShowMap from './SpotShowMap'
+import SpotShowMap from './SpotShowMap';
+import ReactStars from 'react-stars';
 
 class SpotShow extends React.Component {
   constructor (props) {
@@ -40,7 +41,10 @@ class SpotShow extends React.Component {
       if (!review) return null;
       return (
         <li className='single-review' key={review.id}>
-          <div className='single-review-user'>User {review.user_id}</div>
+          <div className='review-user-rating'>
+            <div className='single-review-user'>User {review.user_id}</div>
+            { this.props.currentUserId === review.user_id ? <div className='single-review-rating'><ReactStars color2='#008489' value={ review.rating } half = { false } size={ 14 } edit={ false } /></div> : null }
+          </div>
           <div className='single-review-content'>{review.review}</div>
           { this.props.currentUserId === review.user_id ? <div className='review-deletion'> <i className="fas fa-trash-alt" onClick={ (e) => this.handleSubmit(e) } type='submit'></i> </div> : null}
 

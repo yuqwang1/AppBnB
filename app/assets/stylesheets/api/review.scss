@@ -26,6 +26,10 @@
   margin-top: 20px;
 }
 
+li {
+  list-style-type: none;
+}
+
 .review-deletion {
   margin-bottom: 20px;
   cursor: pointer;
@@ -38,7 +42,7 @@
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 1.43;
   color: #484848;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 
@@ -67,6 +71,15 @@
   cursor: pointer;
 }
 
+.single-review-rating {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.review-user-rating {
+  display: flex;
+}
 .review-content {
   margin-bottom: 15px;
   letter-spacing: normal;
@@ -76,6 +89,7 @@
   font-weight: 300;
   color: #484848;
   border: 1px solid #e4e4e4;
+
 }
 
 .review-rating {
@@ -103,7 +117,6 @@
   line-height: 1.6;
 }
 .guest-review {
-  padding-left: 8px;
   padding-right: 8px;
   box-sizing: border-box;
   margin-top: 40px;
