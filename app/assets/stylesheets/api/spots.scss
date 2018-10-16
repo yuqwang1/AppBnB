@@ -32,10 +32,17 @@
 
 .spot-map {
   display: block;
+  right: 0;
+  top: 27px;
+  min-width: 400px;
+  height: 80%;
+}
+
+.spot-map-show-index {
+  display: block;
   position: fixed;
   right: 0;
-  top: 70px;
-  margin: 24px;
+  top: 150px;
   width: 34%;
   min-width: 400px;
   height: 80%;

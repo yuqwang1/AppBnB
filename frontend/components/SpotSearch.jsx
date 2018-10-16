@@ -7,8 +7,8 @@ const SpotSearch = ({ spots, updateFilter }) => {
   return (
     <div>
       <SpotIndex spots={spots}/>
-      <div className='spot-map'>
-        <SpotMap spots={spots} updateFilter={updateFilter}/>
+      <div className='spot-map-show-index'>
+        <SpotMap spots={spots} updateFilter={updateFilter} zoom={11}/>
       </div>
     </div>
   )

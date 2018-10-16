@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // import SearchBar from './searchBar/SearchBarContainer';
 import BookingFormContainer from './Bookings/BookingFormContainer';
 import ReviewFormContainer from './Reviews/ReviewFormContainer';
-import SpotShowMap from './SpotShowMap';
+import SpotMap from './SpotMap';
 import ReactStars from 'react-stars';
 
 class SpotShow extends React.Component {
@@ -37,6 +37,8 @@ class SpotShow extends React.Component {
     }
     const loggedin = this.props.currentUser;
     const spot = this.props.spot || { img_url: '', title: '', guest: 0, bedrooms: 0, beds: 0, bath: 0, details: '' }
+    let center = new google.maps.LatLng(spot.lat, spot.lng);
+    let zoom = 14;
     const reviews = this.props.reviews.map((review) => {
       if (!review) return null;
       return (
@@ -84,7 +86,12 @@ class SpotShow extends React.Component {
 
               <div className='guest-review'>{reviews}</div>
             </div>
-            <SpotShowMap />
+            <div className='spot-show-map'>
+              <SpotMap
+                spots={[spot]}
+                center={center}
+                zoom={zoom}/>
+            </div>
           </div>
           <BookingFormContainer/>
         </div>
