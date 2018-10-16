@@ -3,8 +3,11 @@ import { closeModal } from '../../actions/modal_actions'
 import { connect } from 'react-redux'
 import LoginFormContainer from '../LoginFormContainer'
 import SignupFormContainer from '../SignupFormContainer'
+import ReviewFormContainer from '../Reviews/ReviewFormContainer'
+import { withRouter } from 'react-router'
 
 function Modal ({ modal, closeModal }) {
+  // debugger
   if (!modal) {
     return null
   }
@@ -16,9 +19,13 @@ function Modal ({ modal, closeModal }) {
     case 'signup':
       component = <SignupFormContainer />
       break
+    case 'leaveReview':
+      component = <ReviewFormContainer />
+      break
     default:
       return null
   }
+  // debugger
   return (
     <div className="modal-background" onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -28,9 +35,11 @@ function Modal ({ modal, closeModal }) {
   )
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = ( state, ownProps ) => {
+  // debugger
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
+    spot: state.entities.spots[ownProps.match.params.spotId]
   }
 }
 
@@ -40,4 +49,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Modal))

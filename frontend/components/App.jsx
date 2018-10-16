@@ -13,10 +13,11 @@ import SpotShowContainer from './SpotShowContainer'
 
 const App = () => (
   <div>
-    <Modal />
+    <Modal/>
     <Route path='/' component={ GreetingContainer } />
     <Route exact path='/spots' component={ SpotSearchContainer } />
     <Route path='/spots/:spotId' component={ SpotShowContainer } />
+    <Route path='/spots/:spotId' component={ Modal }/>
   </div>
 )
 

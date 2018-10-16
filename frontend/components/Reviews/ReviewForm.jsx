@@ -10,15 +10,14 @@ class ReviewForm extends React.Component {
 
   }
 
-
-
   handleSubmit (e) {
     e.preventDefault()
     const spotId = this.props.match.params.spotId
     const review = Object.assign({}, this.state);
-    this.props.createReview(review).then(() => {
-      this.props.fetchSpot(spotId);
-    }).then(() => { window.scrollBy(0, 400) });
+    this.props.createReview(review)
+      .then(() => { this.props.fetchSpot(spotId) })
+      .then(() => { this.props.closeModal() })
+      .then(() => { window.scrollBy(0, 400) });
     this.setState(
       {
         review: '',
@@ -51,17 +50,17 @@ class ReviewForm extends React.Component {
   createReview () {
     return (
       <div className='review-form'>
-        <h1 className='review-title'>Review</h1>
+        <div className='review-errors'>
+          { this.renderErrors() }
+        </div>
+        <div className='review-title'>Review</div>
         <form className='review-container' onSubmit={this.handleSubmit}>
-          <div className='review-errors'>
-            { this.renderErrors() }
-          </div>
           <div className='review-rating'>
             <Rating
               onChange={rating => this.state.rating = rating }
               emptySymbol="far fa-star"
               fullSymbol="fas fa-star"
-              />
+            />
           </div>
 
           <textarea
@@ -81,7 +80,7 @@ class ReviewForm extends React.Component {
   render () {
     const loggedin = this.props.currentUser;
     return (
-       loggedin ? this.createReview.bind(this)() : null
+      loggedin ? this.createReview.bind(this)() : null
     )
   }
 }
