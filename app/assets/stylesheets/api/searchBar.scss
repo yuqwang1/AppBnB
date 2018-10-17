@@ -29,14 +29,14 @@
   background-color: white;
   position: relative;
   left: 210px;
-  background-color: #ffffff !important;
-  -webkit-transition: box-shadow 200ms ease-in !important;
-  -moz-transition: box-shadow 200ms ease-in !important;
-  transition: box-shadow 200ms ease-in !important;
-  border: 1px solid #EBEBEB !important;
-  border-radius: 4px !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-  height: 48px !important;
+  background-color: #ffffff;
+  -webkit-transition: box-shadow 200ms ease-in;
+  -moz-transition: box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in;
+  border: 1px solid #EBEBEB;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 48px;
 }
 
 .search-form input {
@@ -85,21 +85,17 @@
 
 .explore-section {
   font-family: 'Source Sans Pro', sans-serif;
-  // display: block;
-  // padding-left: 100px;
   display: flex;
   flex-direction: column;
   width: 85%;
   margin: auto;
-  // padding-inline-start: 40px;
-
-  // position: relative;
   padding-left: 39px;
 
 }
 ul {
   padding-left: 0;
 }
+
 #explore {
   position: relative;
   top: 8px;
@@ -123,10 +119,10 @@ ul {
   margin-bottom: 50px;
 }
 
-.TriBeCa {
+.explor-manhattan {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
-  width: 250px;
+  width: 240px;
   height: 100px;
   position: relative;
   display: flex;
@@ -138,7 +134,7 @@ ul {
   margin-bottom: 15px;
 }
 
-.TriBeCa p {
+.explor-manhattan p {
   font-weight: 1000;
   color: black;
   font-family: 'Source Sans Pro', sans-serif;
@@ -147,13 +143,13 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.TriBeCa img {
+.explor-manhattan img {
   width: 45%;
   height: 100%;
   border-radius: 2px;
 }
 
-.TriBeCa:after {
+.explor-manhattan:after {
   content: 'TriBeCa';
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
@@ -171,165 +167,6 @@ ul {
   letter-spacing: 0.05em;
 }
 
-.TriBeCa:hover:after {
-  opacity: 2;
-}
-
-.MagicManhattan {
-  // margin-left: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: left;
-  width: 240px;
-  height: 100px;
-  position: relative;
-  display: flex;
-  border: 1px solid rgb(240, 238, 238);
-  border-radius: 3px;
-  align-items: center;
-  box-shadow: 0 1px 1px #D3D3D3;
-  margin-right: 20px;
-  margin-bottom: 15px;
-}
-
-.MagicManhattan p {
-  font-weight: 1000;
-  color: black;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: left;
-  margin-left: 10px;
-  letter-spacing: 0.03em;
-}
-
-.MagicManhattan img {
-  width: 45%;
-  height: 100%;
-  border-radius: 2px;
-}
-
-.MagicManhattan:after {
-  content: 'Magic Manhattan';
-  color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 101%; height: 101%;
-  top:0; left:0;
-  background:rgba(0,0,0,0.7);
-  opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  letter-spacing: 0.05em;
-}
-
-.MagicManhattan:hover:after {
-  opacity: 2;
-}
-
-.ManhattanLux {
-  // margin-left: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: left;
-  width: 240px;
-  height: 100px;
-  position: relative;
-  display: flex;
-  border: 1px solid rgb(240, 238, 238);
-  border-radius: 3px;
-  align-items: center;
-  box-shadow: 0 1px 1px #D3D3D3;
-  margin-right: 20px;
-  margin-bottom: 15px;
-}
-
-.ManhattanLux p {
-  font-weight: 1000;
-  color: black;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: left;
-  margin-left: 10px;
-  letter-spacing: 0.03em;
-}
-
-.ManhattanLux img {
-  width: 45%;
-  height: 100%;
-  border-radius: 2px;
-}
-
-.ManhattanLux:after {
-  content: 'Loft Like Love Lots Look';
-  color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 101%; height: 101%;
-  top:0; left:0;
-  background:rgba(0,0,0,0.7);
-  opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  letter-spacing: 0.05em;
-}
-
-.ManhattanLux:hover:after {
-  opacity: 2;
-}
-
-.explore-all {
-  // margin-left: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: left;
-  width: 240px;
-  height: 100px;
-  position: relative;
-  display: flex;
-  border: 1px solid rgb(240, 238, 238);
-  border-radius: 3px;
-  align-items: center;
-  box-shadow: 0 1px 1px #D3D3D3;
-  // margin-right: 20px;
-  margin-bottom: 15px;
-}
-
-.explore-all p {
-  font-weight: 1000;
-  color: black;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: left;
-  margin-left: 10px;
-  letter-spacing: 0.03em;
-}
-
-.explore-all img {
-  width: 45%;
-  height: 100%;
-  border-radius: 2px;
-}
-
-.explore-all:after {
-  content: 'Explore All';
-  color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 101%; height: 101%;
-  top:0; left:0;
-  background:rgba(0,0,0,0.7);
-  opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  letter-spacing: 0.05em;
-}
-
-.explore-all:hover:after {
+.explor-manhattan:hover:after {
   opacity: 2;
 }

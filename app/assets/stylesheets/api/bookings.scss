@@ -21,8 +21,8 @@
   position: sticky;
   margin-top: 10px;
   float: right;
-
 }
+
 .booking-form-container {
   border: 1.4px solid #dbdbdb;
   border-radius: 1px;
@@ -31,7 +31,21 @@
   justify-content: center;
   align-items: center;
   width: 22vw;
+}
 
+.booking-form-review {
+  box-sizing: border-box;
+  padding: 7px 4px;
+  width: 100%;
+  font-weight: 600;
+  overflow-wrap: break-word;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: normal;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  color: rgb(72, 72, 72);
+  display: inline;
+  margin: 0px;
 }
 
 .booking-button-box {

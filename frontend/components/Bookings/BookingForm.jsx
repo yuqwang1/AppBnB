@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-// import Errors from '../shared/errors';
 import Star from '../star';
 
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.booking;
+    this.state = { check_in: '', check_out: '', guest: 1 };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.props.clearBookingErrors();
   }
 
   componentWillUnmount() {
@@ -18,7 +16,7 @@ class BookingForm extends React.Component {
 
 renderErrors () {
   // debugger
-  return (
+    return (
       <ul >
         {this.props.errors.map((error, idx) => {
           return <li className='booking-error' key={idx}>{error}</li>
@@ -44,13 +42,13 @@ renderErrors () {
 }
 
 renderBooking () {
-  // debugger
-    if (!this.props.booking.length ) {
+    const bookings = this.props.bookings;
+    if (!bookings.length) {
       return;
-    } else if(this.props.booking.length !== 0) {
+    } else if(bookings.length !== 0) {
       return (
         <ul>
-          <li>Congratulations, You successfullly booked </li>
+          <li>Congratulations, You successfullly booked {this.props.spot.title}  guests</li>
         </ul>
       )
     }
@@ -82,7 +80,10 @@ render () {
             <strong className='booking-price'> ${this.props.spot.cost}</strong>
             per night
           </div>
-          <Star rating = {score} />
+          <div className='booking-form-review'>
+            <Star rating = {score} />
+            {this.props.reviews.length}
+          </div>
           <div className='booking-date-calendar'>
             <label className='label-date'>Dates</label>
             <br></br>

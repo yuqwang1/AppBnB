@@ -5,10 +5,9 @@ import { createBooking, clearBookingErrors, clearBooking } from '../../actions/b
 import { fetchSpot } from '../../actions/spot_actions'
 
 const msp = (state, ownProps) => {
-  // debugger
   return ({
     errors: state.errors.bookings,
-    booking: { check_in: '', check_out: '', guest: 1 },
+    bookings: Object.values(state.entities.bookings),
     spot: state.entities.spots[ownProps.match.params.spotId] || {},
     reviews: Object.values(state.entities.reviews)
   }

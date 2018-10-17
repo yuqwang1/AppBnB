@@ -48,12 +48,6 @@ class Greeting extends React.Component {
               <img className='logo' src={window.logo}/>
             </a>
             <div className='right-navBar-homepage'>
-              <button className='nav-bar-loggedin'>Become a host</button>
-              {
-                loggedin ? <button className='nav-bar-loggedin'>Messages</button> : null
-              }
-              <button className='nav-bar-loggedin'>Credit</button>
-              <button className='nav-bar-loggedin'>Help</button>
               { this.sessionButton.bind(this)() }
             </div>
           </header>
@@ -66,28 +60,28 @@ class Greeting extends React.Component {
           <p id="explore">Explore AppBnb</p>
           <ul className="manhattan">
             <Link to="/spots">
-              <li className="TriBeCa ">
+              <li className="explor-manhattan">
                 <img src="https://a0.muscache.com/im/pictures/15619021/d6cf8207_original.jpg?aki_policy=xx_large" />
                 <p>TriBeCa</p>
               </li>
             </Link>
 
             <Link to="/spots">
-              <li className="MagicManhattan">
+              <li className="explor-manhattan">
                 <img src="https://a0.muscache.com/im/pictures/27720090/20bd06e4_original.jpg?aki_policy=xx_large" />
                 <p>Magic Manhattan with Rooftop</p>
               </li>
             </Link>
 
             <Link to="/spots">
-              <li className="ManhattanLux ">
+              <li className="explor-manhattan">
                 <img src="https://a0.muscache.com/im/pictures/12426057/2292b61c_original.jpg?aki_policy=xx_large" />
                 <p>Loft Like Love Lots Look</p>
               </li>
             </Link>
 
             <Link to="/spots">
-              <li className="explore-all">
+              <li className="explor-manhattan">
                 <img src="https://a0.muscache.com/im/pictures/540fa60c-c8a5-4a72-82e6-fcc5985b99f7.jpg?aki_policy=x_large" />
                 <p>Explore All</p>
               </li>
@@ -125,12 +119,6 @@ class Greeting extends React.Component {
             </div>
           </div>
           <div className='right-navBar-otherView'>
-            <button className='nav-sign-up'>Become a host</button>
-            {
-              loggedin ? <button className='nav-sign-up'>Messages</button> : null
-            }
-            <button className='nav-sign-up'>Credit</button>
-            <button className='nav-sign-up'>Help</button>
             { this.sessionButton.bind(this)() }
           </div>
         </header>
@@ -149,3 +137,18 @@ class Greeting extends React.Component {
 
 
 export default withRouter(Greeting)
+//line 50 - 51
+// <button className='nav-bar-loggedin' onClick={() => this.props.history.push('/spots')}>Become a host</button>
+// {
+//   loggedin ? <button className='nav-bar-loggedin'>Messages</button> : null
+// }
+// <button className='nav-bar-loggedin'>Credit</button>
+// <button className='nav-bar-loggedin'>Help</button>
+
+//line 121-122
+// <button className='nav-sign-up'>Become a host</button>
+// {
+//   loggedin ? <button className='nav-sign-up'>Messages</button> : null
+// }
+// <button className='nav-sign-up'>Credit</button>
+// <button className='nav-sign-up'>Help</button>
