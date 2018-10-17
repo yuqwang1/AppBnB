@@ -48,6 +48,7 @@ class Greeting extends React.Component {
               <img className='logo' src={window.logo}/>
             </a>
             <div className='right-navBar-homepage'>
+              <button className='nav-bar-loggedin' onClick={() => this.props.history.push('/spots')}>Explore your homes</button>
               { this.sessionButton.bind(this)() }
             </div>
           </header>
@@ -119,6 +120,7 @@ class Greeting extends React.Component {
             </div>
           </div>
           <div className='right-navBar-otherView'>
+            <button className='nav-sign-up' onClick={() => this.props.history.push('/spots')}>Explore your homes</button>
             { this.sessionButton.bind(this)() }
           </div>
         </header>
@@ -138,7 +140,7 @@ class Greeting extends React.Component {
 
 export default withRouter(Greeting)
 //line 50 - 51
-// <button className='nav-bar-loggedin' onClick={() => this.props.history.push('/spots')}>Become a host</button>
+//
 // {
 //   loggedin ? <button className='nav-bar-loggedin'>Messages</button> : null
 // }
