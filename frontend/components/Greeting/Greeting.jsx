@@ -1,5 +1,5 @@
 import React from 'react'
-import SearchBarContainer from './searchBar/SearchBarContainer';
+import SearchBarContainer from '../searchBar/SearchBarContainer';
 import { Link, withRouter } from 'react-router-dom';
 
 

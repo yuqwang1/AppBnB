@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-import { logout } from '../actions/session_actions'
+import { logout } from '../../actions/session_actions'
 import Greeting from './Greeting'
 import { withRouter } from 'react-router-dom'
-import { openModal } from '../actions/modal_actions'
-import { fetchSpots } from '../actions/spot_actions'
+import { openModal } from '../../actions/modal_actions'
+import { fetchSpots } from '../../actions/spot_actions'
 
 const mapStateToProps = ({ session, entities: { users, spots } }) => {
   return {

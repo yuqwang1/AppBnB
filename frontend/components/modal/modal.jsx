@@ -1,8 +1,8 @@
 import React from 'react'
 import { closeModal } from '../../actions/modal_actions'
 import { connect } from 'react-redux'
-import LoginFormContainer from '../LoginFormContainer'
-import SignupFormContainer from '../SignupFormContainer'
+import LoginFormContainer from '../Greeting/LoginFormContainer'
+import SignupFormContainer from '../Greeting/SignupFormContainer'
 import ReviewFormContainer from '../Reviews/ReviewFormContainer'
 import { withRouter } from 'react-router'
 

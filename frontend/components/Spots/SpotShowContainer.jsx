@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import SpotShow from './SpotShow';
-import { fetchSpot } from '../actions/spot_actions';
-import { fetchReviews, deleteReview } from '../actions/review_actions';
-import { openModal, closeModal } from '../actions/modal_actions';
+import { fetchSpot } from '../../actions/spot_actions';
+import { fetchReviews, deleteReview } from '../../actions/review_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 export const msp = (state, ownProps) => {
   // debugger

@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router'
-import { login } from '../actions/session_actions'
+import { login } from '../../actions/session_actions'
 import { Link } from 'react-router-dom'
 class SessionForm extends React.Component {
   constructor (props) {

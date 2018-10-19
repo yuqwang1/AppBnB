@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { updateFilter } from '../actions/filter_actions';
+import { updateFilter } from '../../actions/filter_actions';
 import SpotSearch from './SpotSearch';
 
 const msp = (state) => {

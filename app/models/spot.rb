@@ -24,10 +24,4 @@ class Spot < ApplicationRecord
     through: :bookings,
     source: :user
 
-  # def self.in_bound(bounds)
-  #   self.where("lat < ?", bounds[:northEast][:lat])
-  #     .where("lat > ?", bounds[:southWest][:lat])
-  #     .where("lng < ?", bounds[:northEast][:lng])
-  #     .where("lng > ?", bounds[:southWest][:lng])
-  # end
 end

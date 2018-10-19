@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import SearchBar from './searchBar/SearchBarContainer';
-import BookingFormContainer from './Bookings/BookingFormContainer';
-import ReviewFormContainer from './Reviews/ReviewFormContainer';
+import BookingFormContainer from '../Bookings/BookingFormContainer';
+import ReviewFormContainer from '../Reviews/ReviewFormContainer';
 import SpotMap from './SpotMap';
 import ReactStars from 'react-stars';
 

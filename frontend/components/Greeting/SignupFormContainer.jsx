@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-import { signup, clearErrors } from '../actions/session_actions'
+import { signup, clearErrors } from '../../actions/session_actions'
 import SessionForm from './SessionForm'
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import { openModal, closeModal } from '../actions/modal_actions'
+import { openModal, closeModal } from '../../actions/modal_actions'
 
 export const msp = ({ session, errors, entities: { users } }) => {
   // debugger

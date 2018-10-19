@@ -1,6 +1,6 @@
 import React from 'react'
-import GreetingContainer from './GreetingContainer'
-import SpotSearchContainer from './SpotSearchContainer'
+import GreetingContainer from './Greeting/GreetingContainer'
+import SpotSearchContainer from './Spots/SpotSearchContainer'
 import { Provider } from 'react-redux'
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx'
 import { Route,
@@ -9,7 +9,7 @@ import { Route,
   Link,
   HashRouter } from 'react-router-dom'
 import Modal from './modal/modal'
-import SpotShowContainer from './SpotShowContainer'
+import SpotShowContainer from './Spots/SpotShowContainer'
 
 const App = () => (
   <div>

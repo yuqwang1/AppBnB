@@ -1,8 +1,9 @@
 import React from 'react'
 import SpotIndexItem from './SpotIndexItem'
 import { withRouter } from 'react-router-dom'
-import { fetchSpots } from '../actions/spot_actions';
+import { fetchSpots } from '../../actions/spot_actions';
 import { connect } from 'react-redux';
+import Star from '../star';
 class SpotIndex extends React.Component {
   constructor (props) {
     super(props);
@@ -34,17 +35,23 @@ class SpotIndex extends React.Component {
             {this.props.spots.map(spot =>
               <SpotIndexItem spot={spot} key={spot.id} />
             )}
-
           </div>
+
+
         </div>
       )
     }
   }
 }
+const msp = (state, ownProps) => {
+  return ({
+    reviews: Object.values(state.entities.reviews)
+  }
+)};
 const mdp = (dispatch) => {
   return {
-    fetchSpots: () => dispatch(fetchSpots())
+    fetchSpots: () => dispatch(fetchSpots()),
   }
 }
 
-export default withRouter(connect(null, mdp)(SpotIndex))
+export default withRouter(connect(msp, mdp)(SpotIndex))
