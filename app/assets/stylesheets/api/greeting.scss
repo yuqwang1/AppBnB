@@ -7,6 +7,32 @@ body {
   top: 80px;
 }
 
+.personal-site-link {
+  width:20%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  color: black;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.personal-site-icon {
+  text-align: center;
+  background: #bebabe;
+  color: #ffffff;
+  line-height: 70px;
+  margin: 0 17px 14px;
+  width: 55px !important;
+  height: 55px !important;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.personal-site-icon a {
+  color: #fff;
+    width: 42px !important;
+    height: 42px !important;
+}
 
 .homepage-container{
   justify-content: center;

@@ -1,10 +1,14 @@
+li {
+  list-style-type: none;
+}
+
 .show-content {
   line-height: 18px;
   letter-spacing: normal;
   font-family: 'Roboto', sans-serif;
   color: #484848;
   font-weight: normal;
-  display: inline;
+  // display: inline;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -62,9 +66,6 @@
   box-sizing: border-box;
 }
 
-li {
-  list-style-type: none;
-}
 
 .spot-show-header {
   color: #572533;

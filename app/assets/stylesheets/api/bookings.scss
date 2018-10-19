@@ -13,14 +13,21 @@
 }
 
 .booking-form {
+  position: sticky;
+  top: 10px;
   line-height: 18px;
   letter-spacing: normal;
   font-family: 'Roboto', sans-serif;
   color: #484848;
   font-weight: normal;
-  position: sticky;
   margin-top: 10px;
   float: right;
+  display: block;
+  // position: fixed;
+  // right: 15px;
+  // top: 400px;
+  width: 34%;
+  min-width: 400px;
 }
 
 .booking-form-container {
@@ -30,7 +37,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 22vw;
+  width: 100%;
 }
 
 .booking-form-review {
@@ -51,7 +58,7 @@
 .booking-button-box {
   margin: 10px auto;
   box-sizing: border-box;
-  width: 88%;
+  width: 90%;
   height: 50px;
   font-size: 20px;
   background-color: #fc5b62;
@@ -100,7 +107,7 @@
   font-size: 16px !important;
   border-radius: 3px !important;
   text-indent: 10px;
-  width: 19.2vw;
+  width: 97%;
   margin-top: 10px;
 }
 

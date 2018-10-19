@@ -39,7 +39,6 @@ class Greeting extends React.Component {
 
   homepageView () {
 
-    const loggedin = this.props.currentUser;
     return (
       <div className='homepage-container'>
         <div className='homepage'>
@@ -89,7 +88,12 @@ class Greeting extends React.Component {
             </Link>
           </ul>
         </div>
-      </div>
+        <ul className='personal-site-link'>
+          <li className='personal-site-icon'><a href="https://github.com/yuqwang1"><i className="fab fa-github fa-2x"></i></a></li>
+    			<li className='personal-site-icon'><a href="https://www.linkedin.com/in/yuqian-wang-03b5a548/"><i className="fab fa-linkedin fa-2x"></i></a></li>
+    			<li className='personal-site-icon'><a href="https://angel.co/yuqian-wang"><i className="fab fa-angellist fa-2x"></i></a></li>
+        </ul>
+    </div>
     )
   }
 
@@ -133,6 +137,7 @@ class Greeting extends React.Component {
     const homepage = this.props.location.pathname === '/';
     return (
       homepage ? this.homepageView.bind(this)() : this.viewPage.bind(this)()
+
     )
   }
 }
@@ -154,3 +159,9 @@ export default withRouter(Greeting)
 // }
 // <button className='nav-sign-up'>Credit</button>
 // <button className='nav-sign-up'>Help</button>
+
+
+// const loggedin = this.props.currentUser;
+// this.props.spots.map(spot => {
+//
+// })

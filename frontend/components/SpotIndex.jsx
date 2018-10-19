@@ -9,7 +9,8 @@ class SpotIndex extends React.Component {
     this.state = {};
   }
   componentDidMount () {
-    this.props.fetchSpots()
+    this.props.fetchSpots();
+      window.scrollTo(0, 0);
   }
 
   emptyPage () {
