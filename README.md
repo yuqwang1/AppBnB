@@ -3,19 +3,19 @@
 
 ## Basic Overview
 Appbnb is a single page application inspired by Airbnb. The website allows travelers to
-browse all the location around the world and pick their favorite spots to book.
+browse locations around the world and pick their favorite spots to book.
 
 
 ## Key Features
 * Search spot by its name, the map filters the bounds respectively
 
 ### User Authentication
-* Verify if users logged in or not and users have limited accessibility without log in.
-* User can create a new account and use that for future log in.
+* Verify if users are logged in and users have limited access to features without logging in.
+* Users can create a new account.
 * A log in demo is available for visitors to browse the app conveniently.
 
 ### Spots
-* Spots are listed both in picture lists and in google map. User can click one of them to view the details.
+* Spots are listed both in picture lists and in google map. Users can click either of them to view the details.
 * Spots can be filtered by its title through the search bar.
 * Spot detail page shows the spot description, spot rating, amenities, all reviews and zoomed in spot location on google map.
 
@@ -52,9 +52,9 @@ componentDidMount () {
 }
 ```
 ### Bookings
-* User with logged in is able to book the spots if they are available.
-* User can customize the date and guests for the spot they want to book.
-* User can view the spot rating and how many reviewers on the booking form.
+* When logged in, users are able to book available spots.
+* Users can customize the date and guests for the spot they want to book.
+* Users can view the spot rating and a booking's reviews.
 
 
 ### Reviews

@@ -10,6 +10,10 @@ class ReviewForm extends React.Component {
     this.handleRating = this.handleRating.bind(this);
   }
 
+  componentWillUnmount() {
+      this.props.clearErrors();
+    }
+
 
 
   handleSubmit (e) {

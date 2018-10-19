@@ -48,7 +48,7 @@ renderBooking () {
     } else if(bookings.length !== 0) {
       return (
         <ul>
-          <li>Congratulations, You successfullly booked {this.props.spot.title}  guests</li>
+          <li>Congratulations, You successfully booked {this.props.spot.title} </li>
         </ul>
       )
     }
@@ -75,7 +75,7 @@ render () {
       <div className='booking-form'>
         <div className='booking-form-container'>
           <div className='booking-errors'>{this.renderErrors()}</div>
-          <div className='booking-errors'>{this.renderBooking()}</div>
+          <div className='booking-success'>{this.renderBooking()}</div>
           <div className='price-tag'>
             <strong className='booking-price'> ${this.props.spot.cost}</strong>
             per night
