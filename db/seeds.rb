@@ -76,7 +76,7 @@ u10 = User.create!(
 
 
 s0 = Spot.create!(
-  host_id: u0.id,
+  host_id: u1.id,
   title: "Private Bedroom Manhattan ",
   details: "The layout of the apartment gives you added privacy. Nice cozy brownstone building with walk up. Alot of steps & just steps outside:
 Starbucks, Large 24 hour Supermarket, Duane Reade, 24 hr Dunkin Donuts, Several Banks: NYSC, Chase Bank, Bank of America, Citi Bank, Carver Federal and Capitol Bank, Post Office, Public Library, Several hardware stores and much much more!",
@@ -91,7 +91,7 @@ Starbucks, Large 24 hour Supermarket, Duane Reade, 24 hr Dunkin Donuts, Several 
 )
 
 s1 = Spot.create!(
-  host_id: u1.id,
+  host_id: u0.id,
   title: "TriBeCa 2500 Sq Ft w/ Priv Elevator",
   details: "2500 square feet TriBeCa loft with 13-feet exposed beam ceilings, hardwood floors and over-sized windows. Three bedrooms, two bathrooms, large kitchen, washer/dryer, art, and modern furnishings. We own our building, live on the premises, and are available for assistance at all times. We are in compliance with all local and state rent laws.",
   img_url: 'https://a0.muscache.com/im/pictures/15619021/d6cf8207_original.jpg?aki_policy=xx_large',
@@ -322,13 +322,13 @@ r2 = Review.create!(
 r3 = Review.create!(
   rating: 5,
   user_id: u2.id,
-  spot_id: s0.id,
+  spot_id: s1.id,
   review: 'The hospitality was fantastic. It is obvious that Jake will go out of his way to get whatever you need. There is a fish smell out in the hallway, but once you are in your apartment, it’s a great home away from home.'
 )
 r4 = Review.create!(
   rating: 4,
   user_id: u3.id,
-  spot_id: s10.id,
+  spot_id: s1.id,
   review: 'Very clean and spacious. Transportation information on how to get to NYC was given and easily followed. The neighborhood is quiet and we had no qualms about walking from the bus stop late at night. We really enjoyed our stay here.'
 )
 r5 = Review.create!(
@@ -346,32 +346,32 @@ r6 = Review.create!(
 r7 = Review.create!(
   rating: 5,
   user_id: u2.id,
-  spot_id: s3.id,
+  spot_id: s2.id,
   review: 'The location is great. The host is great. The apartment has potential but the pictures do make it look nicer and bigger than it is. Trash in the stairway does smell in the apartment, windows don’t hold much noise and let through heat/cold, bathroom and kitchen are pretty basic with minimal amenities and bed has a noticeable slope in it'
 )
 r8 = Review.create!(
   rating: 5,
   user_id: u10.id,
-  spot_id: s4.id,
+  spot_id: s2.id,
   review: 'I am a fairly frequent AirBnB traveler. Michelle’s home was top notch and all communication with her was 100%. My wife and I felt like locals in this space. It was about a 10 minute walk to the train that took us into Manhattan. Take the express and it’s pretty fast. The neighborhood is totally residential. Easy parking on street. Another reviewer mentioned some noise from neighbors. We did not have any issues at all. I would definitely stay again.
 '
 )
 r9 = Review.create!(
   rating: 5,
   user_id: u8.id,
-  spot_id: s7.id,
+  spot_id: s3.id,
   review: 'Absolutely loved it'
 )
 r10 = Review.create!(
   rating: 4,
   user_id: u5.id,
-  spot_id: s8.id,
+  spot_id: s3.id,
   review: 'Fantastic, clean, comfortable spot in Brooklyn. Only a short stroll from the subway, and close to several good options for food, drinks, and groceries. The neighborhood is gorgeous and worthy of many long walks.
 '
 )
 r11 = Review.create!(
   rating: 4,
-  user_id: u8.id,
+  user_id: u2.id,
   spot_id: s3.id,
   review: 'This is a great place. Perfect sized room for a getaway. It was nice that there was a small kitchen for our use as well.'
 )
@@ -385,12 +385,66 @@ r12 = Review.create!(
 r13 = Review.create!(
   rating: 5,
   user_id: u5.id,
-  spot_id: s5.id,
+  spot_id: s4.id,
   review: 'I’ve stayed here before and would do so again, great location and hosts are one of the best I’ve see;'
 )
 r14 = Review.create!(
   rating: 5,
   user_id: u2.id,
-  spot_id: s5.id,
+  spot_id: s4.id,
   review: 'Our girls trip of 15 enjoyed the stay at Ruth place. Ruth was helpful and made everything so easy for us.'
+)
+r15 = Review.create!(
+  rating: 4,
+  user_id: u3.id,
+  spot_id: s5.id,
+  review: 'Thoroughly enjoyed my stay at Nansi’s accommodation right off of the Champs Elysses main strip. Great value for the price, would recommend it!'
+)
+r16 = Review.create!(
+  rating: 3,
+  user_id: u4.id,
+  spot_id: s5.id,
+  review: 'Nice place, but owners are very accusatory'
+)
+r17 = Review.create!(
+  rating: 5,
+  user_id: u5.id,
+  spot_id: s5.id,
+  review: 'Great central location to Champs Elyses, Arc de Triomphe and Eiffel Tower as well as many other touristy spots (if you are wanting to see the tourist sights). '
+)
+r18 = Review.create!(
+  rating: 5,
+  user_id: u6.id,
+  spot_id: s5.id,
+  review: 'This spot was perfect for us! We loved the cozy, underground bedroom and could have slept in for hours if we did not have so many things to see on our visit. The upstairs space was also fun to hang out in. The location worked out great for us (convenient to trains, felt walkable, etc.) and we fell in love with a nearby coffee shop/Japanese spot with rooftop access (Brooklyn Ball Factory).'
+)
+r19 = Review.create!(
+  rating: 5,
+  user_id: u7.id,
+  spot_id: s6.id,
+  review: 'A really great place! Well located in a great neighborhood. Did not feel cramped with three adults and we felt surprisingly spacious. Great looking on the inside. We would definitely stay here again given then chance.'
+)
+r20 = Review.create!(
+  rating: 5,
+  user_id: u9.id,
+  spot_id: s6.id,
+  review: 'Great apartment, location etc. not too far from the subway and plenty of on street parking.'
+)
+r21 = Review.create!(
+  rating: 5,
+  user_id: u10.id,
+  spot_id: s6.id,
+  review: 'Heather was so quick to respond. Her place is immaculately clean and spaciou'
+)
+r22 = Review.create!(
+  rating: 5,
+  user_id: u10.id,
+  spot_id: s0.id,
+  review: 'Such a beautiful space! Heather was attentive and helpful with anything we needed. Thank you!'
+)
+r23 = Review.create!(
+  rating: 5,
+  user_id: u9.id,
+  spot_id: s0.id,
+  review: 'A perfect location for our first stay in Williamsburg. Everything was an easy walk away - food, drink and subway. I highly recommend Sal''s thick crust pizza down the street. The basement sleeping area was perfect - we had little issue with outside and upstairs noise at night.'
 )

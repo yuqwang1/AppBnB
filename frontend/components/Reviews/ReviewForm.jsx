@@ -88,6 +88,7 @@ class ReviewForm extends React.Component {
 }
   render () {
     const loggedin = this.props.currentUser;
+
     return (
       loggedin ? this.createReview.bind(this)() : null
     )

@@ -10,7 +10,9 @@ const msp = (state, ownProps) => {
     errors: state.errors.reviews,
     review: { review: '', rating: 3, spotId: ownProps.match.params.spotId },
     spot: state.entities.spots[ownProps.match.params.spotId],
-    currentUser: state.entities.users[state.session.currentUserId]
+    currentUser: state.entities.users[state.session.currentUserId],
+    reviews: Object.values(state.entities.reviews),
+    currentUserId: state.session.currentUserId
   }
 )};
 

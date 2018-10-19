@@ -26,6 +26,10 @@ class SessionForm extends React.Component {
   demo (e) {
     e.preventDefault();
     let password = '123456';
+    this.state = {
+      username: '',
+      password: ''
+    }
     const newdemo = () => {
       setTimeout(() => {
         if (password.length > 0) {
