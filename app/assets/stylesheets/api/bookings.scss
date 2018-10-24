@@ -53,7 +53,7 @@
 .booking-button-box {
   margin: 10px auto;
   box-sizing: border-box;
-  width: 90%;
+  width: 89%;
   height: 50px;
   font-size: 20px;
   background-color: #fc5b62;
@@ -87,10 +87,9 @@
 
 .booking-date-calendar {
   font-weight: 700;
-  font-weight: 700;
   margin: 10px auto;
   box-sizing: border-box;
-  width: 97%;
+  width: 95%;
   padding: 7px 9px;
 }
 
@@ -102,8 +101,16 @@
   font-size: 16px !important;
   border-radius: 3px !important;
   text-indent: 10px;
-  width: 97%;
+  width: 100%;
   margin-top: 10px;
+}
+
+.booking-guests {
+  font-weight: 700;
+  margin: 10px auto;
+  box-sizing: border-box;
+  width: 95%;
+  padding: 7px 9px;
 }
 
 .booking-guests-selector {
@@ -111,13 +118,12 @@
   text-align: left;
   line-height: normal;
   display: block;
-  width: 98%;
-
+  margin: 10px auto;
+  box-sizing: border-box;
+  width: 100%;
   border-radius: none;
   border: 1px solid #EBEBEB;
   height: 40px;
-  margin-top: 10px;
-
 }
 
 .label-date {
@@ -142,12 +148,4 @@
   font-weight: 400;
   font-size: 15px;
   color: #32CD32;
-}
-
-.booking-guests {
-  font-weight: 700;
-  margin: 10px auto;
-  box-sizing: border-box;
-  width: 95%;
-  padding: 7px 9px;
 }
