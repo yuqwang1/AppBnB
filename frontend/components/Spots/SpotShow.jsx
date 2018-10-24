@@ -45,7 +45,7 @@ class SpotShow extends React.Component {
         <li className='single-review' key={review.id}>
           <div className='review-user-rating'>
             <div className='single-review-user'>User {review.user_id}</div>
-            { this.props.currentUserId === review.user_id ? <div className='single-review-rating'><ReactStars color2='#008489' value={ review.rating } half = { false } size={ 14 } edit={ false } /></div> : null }
+            { this.props.currentUserId === review.user_id ? <div className='single-review-rating'><ReactStars color2='#008489' value={ review.rating } half = { true } size={ 14 } edit={ false } /></div> : null }
           </div>
           <div className='single-review-content'>{review.review}</div>
           { this.props.currentUserId === review.user_id ? <div className='review-deletion'> <i className="fas fa-trash-alt" onClick={ (e) => this.handleSubmit(e) } type='submit'></i> </div> : null}

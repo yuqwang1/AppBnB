@@ -12,7 +12,8 @@ const msp = (state, ownProps) => {
     spot: state.entities.spots[ownProps.match.params.spotId],
     currentUser: state.entities.users[state.session.currentUserId],
     reviews: Object.values(state.entities.reviews),
-    currentUserId: state.session.currentUserId
+    currentUserId: state.session.currentUserId,
+    isEditable: false
   }
 )};
 

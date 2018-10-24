@@ -30,12 +30,14 @@
    outline: 1px solid #008489;
 }
 
+.signup-form {
+  margin-top: 25px;
+}
+
 .signup-errror {
-  height: 60px;
-  position: relative;
-  top: -20px;
+  margin-left: -15px;
   font-family: 'Roboto', sans-serif;
-  padding: 12px 18px 0;
+  padding: 0 18px 0;
   font-weight: 400;
   font-size: 15px;
 }

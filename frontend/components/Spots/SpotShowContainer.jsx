@@ -11,7 +11,8 @@ export const msp = (state, ownProps) => {
     reviews: Object.values(state.entities.reviews),
     user: state.entities.users,
     currentUserId: state.session.currentUserId,
-    currentUser: state.entities.users[state.session.currentUserId]
+    currentUser: state.entities.users[state.session.currentUserId],
+    isEditable: false
   })
 }
 

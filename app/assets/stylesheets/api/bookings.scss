@@ -12,9 +12,10 @@
   color: grey;
 }
 
-.booking-form {
+
+.booking-form-container {
   position: sticky;
-  top: 10px;
+  top: 100px;
   line-height: 18px;
   letter-spacing: normal;
   font-family: 'Roboto', sans-serif;
@@ -23,21 +24,15 @@
   margin-top: 10px;
   float: right;
   display: block;
-  // position: fixed;
-  // right: 15px;
-  // top: 400px;
-  width: 34%;
-  min-width: 400px;
-}
-
-.booking-form-container {
+  width: 30%;
+  min-width: 300px;
   border: 1.4px solid #dbdbdb;
   border-radius: 1px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+
 }
 
 .booking-form-review {
@@ -132,7 +127,7 @@
 .booking-errors {
   box-sizing: border-box;
   width: 97%;
-  padding: 7px 9px;
+  padding: 1px 9px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -142,7 +137,7 @@
 .booking-success {
   box-sizing: border-box;
   width: 97%;
-  padding: 7px 9px;
+  padding: 1px 9px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;

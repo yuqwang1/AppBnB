@@ -82,7 +82,7 @@ class SessionForm extends React.Component {
       <div className='signup-form'>
         <div className='signup-errror'>{this.renderErrors()}</div>
         <button type='button' className="close-x" onClick={this.props.closeModal}>&times;</button>
-        <form onSubmit={this.handleSubmit}>
+        <form className='signup-container' onSubmit={this.handleSubmit}>
           <div className='signup-area'>
             <input className='signup-input' type='text' placeholder='Username' value={this.state.username} onChange={this.update('username')}/>
             <i className="far fa-user"></i>
