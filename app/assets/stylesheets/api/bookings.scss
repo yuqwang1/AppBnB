@@ -85,9 +85,11 @@
 
 }
 
+select { -webkit-appearance: none; -webkit-border-radius: 0px; }
+
 .booking-date-calendar {
   font-weight: 700;
-  margin: 10px auto;
+  margin: 5px auto;
   box-sizing: border-box;
   width: 95%;
   padding: 7px 9px;
@@ -97,33 +99,37 @@
   border: 1px solid #dbdbdb;
   color: #484848;
   display: block;
-  height: 35px;
+  height: 46px;
   font-size: 16px !important;
-  border-radius: 3px !important;
+  border-radius: 2px !important;
   text-indent: 10px;
-  width: 100%;
-  margin-top: 10px;
+  width: 99%;
+  margin-top: 15px;
 }
 
 .booking-guests {
   font-weight: 700;
-  margin: 10px auto;
+  margin: 5px auto;
   box-sizing: border-box;
   width: 95%;
   padding: 7px 9px;
 }
 
 .booking-guests-selector {
-  background: #ffffff;
-  text-align: left;
-  line-height: normal;
+  border: 1px solid #dbdbdb;
   display: block;
-  margin: 10px auto;
-  box-sizing: border-box;
+  font-size: 16px !important;
+  border-radius: 2px !important;
+  text-indent: 10px;
+  padding: 10px;
+  margin-top: 10px;
   width: 100%;
-  border-radius: none;
-  border: 1px solid #EBEBEB;
-  height: 40px;
+  height: 46px;
+  font-size: 17px;
+  font-weight: 200;
+  color: #484848;
+  padding-left: 15px;
+  background-color: white;
 }
 
 .label-date {
@@ -132,7 +138,7 @@
 
 .booking-errors {
   box-sizing: border-box;
-  width: 97%;
+  width: 95%;
   padding: 1px 9px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -142,7 +148,7 @@
 
 .booking-success {
   box-sizing: border-box;
-  width: 97%;
+  width: 95%;
   padding: 1px 9px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
