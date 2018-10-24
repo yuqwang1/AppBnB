@@ -5,6 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { fetchSpots } from './actions/spot_actions';
 
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

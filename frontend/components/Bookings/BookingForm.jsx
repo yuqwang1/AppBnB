@@ -1,11 +1,18 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import momentPropTypes from 'react-moment-proptypes';
+import moment from 'moment';
+import omit from 'lodash/omit';
+import 'react-dates/initialize';
+import { DateRangePicker } from 'react-dates';
 import Star from '../star';
+
+
 
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { check_in: '', check_out: '', guest: 1 };
+    this.state = { check_in: '', check_out: '', guest: 1, focusedInput: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -36,7 +43,7 @@ renderErrors () {
     });
     this.props.createBooking(booking)
       .then(() => {
-        this.setState({ check_in: '', check_out: '', guests: 1 })
+        this.setState({ check_in: '', check_out: '', guests: 1, focusedInput: '' })
         this.props.clearBookingErrors();
       });
 }
@@ -48,7 +55,8 @@ renderBooking () {
     } else if(bookings.length !== 0) {
       return (
         <ul>
-          <li>Congratulations, You successfully booked {this.props.spot.title} </li>
+          <li>Congratulations, You successfully </li>
+          <li>  booked {this.props.spot.title} </li>
         </ul>
       )
     }
@@ -99,6 +107,14 @@ render () {
           </div>
           <button className='booking-button-box' onClick={this.handleSubmit} type='submit'>Book</button>
           <div className='booking-text'>You won’t be charged yet</div>
+          <div className='booking-footer'>
+            <div className='booking-footer-text'>
+              <span className='booking-footer-text-header'> This home is on people’s minds.</span>
+              <br></br>
+              <span className='booking-footer-text-content'>It’s been viewed 500+ times in the past week</span>
+            </div>
+            <div className='bulb-img'></div>
+          </div>
         </div>
       </div>
     );
@@ -107,3 +123,30 @@ render () {
 
 
 export default withRouter(BookingForm);
+
+// <DateRangePicker
+//   startDateId='startDate'
+//   endDateId='endDate'
+//   startDate={this.state.check_in}
+//   endDate={this.state.check_out}
+//   onDatesChange={({ startDate, endDate }) => {
+//     this.setState({ startDate, endDate });
+//   }}
+//   focusedInput={this.state.focusedInput}
+//   onFocusChange={focusedInput => this.setState({ focusedInput })}
+//   startDatePlaceholderText="Check In"
+//   endDatePlaceholderText="Check Out"
+//   />
+// <DateRangePicker
+//   startDate={this.state.check_in}
+//   startDateId="booking-form-checkin"
+//   endDate={this.state.check_out}
+//   endDateId="booking-from-checkout"
+//   onDatesChange={({ startDate, endDate }) => this.setState({ check_in: startDate, check_out: endDate })}
+//   focusedInput={this.state.focusedInput}
+//   onFocusChange={focusedInput => this.setState({ focusedInput })}
+//   startDatePlaceholderText="Check in"
+//   endDatePlaceholderText="Check out"
+//   showClearDates={true}
+//   hideKeyboardShortcutsPanel={true}
+//   />

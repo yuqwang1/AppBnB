@@ -1,6 +1,8 @@
 // Place all the styles related to the api/bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
 .blue-star {
   color: #008489;
   box-sizing: border-box;
@@ -10,6 +12,48 @@
 
 .grey-star {
   color: grey;
+}
+
+.booking-footer {
+  display: flex;
+}
+
+.booking-footer-text {
+  box-sizing: border-box;
+  margin: 5px auto;
+  box-sizing: border-box;
+  width: 95%;
+  padding: 0px 12px;
+}
+
+.booking-footer-text-header {
+
+  font-weight: 600;
+  overflow-wrap: break-word;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: normal;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(72, 72, 72);
+  display: inline;
+  margin: 0px;
+}
+
+.booking-footer-text-content {
+  box-sizing: border-box;
+  font-weight: 200;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bulb-img {
+  height: 80px;
+  width: 80px;
+  background-image: url("https://ubisafe.org/images/orange-vector-light-bulb-3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  background-size: 60px 60px;
 }
 
 
@@ -75,6 +119,7 @@
 .booking-text {
   text-align: center;
   padding: 10px;
+  font-size: 14px;
 }
 
 .booking-price {
@@ -100,8 +145,8 @@ select { -webkit-appearance: none; -webkit-border-radius: 0px; }
   color: #484848;
   display: block;
   height: 46px;
-  font-size: 16px !important;
-  border-radius: 2px !important;
+  font-size: 16px;
+  border-radius: 2px;
   text-indent: 10px;
   width: 99%;
   margin-top: 15px;
@@ -153,5 +198,5 @@ select { -webkit-appearance: none; -webkit-border-radius: 0px; }
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
-  color: #32CD32;
+  color: #008489;
 }

@@ -39,6 +39,17 @@ export const createReview = (review) => {
   }
 }
 
+export const updateReview = (review) => {
+  return dispatch => {
+    return ReviewApiUtil.editReview(review).then(review => {
+      return dispatch(receiveReview(review))
+},
+    errors => {
+      return dispatch(receiveReviewErrors(errors.responseJSON))
+    })
+  }
+}
+
 export const fetchReviews = (spotId) => {
   return dispatch => {
     return ReviewApiUtil.fetchReviews(spotId).then(reviews => {
