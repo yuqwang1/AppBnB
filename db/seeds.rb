@@ -438,13 +438,77 @@ r21 = Review.create!(
 )
 r22 = Review.create!(
   rating: 5,
-  user_id: u10.id,
-  spot_id: s0.id,
+  user_id: u6.id,
+  spot_id: s6.id,
   review: 'Such a beautiful space! Heather was attentive and helpful with anything we needed. Thank you!'
 )
 r23 = Review.create!(
   rating: 5,
   user_id: u9.id,
-  spot_id: s0.id,
+  spot_id: s7.id,
   review: 'A perfect location for our first stay in Williamsburg. Everything was an easy walk away - food, drink and subway. I highly recommend Sal''s thick crust pizza down the street. The basement sleeping area was perfect - we had little issue with outside and upstairs noise at night.'
+)
+
+r24 = Review.create!(
+  rating: 5,
+  user_id: u8.id,
+  spot_id: s7.id,
+  review: 'Thank you SO much Tom for such a pleasant, amazing stay! Could not have asked for a better place to stay!'
+)
+
+r25 = Review.create!(
+  rating: 4,
+  user_id: u10.id,
+  spot_id: s7.id,
+  review: 'This is definitely a "you get what you pay for"place. The basement room is just that-a bit dark and a bit damp. The location is great but DO NOT try to park. We had a rental car from a trip upstate and it was a nightmare. Overall tho-we were glad it was available and glad we got to experience Harlem. Definitely recommend the Grange restaurant!!'
+)
+
+r26 = Review.create!(
+  rating: 4,
+  user_id: u1.id,
+  spot_id: s8.id,
+  review: 'Thre space was exactly as described, great for our one night stay, great location!'
+)
+r27 = Review.create!(
+  rating: 5,
+  user_id: u2.id,
+  spot_id: s8.id,
+  review: 'This apartment was perfect for a very quick trip. I appreciated Tom''s quick response when we had issues with our check-in.'
+)
+r28 = Review.create!(
+  rating: 5,
+  user_id: u3.id,
+  spot_id: s8.id,
+  review: 'A unique place to experience New York from. Amazing food and sights are just a few blocks away. Safe space. Simple and clean. Check in and check out is something you should discuss with him before booking your flight as it is not completely flexible. And bringing some disinfectant wipes for the drawers, nooks and crannies is helpful as well. Definitely would stay again!'
+)
+r29 = Review.create!(
+  rating: 3,
+  user_id: u4.id,
+  spot_id: s8.id,
+  review: 'Our trip was short but this space exceeded my expectations. The studio is so cute and chic and most of all clean! It’s in an amazing location and really close to the train. I will be staying here again.'
+)
+r30 = Review.create!(
+  rating: 4,
+  user_id: u10.id,
+  spot_id: s9.id,
+  review: 'This place was very nice and check-in was pretty simple. '
+)
+r31 = Review.create!(
+  rating: 5,
+  user_id: u7.id,
+  spot_id: s9.id,
+  review: 'Great Brooklyn spot; convenient access to all that is happening in Williamsburg.'
+)
+
+r32 = Review.create!(
+  rating: 5,
+  user_id: u6.id,
+  spot_id: s9.id,
+  review: 'Beautiful and lovely space! A joy to stay in. Highly recommend!'
+)
+r33 = Review.create!(
+  rating: 5,
+  user_id: u5.id,
+  spot_id: s9.id,
+  review: 'Great location. Steps away from new riverfront park. Quaint and comfortable space.'
 )
