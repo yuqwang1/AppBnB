@@ -52,6 +52,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.booking-form {
+  width: 300px;
+}
+
 .bulb-img {
   height: 60px;
   width: 60px;
@@ -144,19 +148,68 @@ select { -webkit-appearance: none; -webkit-border-radius: 0px; }
   box-sizing: border-box;
   width: 95%;
   padding: 7px 9px;
+  display: flex;
+
 }
 
-.booking-date {
+// input[type="date"]:before {
+//     content: attr(placeholder) !important;
+//
+//   }
+
+.dateclassone {
+  width: 100%;
   border: 1px solid #dbdbdb;
-  color: #484848;
+  border-right:none;
   display: block;
   height: 46px;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 200;
+  color: #484848;
   border-radius: 2px;
-  text-indent: 10px;
   width: 99%;
+  text-indent:14px;
   margin-top: 15px;
+  font-family: 'Roboto', sans-serif;
 }
+
+.dateclassone.placeholderclass::before {
+  width: 100%;
+  content: attr(placeholder);
+}
+
+.dateclassone.placeholderclass:hover::before {
+  width: 0%;
+  content: "";
+}
+
+.dateclasstwo {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  border-left:none;
+  display: block;
+  height: 46px;
+  font-size: 17px;
+  font-weight: 200;
+  color: #484848;
+  border-radius: 2px;
+  width: 99%;
+  text-indent:5px;
+  margin-top: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dateclasstwo.placeholderclass::before {
+  width: 100%;
+  content: attr(placeholder);
+}
+
+.dateclasstwo.placeholderclass:hover::before {
+  width: 0%;
+  content: "";
+}
+
+
 
 .booking-guests {
   font-weight: 700;
@@ -169,9 +222,7 @@ select { -webkit-appearance: none; -webkit-border-radius: 0px; }
 .booking-guests-selector {
   border: 1px solid #dbdbdb;
   display: block;
-  font-size: 16px !important;
   border-radius: 2px !important;
-  text-indent: 10px;
   padding: 10px;
   margin-top: 10px;
   width: 100%;
@@ -181,6 +232,7 @@ select { -webkit-appearance: none; -webkit-border-radius: 0px; }
   color: #484848;
   padding-left: 15px;
   background-color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .label-date {

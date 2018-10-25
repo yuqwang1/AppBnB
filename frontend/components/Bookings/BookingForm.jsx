@@ -92,13 +92,14 @@ render () {
             <Star rating = {score} />
             {this.props.reviews.length}
           </div>
+          <label className='label-date'>Dates</label>
           <div className='booking-date-calendar'>
-            <label className='label-date'>Dates</label>
             <br></br>
-            <input className='booking-date' type='date' value={this.state.check_in}
-              min={todayDate} onChange={this.update('check_in')} />
-            <input className='booking-date' type='date' value={this.state.check_out}
-              min={todayDate} onChange={this.update('check_out')} />
+
+            <input className='dateclassone placeholderclass' type='date' value={this.state.check_in}
+              min={todayDate} onChange={this.update('check_in')} placeholder='Check in'/>
+            <input className='dateclasstwo placeholderclass' type='date' value={this.state.check_out}
+              min={todayDate} onChange={this.update('check_out')} placeholder='Check out' />
           </div>
           <div className='booking-guests'>
             <label className='label-date'>Guests</label>
