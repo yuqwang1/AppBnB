@@ -92,17 +92,18 @@ render () {
             <Star rating = {score} />
             {this.props.reviews.length}
           </div>
-          <label className='label-date'>Dates</label>
-          <div className='booking-date-calendar'>
-            <br></br>
-
-            <input className='dateclassone placeholderclass' type='date' value={this.state.check_in}
-              min={todayDate} onChange={this.update('check_in')} placeholder='Check in'/>
-            <input className='dateclasstwo placeholderclass' type='date' value={this.state.check_out}
-              min={todayDate} onChange={this.update('check_out')} placeholder='Check out' />
+          <div className='booking-date'>
+            <label className='label-date'>Dates</label>
+            <div className='booking-date-calendar'>
+              <br></br>
+              <input className='dateclassone placeholderclass' type='date' value={this.state.check_in}
+                min={todayDate} onChange={this.update('check_in')} placeholder='Check in'/>
+              <input className='dateclasstwo placeholderclass' type='date' value={this.state.check_out}
+                min={todayDate} onChange={this.update('check_out')} placeholder='Check out' />
+            </div>
           </div>
           <div className='booking-guests'>
-            <label className='label-date'>Guests</label>
+            <label className='label-guest'>Guests</label>
             <br></br>
             <select className='booking-guests-selector' onChange={this.update('guests')}>{ dropdown }</select>
           </div>
@@ -124,30 +125,3 @@ render () {
 
 
 export default withRouter(BookingForm);
-
-// <DateRangePicker
-//   startDateId='startDate'
-//   endDateId='endDate'
-//   startDate={this.state.check_in}
-//   endDate={this.state.check_out}
-//   onDatesChange={({ startDate, endDate }) => {
-//     this.setState({ startDate, endDate });
-//   }}
-//   focusedInput={this.state.focusedInput}
-//   onFocusChange={focusedInput => this.setState({ focusedInput })}
-//   startDatePlaceholderText="Check In"
-//   endDatePlaceholderText="Check Out"
-//   />
-// <DateRangePicker
-//   startDate={this.state.check_in}
-//   startDateId="booking-form-checkin"
-//   endDate={this.state.check_out}
-//   endDateId="booking-from-checkout"
-//   onDatesChange={({ startDate, endDate }) => this.setState({ check_in: startDate, check_out: endDate })}
-//   focusedInput={this.state.focusedInput}
-//   onFocusChange={focusedInput => this.setState({ focusedInput })}
-//   startDatePlaceholderText="Check in"
-//   endDatePlaceholderText="Check out"
-//   showClearDates={true}
-//   hideKeyboardShortcutsPanel={true}
-//   />
