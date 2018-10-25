@@ -7,11 +7,14 @@
   color: #008489;
   box-sizing: border-box;
   width: 97%;
-  padding: 7px 9px;
+  padding: 7px 1px;
 }
 
 .grey-star {
   color: grey;
+  box-sizing: border-box;
+  width: 97%;
+  padding: 7px 1px;
 }
 
 .booking-footer {
@@ -92,7 +95,7 @@
 
 .booking-form-review {
   box-sizing: border-box;
-  padding: 8px;
+  padding: 8px 0px;
   width: 90%;
   font-weight: 600;
   overflow-wrap: break-word;
@@ -107,10 +110,7 @@
   border-bottom: 1px solid lightgrey;
 }
 
-.booking-form-review span {
-  text-align: left;
-  margin-left: -8px;
-}
+
 
 .booking-button-box {
   margin: auto;
