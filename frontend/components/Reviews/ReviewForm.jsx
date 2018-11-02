@@ -35,7 +35,6 @@ class ReviewForm extends React.Component {
     this.props.updateReview(review)
       .then(() => { this.props.fetchSpot(spotId) })
       .then(() => { this.props.closeModal() })
-      .then(() => { window.scrollBy(0, 400) })
       .then(() => { this.props.clearErrors() })
   }
 
