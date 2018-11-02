@@ -30,7 +30,7 @@ class ReviewForm extends React.Component {
 
   handleEditSubmit (e) {
     e.preventDefault()
-    const spotId = this.props.match.params.spot_id
+    const spotId = this.props.match.params.spotId
     const review = Object.assign({}, this.state);
     this.props.updateReview(review)
       .then(() => { this.props.fetchSpot(spotId) })
@@ -66,6 +66,7 @@ class ReviewForm extends React.Component {
   }
 
   createReview () {
+    const createFormType = this.props.formType
     return (
       <div className='review-form'>
         <button type='button' className="close-x" onClick={ this.props.closeModal }>&times;</button>
@@ -82,7 +83,7 @@ class ReviewForm extends React.Component {
             size={ 24 }
           />
         </div>
-        <form className='review-container' onSubmit={this.props.formType === 'createReview' ? this.handleCreateSubmit : this.handleEditSubmit}>
+        <form className='review-container' onSubmit={createFormType === 'createReview' ? this.handleCreateSubmit : this.handleEditSubmit}>
 
           <textarea
             className='review-content'
@@ -92,7 +93,7 @@ class ReviewForm extends React.Component {
           />
 
           <button className='review-submit'>
-            {this.props.formType === 'createReview' ? 'Create your review' : 'Edit your review'}
+            {createFormType === 'createReview' ? 'Create your review' : 'Edit your review'}
           </button>
         </form>
       </div>

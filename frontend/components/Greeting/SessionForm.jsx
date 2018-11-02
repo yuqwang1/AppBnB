@@ -42,7 +42,6 @@ class SessionForm extends React.Component {
         }
         else {
           dispatch(login(this.state))
-          .then(() => this.props.history.push('/spots'))
           .then(this.props.closeModal);
         }
       }, 100);

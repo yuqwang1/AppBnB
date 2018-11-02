@@ -9,9 +9,9 @@ const msp = (state, ownProps) => {
   const reviews = Object.values(state.entities.reviews)
   const currentReview = reviews[reviews.length - 1]
   const review = {
+    id: currentReview.id,
     review: currentReview.review,
     rating: currentReview.rating,
-    spotId: ownProps.match.params.spotId
   }
   return ({
     errors: state.errors.reviews,

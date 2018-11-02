@@ -31,15 +31,12 @@ class SpotShow extends React.Component {
     this.props.deleteReview(this.props.reviews[(this.props.reviews.length - 1)].id);
   }
 
-  updateReview(e) {
-    e.preventDefault();
-    this.props.updateReview(this.props.reviews[(this.props.reviews.length - 1)].id)
-  }
 
   render () {
     if(!this.props.spot || !this.props.reviews) {
       return <div>Loading.....</div>;
     }
+    const lastReview = this.props.reviews[(this.props.reviews.length - 1)].user_id
     const loggedin = this.props.currentUser;
     const spot = this.props.spot || { img_url: '', title: '', guest: 0, bedrooms: 0, beds: 0, bath: 0, details: '' }
     let center = new google.maps.LatLng(spot.lat, spot.lng);
@@ -88,8 +85,7 @@ class SpotShow extends React.Component {
                   <div className='icon-Amenities-page'><i className="fas fa-coffee"> Breakfast</i></div>
                 </div>
               </div>
-              {loggedin ? <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
-              {loggedin ? <button className='review-button' onClick={() => this.props.openModal('updateReview')}>Edit your review</button> : null}
+              {loggedin ? lastReview === this.props.currentUserId ? <button className='review-button' onClick={() => this.props.openModal('updateReview')}>Edit your review</button> : <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
               <div className='guest-review'>{reviews}</div>
             </div>
             <div className='spot-show-map'>
