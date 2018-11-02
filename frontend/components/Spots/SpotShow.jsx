@@ -31,6 +31,11 @@ class SpotShow extends React.Component {
     this.props.deleteReview(this.props.reviews[(this.props.reviews.length - 1)].id);
   }
 
+  updateReview(e) {
+    e.preventDefault();
+    this.props.updateReview(this.props.reviews[(this.props.reviews.length - 1)].id)
+  }
+
   render () {
     if(!this.props.spot || !this.props.reviews) {
       return <div>Loading.....</div>;
@@ -84,7 +89,7 @@ class SpotShow extends React.Component {
                 </div>
               </div>
               {loggedin ? <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
-
+              {loggedin ? <button className='review-button' onClick={() => this.props.openModal('updateReview')}>Edit your review</button> : null}
               <div className='guest-review'>{reviews}</div>
             </div>
             <div className='spot-show-map'>
@@ -103,4 +108,3 @@ class SpotShow extends React.Component {
 }
 
 export default SpotShow;
-  // { this.props.currentUserId === review.user_id ? <div className='review-deletion'> <i className="fas fa-edit" onClick={ (e) => this.handleSubmit(e) } type='submit'></i> </div> : null}

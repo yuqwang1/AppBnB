@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import LoginFormContainer from '../Greeting/LoginFormContainer'
 import SignupFormContainer from '../Greeting/SignupFormContainer'
 import ReviewFormContainer from '../Reviews/ReviewFormContainer'
+import EditReviewContainer from '../Reviews/EditReviewContainer'
 import { withRouter } from 'react-router'
 
 function Modal ({ modal, closeModal }) {
@@ -21,6 +22,9 @@ function Modal ({ modal, closeModal }) {
       break
     case 'leaveReview':
       component = <ReviewFormContainer />
+      break
+    case 'updateReview':
+      component = <EditReviewContainer />
       break
     default:
       return null

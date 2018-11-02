@@ -108,7 +108,7 @@ render () {
                 endDatePlaceholderText="Check Out"
                 showClearDates={true}
                 hideKeyboardShortcutsPanel={true}
-                />
+              />
               <br></br>
             </div>
           </div>

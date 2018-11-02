@@ -6,12 +6,19 @@ import { fetchSpot } from '../../actions/spot_actions';
 import { closeModal } from '../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
+  const reviews = Object.values(state.entities.reviews)
+  const currentReview = reviews[reviews.length - 1]
+  const review = {
+    review: currentReview.review,
+    rating: currentReview.rating,
+    spotId: ownProps.match.params.spotId
+  }
   return ({
     errors: state.errors.reviews,
-    review: { review: '', rating: 3, spotId: ownProps.match.params.spotId },
+    formType: 'updateReview',
+    review: review,
     spot: state.entities.spots[ownProps.match.params.spotId],
     currentUser: state.entities.users[state.session.currentUserId],
-    reviews: Object.values(state.entities.reviews),
     currentUserId: state.session.currentUserId,
   }
 )};

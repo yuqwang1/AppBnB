@@ -5,22 +5,34 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.review;
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCreateSubmit = this.handleCreateSubmit.bind(this);
     this.update = this.update.bind(this);
     this.handleRating = this.handleRating.bind(this);
+    this.handleEditSubmit = this.handleEditSubmit.bind(this);
   }
 
-  componentWillUnmount() {
-      this.props.clearErrors();
-    }
+  componentWillUnmount () {
+    this.props.clearErrors();
+  }
 
 
 
-  handleSubmit (e) {
+  handleCreateSubmit (e) {
     e.preventDefault()
     const spotId = this.props.match.params.spotId
     const review = Object.assign({}, this.state);
     this.props.createReview(review)
+      .then(() => { this.props.fetchSpot(spotId) })
+      .then(() => { this.props.closeModal() })
+      .then(() => { window.scrollBy(0, 400) })
+      .then(() => { this.props.clearErrors() })
+  }
+
+  handleEditSubmit (e) {
+    e.preventDefault()
+    const spotId = this.props.match.params.spot_id
+    const review = Object.assign({}, this.state);
+    this.props.updateReview(review)
       .then(() => { this.props.fetchSpot(spotId) })
       .then(() => { this.props.closeModal() })
       .then(() => { window.scrollBy(0, 400) })
@@ -70,7 +82,7 @@ class ReviewForm extends React.Component {
             size={ 24 }
           />
         </div>
-        <form className='review-container' onSubmit={this.handleSubmit}>
+        <form className='review-container' onSubmit={this.props.formType === 'createReview' ? this.handleCreateSubmit : this.handleEditSubmit}>
 
           <textarea
             className='review-content'
@@ -80,7 +92,7 @@ class ReviewForm extends React.Component {
           />
 
           <button className='review-submit'>
-            Create Review
+            {this.props.formType === 'createReview' ? 'Create your review' : 'Edit your review'}
           </button>
         </form>
       </div>

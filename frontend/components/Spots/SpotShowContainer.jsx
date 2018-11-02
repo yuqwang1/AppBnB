@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import SpotShow from './SpotShow';
 import { fetchSpot } from '../../actions/spot_actions';
-import { fetchReviews, deleteReview } from '../../actions/review_actions';
+import { fetchReviews, deleteReview, updateReview } from '../../actions/review_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 export const msp = (state, ownProps) => {
@@ -23,7 +23,7 @@ export const mdp = (dispatch) => {
     fetchReviews: (id) => dispatch(fetchReviews(id)),
     deleteReview: (id) => dispatch(deleteReview(id)),
     openModal: modal => dispatch(openModal(modal)),
-    closeModal: modal => dispatch(closeModal(modal))
+    closeModal: modal => dispatch(closeModal(modal)),
   })
 }
 
