@@ -59,6 +59,7 @@ componentDidMount () {
 
 ### Reviews
 * Current user is able to write and delete his/her review.
+* Current user can post only one review per spot, but can edit the review as many times as they wish.
 * Current user can rate his/her trip, view his/her rating.  
 
 
