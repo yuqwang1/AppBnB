@@ -1,4 +1,7 @@
 import React from 'react'
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+import '../../app/assets/stylesheets/api/react_dates_overrides.css'
 import GreetingContainer from './Greeting/GreetingContainer'
 import SpotSearchContainer from './Spots/SpotSearchContainer'
 import { Provider } from 'react-redux'

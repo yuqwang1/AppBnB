@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import momentPropTypes from 'react-moment-proptypes';
-import moment from 'moment';
-import omit from 'lodash/omit';
-import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import Star from '../star';
 
@@ -12,7 +8,7 @@ import Star from '../star';
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { check_in: '', check_out: '', guest: 1, focusedInput: '' };
+    this.state = { check_in: null, check_out: null, guest: 1, focusedInput: null };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -38,12 +34,17 @@ renderErrors () {
 
   handleSubmit(e) {
     e.preventDefault();
-    const booking = Object.assign({}, this.state, {
+
+
+    const booking = {
+      check_in: this.state.check_in._d,
+      check_out: this.state.check_out._d,
+      guest: this.state.guest,
       spot_id: parseInt(this.props.match.params.spotId),
-    });
+    }
     this.props.createBooking(booking)
       .then(() => {
-        this.setState({ check_in: '', check_out: '', guests: 1, focusedInput: '' })
+        this.setState({ check_in: null, check_out: null, guests: 1, focusedInput: null })
         this.props.clearBookingErrors();
       });
 }
@@ -95,16 +96,26 @@ render () {
           <div className='booking-date'>
             <label className='label-date'>Dates</label>
             <div className='booking-date-calendar'>
+              <DateRangePicker
+                startDate={this.state.check_in}
+                startDateId="chick_in"
+                endDate={this.state.check_out}
+                endDateId="check_out"
+                onDatesChange={({ startDate, endDate }) => this.setState({ check_in: startDate, check_out: endDate })}
+                focusedInput={this.state.focusedInput}
+                onFocusChange={focusedInput => this.setState({ focusedInput })}
+                startDatePlaceholderText="Check In"
+                endDatePlaceholderText="Check Out"
+                showClearDates={true}
+                hideKeyboardShortcutsPanel={true}
+                />
               <br></br>
-              <input className='dateclassone placeholderclass' type='date' value={this.state.check_in}
-                min={todayDate} onChange={this.update('check_in')} placeholder='Check in'/>
-              <input className='dateclasstwo placeholderclass' type='date' value={this.state.check_out}
-                min={todayDate} onChange={this.update('check_out')} placeholder='Check out' />
             </div>
           </div>
           <div className='booking-guests'>
             <label className='label-guest'>Guests</label>
             <br></br>
+
             <select className='booking-guests-selector' onChange={this.update('guests')}>{ dropdown }</select>
           </div>
           <button className='booking-button-box' onClick={this.handleSubmit} type='submit'>Book</button>
@@ -119,9 +130,18 @@ render () {
           </div>
         </div>
       </div>
+
     );
   }
 }
 
 
 export default withRouter(BookingForm);
+
+// const booking = Object.assign({}, this.state, {
+//   spot_id: parseInt(this.props.match.params.spotId),
+// });
+// <input className='dateclassone placeholderclass' type='date' value={this.state.check_in}
+//   min={todayDate} onChange={this.update('check_in')} placeholder='Check in'/>
+// <input className='dateclasstwo placeholderclass' type='date' value={this.state.check_out}
+//   min={todayDate} onChange={this.update('check_out')} placeholder='Check out' />

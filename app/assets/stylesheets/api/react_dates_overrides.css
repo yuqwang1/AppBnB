@@ -1,0 +1,25 @@
+/*
+.CalendarDay__selected_span {
+  background: #82e0aa;
+  color: white;
+  border: 1px solid #fc5b62;
+}
+
+.CalendarDay__selected {
+  background: red;
+  color: white;
+}
+
+.CalendarDay__selected:hover {
+  background: orange;
+  color: white;
+}
+
+.CalendarDay__hovered_span:hover,
+.CalendarDay__hovered_span {
+  background: brown;
+} */
+
+.DateInput_input {
+  width: 75%;
+}
