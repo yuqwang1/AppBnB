@@ -33,30 +33,31 @@ class SpotShow extends React.Component {
 
 
   render () {
-    if(!this.props.spot || !this.props.reviews) {
+    if (!this.props.spot || !this.props.reviews) {
       return <div>Loading.....</div>;
-    }
-    const lastReview = this.props.reviews[(this.props.reviews.length - 1)].user_id
-    const loggedin = this.props.currentUser;
-    const spot = this.props.spot || { img_url: '', title: '', guest: 0, bedrooms: 0, beds: 0, bath: 0, details: '' }
-    let center = new google.maps.LatLng(spot.lat, spot.lng);
-    let zoom = 14;
-    const reviews = this.props.reviews.map((review) => {
-      if (!review) return null;
-      return (
-        <li className='single-review' key={review.id}>
-          <div className='review-user-rating'>
-            <div className='single-review-user'>User {review.user_id}</div>
-            { this.props.currentUserId === review.user_id ? <div className='single-review-rating'><ReactStars color2='#008489' value={ review.rating } half = { true } size={ 14 } edit={ false } /></div> : null }
-          </div>
-          <div className='single-review-content'>{review.review}</div>
+    } else {
 
-          { this.props.currentUserId === review.user_id ? <div className='review-deletion'> <i className="fas fa-trash-alt" onClick={ (e) => this.handleSubmit(e) } type='submit'></i> </div> : null}
+      const loggedin = this.props.currentUser;
+      const spot = this.props.spot || { img_url: '', title: '', guest: 0, bedrooms: 0, beds: 0, bath: 0, details: '' }
+      let center = new google.maps.LatLng(spot.lat, spot.lng);
+      let zoom = 14;
+      const reviews = this.props.reviews.map((review) => {
+        if (!review) return null;
 
-        </li>
-      )
-    }
-)
+        return (
+          <li className='single-review' key={review.id}>
+            <div className='review-user-rating'>
+              <div className='single-review-user'>User {review.user_id}</div>
+              { this.props.currentUserId === review.user_id ? <div className='single-review-rating'><ReactStars color2='#008489' value={ review.rating } half = { true } size={ 14 } edit={ false } /></div> : null }
+            </div>
+            <div className='single-review-content'>{review.review}</div>
+
+            { this.props.currentUserId === review.user_id ? <div className='review-deletion'> <i className="fas fa-trash-alt" onClick={ (e) => this.handleSubmit(e) } type='submit'></i> </div> : null}
+            { this.props.currentUserId === review.user_id ? <button className='review-button' onClick={() => this.props.openModal('updateReview')}>Edit your review</button> : null}
+          </li>
+        )
+      }
+    )
 
 
 
@@ -85,7 +86,7 @@ class SpotShow extends React.Component {
                   <div className='icon-Amenities-page'><i className="fas fa-coffee"> Breakfast</i></div>
                 </div>
               </div>
-              {loggedin ? lastReview === this.props.currentUserId ? <button className='review-button' onClick={() => this.props.openModal('updateReview')}>Edit your review</button> : <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
+              {loggedin ? <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
               <div className='guest-review'>{reviews}</div>
             </div>
             <div className='spot-show-map'>
@@ -101,6 +102,11 @@ class SpotShow extends React.Component {
       </div>
     )
   }
+
+    }
+
+
+
 }
 
 export default SpotShow;
