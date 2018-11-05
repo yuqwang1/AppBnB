@@ -5,10 +5,14 @@ import BookingFormContainer from '../Bookings/BookingFormContainer';
 import ReviewFormContainer from '../Reviews/ReviewFormContainer';
 import SpotMap from './SpotMap';
 import ReactStars from 'react-stars';
+import moment from 'moment';
+import { DayPickerRangeController } from 'react-dates';
+
 
 class SpotShow extends React.Component {
   constructor (props) {
     super(props);
+  this.state = { check_in: null, check_out: null}
   }
 
   componentDidMount () {
@@ -60,7 +64,7 @@ class SpotShow extends React.Component {
       )
 
       const reviewed = this.props.reviews.map((review) => {
-        
+
         if (this.props.currentUserId === review.user_id) {
           return true
         }
@@ -94,6 +98,18 @@ class SpotShow extends React.Component {
                   </div>
                 </div>
                 {loggedin ? reviewed.includes(true) ? <button className='review-button' onClick={() => this.props.openModal('updateReview')}>Edit your review</button> : <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
+                <h3 className='available-title'>Availability</h3>
+                <div className="availability-calendar">
+                  <DayPickerRangeController
+                    startDate={this.state.startDate}
+                    endDate={this.state.endDate}
+                    onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+                    focusedInput={this.state.focusedInput}
+                    onFocusChange={focusedInput => this.setState({ focusedInput })}
+                    hideKeyboardShortcutsPanel={true}
+                    numberOfMonths={2}
+                  />
+                </div>
                 <div className='guest-review'>{reviews}</div>
               </div>
               <div className='spot-show-map'>
