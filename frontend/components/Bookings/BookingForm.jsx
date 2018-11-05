@@ -70,10 +70,16 @@ render () {
     score = score / this.props.reviews.length || 0;
 
     let dropdown = [];
-    for (let i = 0; i < 16; i++) {
-      dropdown.push(
-        <option key={i} value={i + 1}> {i + 1} guests</option>
-      )
+    for (let i = 1; i <= this.props.spot.guest; i++) {
+      if (i === 1) {
+        dropdown.push(
+          <option key={i} value={i} > {i} guest</option>
+        )
+      } else {
+        dropdown.push(
+          <option key={i} value={i}> {i} guests</option>
+        )
+      }
     }
     let today = new Date();
     let todayDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000);
