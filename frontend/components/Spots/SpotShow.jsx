@@ -53,9 +53,18 @@ class SpotShow extends React.Component {
             <div className='single-review-content'>{review.review}</div>
 
             { this.props.currentUserId === review.user_id ? <div className='review-deletion'> <i className="fas fa-trash-alt" onClick={ (e) => this.handleSubmit(e) } type='submit'></i> </div> : null}
-            { this.props.currentUserId === review.user_id ? <button className='review-button' onClick={() => this.props.openModal('updateReview')}>Edit your review</button> : null}
+
           </li>
         )
+      }
+      )
+
+      const reviewed = this.props.reviews.map((review) => {
+        
+        if (this.props.currentUserId === review.user_id) {
+          return true
+        }
+        return false
       }
       )
 
@@ -84,7 +93,7 @@ class SpotShow extends React.Component {
                     <div className='icon-Amenities-page'><i className="fas fa-coffee"> Breakfast</i></div>
                   </div>
                 </div>
-                {loggedin ? <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
+                {loggedin ? reviewed.includes(true) ? <button className='review-button' onClick={() => this.props.openModal('updateReview')}>Edit your review</button> : <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
                 <div className='guest-review'>{reviews}</div>
               </div>
               <div className='spot-show-map'>
