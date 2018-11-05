@@ -3,16 +3,16 @@ import SpotShow from './SpotShow';
 import { fetchSpot } from '../../actions/spot_actions';
 import { fetchReviews, deleteReview, updateReview } from '../../actions/review_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import { fetchUsers } from '../../actions/session_actions'
 
 export const msp = (state, ownProps) => {
   // debugger
   return ({
     spot: state.entities.spots[ownProps.match.params.spotId],
     reviews: Object.values(state.entities.reviews),
-    user: state.entities.users,
     currentUserId: state.session.currentUserId,
     currentUser: state.entities.users[state.session.currentUserId],
-    isEditable: false
+    users: state.entities.users
   })
 }
 
@@ -21,6 +21,7 @@ export const mdp = (dispatch) => {
   return ({
     fetchSpot: (id) => dispatch(fetchSpot(id)),
     fetchReviews: (id) => dispatch(fetchReviews(id)),
+    fetchUsers: () => dispatch(fetchUsers()),
     deleteReview: (id) => dispatch(deleteReview(id)),
     openModal: modal => dispatch(openModal(modal)),
     closeModal: modal => dispatch(closeModal(modal)),

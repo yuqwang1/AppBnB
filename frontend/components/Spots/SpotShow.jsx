@@ -19,6 +19,7 @@ class SpotShow extends React.Component {
     // debugger
     this.props.fetchSpot(this.props.match.params.spotId)
     this.props.fetchReviews(this.props.match.params.spotId)
+    this.props.fetchUsers();
     window.scrollTo(0, 0);
 }
 
@@ -43,15 +44,21 @@ class SpotShow extends React.Component {
 
       const loggedin = this.props.currentUser;
       const spot = this.props.spot || { img_url: '', title: '', guest: 0, bedrooms: 0, beds: 0, bath: 0, details: '' }
+
       let center = new google.maps.LatLng(spot.lat, spot.lng);
       let zoom = 14;
+      // debugger
       const reviews = this.props.reviews.map((review) => {
         if (!review) return null;
-
+        if(!this.props.users[review.user_id]){
+          return(
+            <h1 key={review.id}>nothing</h1>
+          )
+        }
         return (
           <li className='single-review' key={review.id}>
             <div className='review-user-rating'>
-              <div className='single-review-user'>User {review.user_id}</div>
+              <div className='single-review-user'>{this.props.users[review.user_id].username}</div>
               { this.props.currentUserId === review.user_id ? <div className='single-review-rating'><ReactStars color2='#008489' value={ review.rating } half = { true } size={ 14 } edit={ false } /></div> : null }
             </div>
             <div className='single-review-content'>{review.review}</div>
