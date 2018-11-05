@@ -57,53 +57,50 @@ class SpotShow extends React.Component {
           </li>
         )
       }
-    )
+      )
 
-
-
-    return (
-      <div className='spot-show-body'>
-        <img className='spot-show-image' src={spot.img_url} />
-        <div className='show-content'>
-          <div className='spot-detail-show-page'>
-            <div className='spot-detail-container'>
-              <h2 className='spot-show-header'>ENTIRE APARTMENT</h2>
-              <div className='spot-show-title'>{spot.title}</div>
-              <div className='icon-list-show-page'>
-                <div className='icon-show-page'> <i className="fas fa-user-friends" />  {spot.guest} guest </div>
-                <div className='icon-show-page'> <i className="fas fa-warehouse" />  {spot.bedrooms} bedroom </div>
-                <div className='icon-show-page'> <i className="fas fa-bed" />  {spot.beds} bed </div>
-                <div className='icon-show-page'> <i className="fas fa-bath" />  {spot.bath} bath </div>
-              </div>
-              <div className='details-show-page'>{spot.details}</div>
-              <div className='Amenities'>
-                <div className='Amenities-left'>
-                  <div className='icon-Amenities-page'><i className="fas fa-wifi"> Wifi</i></div>
-                  <div className='icon-Amenities-page'><i className="fas fa-utensils"> Kitchen</i></div>
+      return (
+        <div className='spot-show-body'>
+          <img className='spot-show-image' src={spot.img_url} />
+          <div className='show-content'>
+            <div className='spot-detail-show-page'>
+              <div className='spot-detail-container'>
+                <h2 className='spot-show-header'>ENTIRE APARTMENT</h2>
+                <div className='spot-show-title'>{spot.title}</div>
+                <div className='icon-list-show-page'>
+                  <div className='icon-show-page'> <i className="fas fa-user-friends" />  {spot.guest} guest </div>
+                  <div className='icon-show-page'> <i className="fas fa-warehouse" />  {spot.bedrooms} bedroom </div>
+                  <div className='icon-show-page'> <i className="fas fa-bed" />  {spot.beds} bed </div>
+                  <div className='icon-show-page'> <i className="fas fa-bath" />  {spot.bath} bath </div>
                 </div>
-                <div className='Amenities-left'>
-                  <div className='icon-Amenities-page'><i className="fas fa-tv"> Cable TV</i></div>
-                  <div className='icon-Amenities-page'><i className="fas fa-coffee"> Breakfast</i></div>
+                <div className='details-show-page'>{spot.details}</div>
+                <div className='Amenities'>
+                  <div className='Amenities-left'>
+                    <div className='icon-Amenities-page'><i className="fas fa-wifi"> Wifi</i></div>
+                    <div className='icon-Amenities-page'><i className="fas fa-utensils"> Kitchen</i></div>
+                  </div>
+                  <div className='Amenities-left'>
+                    <div className='icon-Amenities-page'><i className="fas fa-tv"> Cable TV</i></div>
+                    <div className='icon-Amenities-page'><i className="fas fa-coffee"> Breakfast</i></div>
+                  </div>
                 </div>
+                {loggedin ? <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
+                <div className='guest-review'>{reviews}</div>
               </div>
-              {loggedin ? <button className='review-button' onClick={() => this.props.openModal('leaveReview')}>Leave a review</button> : <button className='review-button' onClick={() => this.props.openModal('login')}>Please log in to leave a review</button>}
-              <div className='guest-review'>{reviews}</div>
+              <div className='spot-show-map'>
+                <SpotMap
+                  spots={[spot]}
+                  center={center}
+                  zoom={zoom}/>
+              </div>
             </div>
-            <div className='spot-show-map'>
-              <SpotMap
-                spots={[spot]}
-                center={center}
-                zoom={zoom}/>
-            </div>
+            <BookingFormContainer/>
           </div>
-          <BookingFormContainer/>
+
         </div>
-
-      </div>
-    )
-  }
-
+      )
     }
+}
 
 
 
