@@ -6,7 +6,6 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import { fetchUsers } from '../../actions/session_actions'
 
 export const msp = (state, ownProps) => {
-  // debugger
   return ({
     spot: state.entities.spots[ownProps.match.params.spotId],
     reviews: Object.values(state.entities.reviews),
@@ -17,7 +16,6 @@ export const msp = (state, ownProps) => {
 }
 
 export const mdp = (dispatch) => {
-  // debugger
   return ({
     fetchSpot: (id) => dispatch(fetchSpot(id)),
     fetchReviews: (id) => dispatch(fetchReviews(id)),

@@ -21,9 +21,6 @@ class SpotMap extends React.Component {
   componentDidMount () {
     const map = this.refs.map;
     mapOptions.zoom = this.props.zoom;
-    if (this.props.spots.length === 1) {
-      mapOptions.center = { lat: this.props.spots[0].lat, lng: this.props.spots[0].lng }
-    }
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(
       this.map,

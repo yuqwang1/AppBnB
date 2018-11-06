@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // import SearchBar from './searchBar/SearchBarContainer';
 import BookingFormContainer from '../Bookings/BookingFormContainer';
 import ReviewFormContainer from '../Reviews/ReviewFormContainer';
-import SpotMap from './SpotMap';
+import SpotShowMap from './SpotShowMap';
 import ReactStars from 'react-stars';
 import moment from 'moment';
 import { DayPickerRangeController } from 'react-dates';
@@ -24,7 +24,7 @@ class SpotShow extends React.Component {
 }
 
   componentWillReceiveProps (nextProps) {
-    if (!this.props.spot || this.props.spot.id !== parseInt(nextProps.match.params.spotId)) {
+    if (this.props.spot && this.props.spot.id !== parseInt(nextProps.match.params.spotId)) {
       this.props.fetchSpot(nextProps.match.params.spotId);
 
     }
@@ -50,9 +50,9 @@ class SpotShow extends React.Component {
       // debugger
       const reviews = this.props.reviews.map((review) => {
         if (!review) return null;
-        if(!this.props.users[review.user_id]){
-          return(
-            <h1 key={review.id}>nothing</h1>
+        if (!this.props.users[review.user_id]) {
+          return (
+            <h1 key={review.id}>loading</h1>
           )
         }
         return (
@@ -120,7 +120,7 @@ class SpotShow extends React.Component {
                 <div className='guest-review'>{reviews}</div>
               </div>
               <div className='spot-show-map'>
-                <SpotMap
+                <SpotShowMap
                   spots={[spot]}
                   center={center}
                   zoom={zoom}/>
