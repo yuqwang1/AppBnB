@@ -1,11 +1,16 @@
 import React from 'react'
 import SearchBarContainer from '../searchBar/SearchBarContainer';
 import { Link, withRouter } from 'react-router-dom';
+import Loading from '../loading.jsx';
 
 
 class Greeting extends React.Component {
   constructor (props) {
     super(props)
+    this.state = {
+      loading: true,
+    }
+    setTimeout(() => this.setState({ loading: false }), 1200);
   }
   actionLogout () {
     this.props.logout()
@@ -45,9 +50,14 @@ class Greeting extends React.Component {
   }
 
   homepageView () {
-    if (this.props.spots.length === 0 || !this.props.spots) {
+    if (this.state.loading) {
       return (
-        <h1 >loading</h1>
+        <Loading state={this.state}/>
+      )
+    }
+    if (this.props.spots.length === 0) {
+      return (
+        <Loading state={this.state}/>
       )
     }
     return (

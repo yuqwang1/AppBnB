@@ -7,12 +7,14 @@ import SpotShowMap from './SpotShowMap';
 import ReactStars from 'react-stars';
 import moment from 'moment';
 import { DayPickerRangeController } from 'react-dates';
+import Loading from '../loading';
 
 
 class SpotShow extends React.Component {
   constructor (props) {
     super(props);
-  this.state = { check_in: null, check_out: null}
+    this.state = { check_in: null, check_out: null, loading: true }
+    setTimeout(() => this.setState({ loading: false }), 1200);
   }
 
   componentDidMount () {
@@ -38,6 +40,9 @@ class SpotShow extends React.Component {
 
 
   render () {
+    if (this.state.loading) {
+      return <Loading state={this.state}/>
+    }
     if (!this.props.spot || !this.props.reviews) {
       return <div>Loading.....</div>;
     } else {
