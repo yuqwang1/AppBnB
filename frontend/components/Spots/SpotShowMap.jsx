@@ -11,7 +11,7 @@ class SpotShowMap extends React.Component {
       center: {
         lat: this.props.spots[0].lat, lng: this.props.spots[0].lng
       },
-      zoom: 16
+      zoom: 15
     };
 
     const map = this.refs.map;
@@ -19,12 +19,12 @@ class SpotShowMap extends React.Component {
     this.MarkerManager = new google.maps.Circle({
       strokeColor: '#71cec9',
       strokeOpacity: 0.8,
-      strokeWeight: 2,
+      strokeWeight: 1,
       fillColor: '#90ece4',
       fillOpacity: 0.6,
       map: this.map,
       center: { lat: mapOptions.center.lat, lng: mapOptions.center.lng },
-      radius: 150
+      radius: 300
     })
   }
 
