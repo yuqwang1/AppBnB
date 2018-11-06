@@ -16,70 +16,70 @@ u0 = User.create!(
 )
 
 u1 = User.create!(
-  username: "Adam Rothman",
+  username: "Adam",
   email: "arothman@gmail.org",
   password: "hunter12",
   img_url: "https://image.flaticon.com/icons/png/512/141/141829.png"
 )
 
 u2 = User.create!(
-  username: "Andrew Young",
+  username: "Andrew",
   email: "ayoung@pen-international.org",
   password: "123456",
   img_url: "https://image.flaticon.com/icons/png/512/141/141838.png"
 )
 
 u3 = User.create!(
-  username: "Blake Woodruff",
+  username: "Blake",
   email: "blakewood@pinspot.com",
   password: "asdfgh",
   img_url: "https://image.flaticon.com/icons/png/512/141/141834.png"
 )
 
 u4 = User.create!(
-  username: "Charles Dan",
+  username: "Charles",
   email: "charlesdan@yahoo.edu",
   password: "belljar",
   img_url: "https://image.flaticon.com/icons/png/512/141/141835.png"
 )
 
 u5 = User.create!(
-  username: "Erin May",
+  username: "Erin",
   email: "emay@themount.com",
   password: "starwall",
   img_url: "https://image.flaticon.com/icons/png/512/141/141836.png"
 )
 
 u6 = User.create!(
-  username: "E. M. Forster",
+  username: "Forster",
   email: "emf@bloomsbury.org",
   password: "buckingham",
   img_url: "https://image.flaticon.com/icons/png/512/141/141837.png"
 )
 
 u7 = User.create!(
-  username: "Ethan Woods",
+  username: "Ethan",
   email: "Ewoods@apple.com",
   password: "nevermore",
   img_url: "https://image.flaticon.com/icons/png/512/141/141839.png"
 )
 
 u8 = User.create!(
-  username: "Johanthan Karl",
+  username: "Johanthan",
   email: "jkarl@uhavana.edu",
   password: "jkarl1",
   img_url: "https://image.flaticon.com/icons/png/512/141/141830.png"
 )
 
 u9 = User.create!(
-  username: "Guillermo Cabrera Infante",
+  username: "Guillermo",
   email: "gcain@lunes.org",
   password: "revolucion",
   img_url: "https://image.flaticon.com/icons/png/512/141/141831.png"
 )
 
 u10 = User.create!(
-  username: "Kevin Jack",
+  username: "Kevin",
   email: "kevinVD@amazon.org",
   password: "kvandyke",
   img_url: "https://image.flaticon.com/icons/png/512/141/141832.png"
