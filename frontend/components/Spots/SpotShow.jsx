@@ -41,7 +41,6 @@ class SpotShow extends React.Component {
     if (!this.props.spot || !this.props.reviews) {
       return <div>Loading.....</div>;
     } else {
-
       const loggedin = this.props.currentUser;
       const spot = this.props.spot || { img_url: '', title: '', guest: 0, bedrooms: 0, beds: 0, bath: 0, details: '' }
 
@@ -49,8 +48,9 @@ class SpotShow extends React.Component {
       let zoom = 14;
       // debugger
       const reviews = this.props.reviews.map((review) => {
+        const reviewUser = this.props.users[review.user_id]
         if (!review) return null;
-        if (!this.props.users[review.user_id]) {
+        if (!reviewUser) {
           return (
             <h1 key={review.id}>loading</h1>
           )
@@ -58,7 +58,11 @@ class SpotShow extends React.Component {
         return (
           <li className='single-review' key={review.id}>
             <div className='review-user-rating'>
-              <div className='single-review-user'>{this.props.users[review.user_id].username}</div>
+              <img className='single-review-img' src={reviewUser.img_url}></img>
+              <div className='single-review-content-one'>
+                <div className='single-review-user'>{reviewUser.username}</div>
+                <div className='single-review-date'>{reviewUser.created_at.slice(0,7)}</div>
+              </div>
               { this.props.currentUserId === review.user_id ? <div className='single-review-rating'><ReactStars color2='#008489' value={ review.rating } half = { true } size={ 14 } edit={ false } /></div> : null }
             </div>
             <div className='single-review-content'>{review.review}</div>

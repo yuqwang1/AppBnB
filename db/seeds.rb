@@ -9,69 +9,80 @@ Review.destroy_all
 Booking.destroy_all
 
 u0 = User.create!(
-  username: "guest",
+  username: "Guest",
   email: "user@user.io",
-  password: "123456"
+  password: "123456",
+  img_url:"https://image.flaticon.com/icons/png/512/141/141832.png"
 )
 
 u1 = User.create!(
   username: "Adam Rothman",
   email: "arothman@gmail.org",
-  password: "hunter12"
+  password: "hunter12",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141829.png"
 )
 
 u2 = User.create!(
-  username: "Ardrew Young",
+  username: "Andrew Young",
   email: "ayoung@pen-international.org",
-  password: "123456"
+  password: "123456",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141838.png"
 )
 
 u3 = User.create!(
   username: "Blake Woodruff",
   email: "blakewood@pinspot.com",
-  password: "asdfgh"
+  password: "asdfgh",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141834.png"
 )
 
 u4 = User.create!(
   username: "Charles Dan",
   email: "charlesdan@yahoo.edu",
-  password: "belljar"
+  password: "belljar",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141835.png"
 )
 
 u5 = User.create!(
-  username: "ErinMay",
+  username: "Erin May",
   email: "emay@themount.com",
-  password: "starwall"
+  password: "starwall",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141836.png"
 )
 
 u6 = User.create!(
   username: "E. M. Forster",
   email: "emf@bloomsbury.org",
-  password: "buckingham"
+  password: "buckingham",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141837.png"
 )
 
 u7 = User.create!(
   username: "Ethan Woods",
   email: "Ewoods@apple.com",
-  password: "nevermore"
+  password: "nevermore",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141839.png"
 )
 
 u8 = User.create!(
   username: "Johanthan Karl",
   email: "jkarl@uhavana.edu",
-  password: "jkarl1"
+  password: "jkarl1",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141830.png"
 )
 
 u9 = User.create!(
   username: "Guillermo Cabrera Infante",
   email: "gcain@lunes.org",
-  password: "revolucion"
+  password: "revolucion",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141831.png"
 )
 
 u10 = User.create!(
-  username: "KevinVan",
+  username: "Kevin Jack",
   email: "kevinVD@amazon.org",
-  password: "kvandyke"
+  password: "kvandyke",
+  img_url: "https://image.flaticon.com/icons/png/512/141/141832.png"
 )
 
 

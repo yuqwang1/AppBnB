@@ -45,7 +45,7 @@ class Greeting extends React.Component {
   }
 
   homepageView () {
-    if (this.props.spots.length === 0) {
+    if (this.props.spots.length === 0 || !this.props.spots) {
       return (
         <h1 >loading</h1>
       )

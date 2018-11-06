@@ -23,11 +23,6 @@ class SearchBar extends React.Component {
   updateForm (field) {
     return e => {
       this.setState({ [field]: e.target.value });
-      if (e.target.value.length > 1) {
-        this.props.fetchSpots({ title: this.state.search });
-      } else if (e.target.value.length === 0) {
-        this.props.fetchSpots();
-      }
     };
   }
 

@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
       setTimeout(() => {
         if (password.length > 0) {
           this.setState({
-            username:"guest",
+            username:"Guest",
             password: this.state.password.concat(password[0])
           });
           password = password.slice(1);

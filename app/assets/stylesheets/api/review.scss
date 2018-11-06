@@ -1,3 +1,10 @@
+.single-review-img {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  padding-left: 0px;
+}
+
 .review-button {
   cursor: pointer;
   display: inline-block;
@@ -109,11 +116,17 @@ li {
   margin-bottom: 20px;
 }
 
-
+.single-review-content-one {
+  display: inline;
+}
 .single-review-user {
   margin-top: 10px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
+}
+
+.single-review-date {
+  padding-bottom: 5px;
 }
 
 .single-review-content {
