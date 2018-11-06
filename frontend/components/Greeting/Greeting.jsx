@@ -4,8 +4,15 @@ import { Link, withRouter } from 'react-router-dom';
 
 
 class Greeting extends React.Component {
+  constructor (props) {
+    super(props)
+  }
   actionLogout () {
     this.props.logout()
+  }
+
+  componentDidMount () {
+    this.props.fetchSpots();
   }
 
   sessionButton () {
@@ -38,7 +45,11 @@ class Greeting extends React.Component {
   }
 
   homepageView () {
-
+    if (this.props.spots.length === 0) {
+      return (
+        <h1 >loading</h1>
+      )
+    }
     return (
       <div className='homepage-container'>
         <div className='homepage'>
@@ -59,21 +70,21 @@ class Greeting extends React.Component {
         <div className="explore-section">
           <p id="explore">Explore AppBnb</p>
           <ul className="manhattan">
-            <Link to="/spots">
+            <Link to={`/spots/${this.props.spots[1].id}`}>
               <li className="explor-manhattan">
                 <img src="https://a0.muscache.com/im/pictures/15619021/d6cf8207_original.jpg?aki_policy=xx_large" />
                 <p>TriBeCa</p>
               </li>
             </Link>
 
-            <Link to="/spots">
+            <Link to={`/spots/${this.props.spots[5].id}`}>
               <li className="explor-manhattan">
                 <img src="https://a0.muscache.com/im/pictures/27720090/20bd06e4_original.jpg?aki_policy=xx_large" />
                 <p>Magic Manhattan with Rooftop</p>
               </li>
             </Link>
 
-            <Link to="/spots">
+            <Link to={`/spots/${this.props.spots[6].id}`}>
               <li className="explor-manhattan">
                 <img src="https://a0.muscache.com/im/pictures/12426057/2292b61c_original.jpg?aki_policy=xx_large" />
                 <p>Loft Like Love Lots Look</p>

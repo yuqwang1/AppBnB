@@ -5,10 +5,11 @@ import { withRouter } from 'react-router-dom'
 import { openModal } from '../../actions/modal_actions'
 import { fetchSpots } from '../../actions/spot_actions'
 
-const mapStateToProps = ({ session, entities: { users, spots } }) => {
+const mapStateToProps = (state, ownProps) => {
+  // debugger
   return {
-    currentUser: users[session.currentUserId],
-    spots: spots
+    currentUser: state.entities.users[state.session.currentUserId],
+    spots: Object.values(state.entities.spots)
   }
 }
 
