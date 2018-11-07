@@ -5,10 +5,10 @@ import MarkerManager from '../../util/marker_manager';
 
 const mapOptions = {
   center: {
-    lat: 40.715494,
-    lng: -74.002209
+    lat: 40.739455,
+    lng: -73.978460
   },
-  zoom: 11
+  zoom: 12
 };
 
 const getCoordsObj = latLng => ({
@@ -20,7 +20,6 @@ class SpotMap extends React.Component {
 
   componentDidMount () {
     const map = this.refs.map;
-    mapOptions.zoom = this.props.zoom;
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(
       this.map,

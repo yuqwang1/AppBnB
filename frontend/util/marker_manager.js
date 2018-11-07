@@ -23,10 +23,22 @@ class MarkerManager {
 
   createMarkerFromspot(spot) {
     const position = new google.maps.LatLng(spot.lat, spot.lng);
+    const icon = {
+      path: "m22,-28.3925l-44,0l0,20l20,0l5,5l5,-5l15,0l0,-20z",
+      fillColor: "white",
+      fillOpacity: 5,
+      scale: 1,
+      strokeColor: "lightgrey",
+      labelOrigin: new google.maps.Point(0, -18),
+      strokeWeight: 1.5
+    };
+
     const marker = new google.maps.Marker({
       position,
       map: this.map,
-      spotId: spot.id
+      spotId: spot.id,
+      label: "$" + String(spot.cost),
+      icon
     });
 
     marker.addListener("click", () => this.handleClick(spot));
