@@ -9,10 +9,6 @@ import Loading from '../loading'
 class SpotIndex extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {
-      loading: true,
-    }
-    setTimeout(() => this.setState({loading: false}), 1500);
   }
   componentDidMount () {
     this.props.fetchSpots();
@@ -28,28 +24,25 @@ class SpotIndex extends React.Component {
   }
 
   render () {
-    if (this.state.loading) {
-      return <Loading state={this.state}/>
+    if (this.props.spots.length === 0) {
+      return (
+        this.emptyPage.bind(this)()
+      )
     } else {
-      if (this.props.spots.length === 0) {
-        return (
-          this.emptyPage.bind(this)()
-        )
-      } else {
-        return (
-          <div>
-            <h1 className='spot-list-title'>Explore Airbnb</h1>
-            <div className='spot-img-list'>
-              {this.props.spots.map(spot =>
-                <SpotIndexItem spot={spot} key={spot.id} />
-              )}
-            </div>
+      return (
+        <div>
+          <h1 className='spot-list-title'>Explore Airbnb</h1>
+          <div className='spot-img-list'>
+            {this.props.spots.map(spot =>
+              <SpotIndexItem spot={spot} key={spot.id} />
+            )}
           </div>
-        )
-      }
+        </div>
+      )
     }
   }
 }
+
 
 const msp = (state, ownProps) => {
   return ({
