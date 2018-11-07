@@ -145,7 +145,7 @@ class Greeting extends React.Component {
             </div>
           </div>
           <div className='right-navBar-otherView'>
-            <button className='nav-sign-up' onClick={() => this.props.history.push('/')}>Back to homepage</button>
+            {this.props.location.pathname === '/spots' ? <button className='nav-sign-up' onClick={() => this.props.history.push('/')}>Back to homepage</button> : <button className='nav-sign-up' onClick={() => this.props.history.push('/spots')}>Explore your homes</button>}
             { this.sessionButton.bind(this)() }
           </div>
         </header>
