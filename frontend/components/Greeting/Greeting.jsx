@@ -50,15 +50,17 @@ class Greeting extends React.Component {
   }
 
   homepageView () {
-    if (this.state.loading) {
+    if (this.state.loading || this.props.spots.length === 0) {
       return (
         <Loading state={this.state}/>
       )
     }
-    if (this.props.spots.length === 0) {
-      return (
-        <Loading state={this.state}/>
-      )
+    for (let i = 0; i < 15; i++) {
+      if (!this.props.spots[i]) {
+        return (
+          <Loading state={this.state}/>
+        )
+      }
     }
     return (
       <div className='homepage-container'>

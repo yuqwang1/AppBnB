@@ -4,14 +4,12 @@ import { withRouter } from 'react-router-dom'
 import { fetchSpots } from '../../actions/spot_actions';
 import { connect } from 'react-redux';
 import Star from '../star';
-import Loading from '../loading'
 
 class SpotIndex extends React.Component {
   constructor (props) {
     super(props);
   }
   componentDidMount () {
-    this.props.fetchSpots();
     window.scrollTo(0, 0);
   }
 
