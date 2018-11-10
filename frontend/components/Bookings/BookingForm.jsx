@@ -18,7 +18,6 @@ class BookingForm extends React.Component {
 
 
 renderErrors () {
-  // debugger
     return (
       <ul >
         {this.props.errors.map((error, idx) => {
@@ -81,12 +80,9 @@ render () {
         )
       }
     }
-    let today = new Date();
-    let todayDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000);
-    todayDate = todayDate.toJSON().split('T')[0];
+
 
     return (
-      // debugger
       <div className='booking-form'>
         <div className='booking-form-container'>
           <div className='booking-errors'>{this.renderErrors()}</div>

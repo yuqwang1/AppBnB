@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+
 const SpotIndexItem = props => {
-  // const guests = props.spot.guest
   return (
     <div className='img-box'>
       <Link to={`/spots/${props.spot.id}`}>
@@ -10,6 +10,7 @@ const SpotIndexItem = props => {
         <div className='spot-title'>{props.spot.title}</div>
         <div className='spot-guest'>{props.spot.guest} guests · </div>
         <div className='spot-cost'>${props.spot.cost} per night · Free cancellation </div>
+
       </Link>
     </div>
   )

@@ -13,7 +13,6 @@ export const msp = ({ session, errors, entities: { users } }) => {
     formType: 'Log in',
     navLink: <Link to='/signup'>Sign Up</Link>,
     status_text: 'Don’t have an account?'
-    // loggedIn: Boolean(session.currentUserId)
   };
 };
 

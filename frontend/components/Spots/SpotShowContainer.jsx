@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import SpotShow from './SpotShow';
 import { fetchSpot } from '../../actions/spot_actions';
-import { fetchReviews, deleteReview, updateReview } from '../../actions/review_actions';
+import { fetchReviews, deleteReview } from '../../actions/review_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { fetchUsers } from '../../actions/session_actions'
 

@@ -18,7 +18,6 @@ class SpotShow extends React.Component {
   }
 
   componentDidMount () {
-    // debugger
     this.props.fetchSpot(this.props.match.params.spotId)
     this.props.fetchReviews(this.props.match.params.spotId)
     this.props.fetchUsers();
