@@ -50,7 +50,6 @@ class SessionForm extends React.Component {
   }
 
   renderErrors () {
-    // debugger
     return (
       <ul >
         {this.props.errors.map((error, idx) => {
@@ -67,7 +66,6 @@ class SessionForm extends React.Component {
   }
 
   render () {
-    // debugger
     const email = () => {
       return (
         <div className='signup-area'>
