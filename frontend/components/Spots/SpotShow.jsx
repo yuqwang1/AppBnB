@@ -50,7 +50,6 @@ class SpotShow extends React.Component {
 
       let center = new google.maps.LatLng(spot.lat, spot.lng);
       let zoom = 14;
-      // debugger
       const reviews = this.props.reviews.map((review) => {
         const reviewUser = this.props.users[review.user_id]
         if (!review) return null;
